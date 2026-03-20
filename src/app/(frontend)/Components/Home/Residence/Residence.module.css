@@ -1,0 +1,197 @@
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding:
+0px
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  background-color: #ffffff;
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headingText {
+  font-size: var(--fs-25);
+  margin: 0;
+  font-family: var(--font-pp-hatton);
+  color: #414141;
+  font-weight: 400;
+}
+
+
+
+.bold {
+  font-weight: 700;
+  font-family: var(--font-poppins);
+}
+
+.arrows {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.arrowMuted {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.desktopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.imgWrapper:hover .img {
+  transform: scale(1.03);
+}
+
+.cardLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  color: #69594F;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.mobileCarousel {
+  display: none;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.emblaContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.emblaSlide {
+  flex: 0 0 85%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (max-width: 720px) {
+  .Main {
+    padding: 0 0px 80px 24px;
+  }
+
+  .MainContainer {
+    gap: 20px;
+  }
+
+  .arrows {
+    display: flex;
+  }
+
+  .desktopGrid {
+    display: none;
+  }
+
+  .mobileCarousel {
+    display: block;
+  }
+
+  .headingText {
+    font-size: 20px;
+  }
+  .heading{
+    padding-right: 24px;
+  }
+
+  .cardLabel {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .Main {
+    padding: 0 40px 120px 40px;
+  }
+
+  .desktopGrid {
+    gap: 16px;
+  }
+
+  .cardLabel {
+    font-size: 15px;
+  }
+}
+
+
+
+[dir="rtl"] .cardLabel svg {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 720px) {
+  [dir="rtl"] .Main {
+    padding: 0 0px 80px 24px;
+  }
+
+  [dir="rtl"] .heading {
+    padding-right: 0;
+    padding-left: 24px;
+  }
+ 
+}
+[dir="rtl"] .arrows {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding:0px 50px;
+}
+.MainContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+@media (max-width: 640px) {
+    .main{
+        padding: 0px 24px;
+    }
+}

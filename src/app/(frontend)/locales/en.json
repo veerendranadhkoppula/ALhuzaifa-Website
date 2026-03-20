@@ -1,0 +1,148 @@
+{
+  "navbar": {
+    "aboutUs": "About us",
+    "services": "Services",
+    "craftmanship": "Craftmanship",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "languageSwitch": "العربية",
+    "hospitality": "Hospitality",
+    "residential": "Residential",
+    "commercial": "Commercial"
+  },
+  "landing": {
+    "heading": "Crafting Your Signature Style"
+  },
+  "textContainer": {
+    "body": "At Al Huzaifa Design Studio, we go beyond design. We curate immersive worlds of elegance - where every detail is intentional, every material speaks of refinement, and every space becomes a personal expression of luxury."
+  },
+  "twoBlock": {
+    "block1Title": "Craftmanship",
+    "block1Desc": "At the core of our process is design-led production. Interior designers work in seamless collaboration with master artisans within our state-of-the-art regional manufacturing facility, ensuring design intent is realised with precision, artistry, and flawless execution.",
+    "block1Link": "Explore craftmanship",
+    "block2Title": "Customizations",
+    "block2Desc": "True luxury is personal. Every project is tailored to your lifestyle and aspirations, uniting bespoke design, fine craftmanship, and in-house manufacturing – ensuring every detail is considered and every space is distinctly yours.",
+    "block2Link": "Explore Customizations"
+  },
+  "signatureClosets": {
+    "title": "Signature Closets",
+    "desc": "From the visionary minds of Al Huzaifa Design Studio, Signature Closets unite manufacturing excellence with audacious customization. Each collection is tailored to reflect your aesthetic and lifestyle, a perfect balance of structure, sophistication, and soul.",
+    "link": "Explore Signature Closets"
+  },
+  "worldAlhuzaifa": {
+    "title": "The World of Al-Huzaifa",
+    "desc": "A legacy shaped by design, craftsmanship, and refined living. The World of Al Huzaifa brings together our Design Studio, Furniture, and Properties - uniting creativity, manufacturing excellence, and timeless elegance to create spaces that captivate.",
+    "link": "Explore the world of Al-Huzaifa"
+  },
+  "contact": {
+    "contactTitle": "Contact",
+    "contactDesc": "Project enquiries, collaborations, and bespoke design consultations.",
+    "contactLink": "Contact a specialist",
+    "brochureTitle": "Brochure",
+    "brochureDesc": "Curated brochures showcasing projects, materials, and design philosophy.",
+    "brochureLink": "Download brochures",
+    "newsletterTitle": "Newsletter",
+    "newsletterDesc": "Curated updates on projects, insights, and design perspectives.",
+    "newsletterLink": "Subscribe now"
+  },
+  "portfolio": {
+    "label": "Portfolio",
+    "hospitality": "Hospitality",
+    "residence": "Residence",
+    "project1": "Avli by tashas",
+    "project2": "Loren",
+    "project3": "Toto"
+  },
+  "footer": {
+    "studioTitle": "Studio",
+    "aboutUs": "About Us",
+    "craftmanship": "Craftsmanship",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "servicesTitle": "Services",
+    "residential": "Residential",
+    "hospitality": "Hospitality (F&B)",
+    "signatureClosets": "Signature Closets",
+    "legalTitle": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "connectTitle": "Connect",
+    "phone": "+971 800 888 247",
+    "email": "Info@alhuzaifaproperties.com",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "copyright": "Copyright © 2026 Al-Huzaifa"
+  },
+  "aboutUs": {
+    "landingHeading": "Crafting spaces since 1976",
+    "landingDesc": "Where contemporary design, refined materials, and meticulous detailing come together in perfect harmony.",
+    "journeyTitle": "Al - Huziafa The Evolving Journey",
+    "milestones": [
+      {
+        "year": 1976,
+        "title": "Sharjah debut",
+        "desc": "Our very first showroom in Sharjah lays the cornerstone for our vision. The future of furniture fashion begins here."
+      },
+      {
+        "year": 2001,
+        "title": "UAE Expansion",
+        "desc": "We unveil luxury-living experiential showrooms across the Emirates, redefining how spaces are experienced."
+      },
+      {
+        "year": 2008,
+        "title": "Design Evolution",
+        "desc": "A pivotal chapter as we redefine our design language, blending tradition with contemporary luxury."
+      },
+      {
+        "year": 2009,
+        "title": "New Horizons",
+        "desc": "Expanding our portfolio with fresh concepts and bold design philosophies that captivate a new generation."
+      },
+      {
+        "year": 2014,
+        "title": "Regional Presence",
+        "desc": "Establishing a commanding presence across the region, synonymous with refined craftsmanship and innovation."
+      },
+      {
+        "year": 2018,
+        "title": "Design Studio Launch",
+        "desc": "Al Huzaifa Design Studio officially opens, offering bespoke interior design consultations and signature collections."
+      },
+      {
+        "year": 2020,
+        "title": "Digital Transformation",
+        "desc": "Embracing the future with a comprehensive digital presence and virtual design experiences."
+      },
+      {
+        "year": 2021,
+        "title": "Sustainability Pledge",
+        "desc": "A commitment to sustainable luxury — sourcing responsibly and designing with the future in mind."
+      },
+      {
+        "year": 2022,
+        "title": "Global Collaborations",
+        "desc": "Partnering with world-renowned designers and artisans to bring unparalleled collections to our clientele."
+      },
+      {
+        "year": 2023,
+        "title": "Signature Closets",
+        "desc": "Launching our exclusive Signature Closets line — where personal style meets architectural precision."
+      },
+      {
+        "year": 2025,
+        "title": "The Next Chapter",
+        "desc": "Continuing to shape the future of luxury living, design, and hospitality across the globe."
+      }
+    ],
+    "textOne": "For 50 years, Al Huzaifa has been at the forefront of refined living. From humble beginnings to a hallmark of luxury design, our journey is defined by craftsmanship, innovation, and enduring elegance. Every chapter reflects our passion for interiors and furniture that are timeless and transformative.",
+    "textTwo": "At Al Huzaifa Design Studio, we go beyond design. We curate immersive worlds of elegance, where every detail is intentional, every material speaks of refinement, and every space becomes a personal expression of luxury. From bespoke furniture to turnkey interiors, we bring vision to life with precision and artistry.",
+    "philosophyTitle": "Our Philosophy",
+    "philosophyDesc": "True luxury is personal. We believe in craftsmanship, customisation, and thoughtful design, creating spaces that are tailored, refined, and enduring.",
+    "theWorldTitle": "The World of Al Huzaifa",
+    "theWorldDesc": "A legacy shaped by design, craftsmanship, and refined living. The World of Al Huzaifa brings together our Design Studio, Furniture, and Properties - uniting creativity, manufacturing excellence, and timeless elegance to create spaces that captivate.",
+    "designStudio": "Design studio",
+    "furniture": "Al-Huzaifa furniture",
+    "properties": "Al Huzaifa properties"
+  }
+}

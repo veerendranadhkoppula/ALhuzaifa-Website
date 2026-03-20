@@ -1,0 +1,113 @@
+.Main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+padding:
+0px
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+.MainContainer{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+   gap: 40px;
+    width: 100%;
+}
+[dir="rtl"] .content {
+  justify-content: right;
+}
+
+[dir="rtl"] .content svg {
+  transform: scaleX(-1);
+}
+.top{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 20px;
+}
+.top h3{
+    font-size: var(--fs-25);
+    font-weight: 700;
+    color: #414141;
+    margin: 0;
+    font-family: var(--font-poppins);
+}
+.top p{
+    font-size: var(--fs-18);
+    font-weight: 400;
+    color: #414141;
+    margin: 0;
+    line-height: 130%;
+    max-width: 900px;
+   font-family: var(--font-poppins);
+}
+.bottom{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+}
+.card{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.content h4{
+    font-size: var(--fs-18);
+    font-weight: 700;
+    color: #69594F;
+    margin: 0;
+    line-height: 130%;
+    font-family: var(--font-poppins);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+}
+@media (max-width: 690px) {
+    .Main{
+        padding: 0px 24px 80px 24px;
+    }
+    .MainContainer{
+        gap: 25px;
+    }
+    .top h3{
+        font-size: 20px;
+    }
+    .top p{
+        font-size: 14px;
+    }
+    .bottom{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .content h4{
+        font-size: 14px;
+    }
+    .card img{
+        max-height: 250px;
+    }
+    .content svg{
+        width: 13px;
+    }
+}

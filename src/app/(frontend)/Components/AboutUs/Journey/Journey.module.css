@@ -1,0 +1,330 @@
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding:
+    clamp(60px, calc(60px + (60 * ((100vw - 320px) / 1120))), 120px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+    clamp(60px, calc(60px + (60 * ((100vw - 320px) / 1120))), 120px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  background-color: #ffffff;
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.top h3 {
+  font-size: var(--fs-25);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+  margin-bottom: 66px;
+  font-family: var(--font-poppins);
+}
+[dir="rtl"] .arrowBtn svg {
+  transform: scaleX(-1);
+}
+.content {
+  width: 100%;
+  min-height: 220px;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+.desktopContent {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  padding:
+0px
+clamp(0px, calc(0px + (107 * ((100vw - 320px) / 1120))), 107px)
+0px
+clamp(0px, calc(0px + (81 * ((100vw - 320px) / 1120))), 81px);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items:center;
+  flex: 1;
+}
+
+.cardImg {
+  position: relative;
+  width: 270px;
+  height: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.year {
+  font-family: var(--font-pp-hatton);
+  font-size: var(--fs-46);
+  font-weight: 400;
+  color: #414141;
+  line-height: 1;
+  margin: 0 0 20px 0;
+}
+
+.title {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-25);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+}
+
+.desc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+  line-height: 140%;
+  max-width: 390px;
+}
+
+.mobileContent {
+  display: none;
+}
+
+.mobileArrows {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrowMuted {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mobileImg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.timelineWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.timelineLine {
+  display: none;
+}
+
+.timelineActiveLine {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  height: 1.5px;
+  background-color: #414141;
+  transition: left 0.4s ease, width 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.timelineYears {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #000000;
+  padding-top: 12px;
+padding-left: clamp(0px, calc(0px + (81 * ((100vw - 320px) / 1120))), 81px);
+padding-right: clamp(0px, calc(0px + (81 * ((100vw - 320px) / 1120))), 81px);
+}
+
+.yearBtn {
+  background: none;
+  border: none;
+  padding: 0px 8px;
+  cursor: pointer;
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.yearBtn:hover {
+  color: #000000;
+  font-weight: 700;
+}
+
+.yearActive {
+  font-weight: 700;
+  color: #414141;
+  font-size: var(--fs-18);
+}
+
+.yearActiveEnd {
+  font-weight: 700;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .desktopContent {
+    display: none;
+  }
+
+  .mobileContent {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .top h3{
+    font-size: 20px;
+  }
+
+  .content {
+    min-height: unset;
+  }
+
+  .year {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .timelineYears {
+    overflow-x: auto;
+    gap: 25px;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .timelineYears::-webkit-scrollbar {
+    display: none;
+  }
+.cardImg img{
+    width: 100%;
+    height: auto;
+    object-fit: cover !important;
+}
+  .yearBtn {
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .top h3{
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1240px) {
+  .desktopContent {
+    gap: 24px;
+    padding: 0px;
+  }
+
+  .card {
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .cardImg {
+    width: 180px;
+    height: 200px;
+  }
+
+  .year {
+    font-size: 32px;
+    margin: 0 0 12px 0;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .cardImg {
+    width: 130px;
+    height: 150px;
+  }
+
+  .year {
+    font-size: 26px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .timelineYears {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .yearBtn {
+    font-size: 13px;
+    padding: 0px 4px;
+  }
+}

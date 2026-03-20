@@ -1,0 +1,43 @@
+.Main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    background: url('./1.png');
+}
+.MainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+}
+.MainContainer h3{
+    font-size: var(--fs-64);
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+   font-family: var(--font-pp-hatton);
+}
+@media (max-width: 640px) {
+    .MainContainer h3{
+        font-size: 32px;
+        text-align: center;
+        line-height: 120%;
+    }
+    .Main{
+        object-fit: cover;
+        object-position: left;
+
+        width: 100%;
+       
+    }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+    .MainContainer h3{
+        font-size: 48px;
+        text-align: center;
+        line-height: 120%;
+    }
+    
+}
