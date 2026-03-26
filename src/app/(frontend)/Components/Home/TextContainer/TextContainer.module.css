@@ -49,3 +49,6 @@ clamp(80px, calc(80px + (120 * ((100vw - 320px) / 1120))), 200px)
         line-height: 120%;
     }
 }
+[dir='rtl'] .MainContainer p {
+    font-family: var(--font-alexandria);
+}

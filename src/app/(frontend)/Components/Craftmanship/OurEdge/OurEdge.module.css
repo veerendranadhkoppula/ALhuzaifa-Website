@@ -1,0 +1,224 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding:
+    0px
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+    clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+gap: clamp(24px, calc(24px + (119 * ((100vw - 320px) / 1120))), 143px);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, calc(24px + (46 * ((100vw - 320px) / 1120))), 70px);
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-25);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+}
+
+
+.desktopRows {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* .rowLine {
+  width: 100%;
+  height: 1px;
+  background-color: #A7A7A780;
+  margin-bottom: 20px;
+} */
+
+.rowContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+padding-bottom: clamp(0px, calc(0px + (50 * ((100vw - 320px) / 1120))), 50px);
+}
+
+.rowTitle {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+}
+
+.rowDesc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+  line-height: 140%;
+}
+
+
+.right {
+
+  width: 100%;
+
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile accordion */
+.mobileAccordion {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #A7A7A780;
+}
+
+.accordionTrigger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 25px 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordionTitle {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  color: #414141;
+}
+
+.accordionIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.accordionBodyOpen {
+  max-height: 200px;
+  padding-bottom: 16px;
+}
+
+.accordionDesc {
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+  line-height: 140%;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 0px 24px 80px 24px;
+  }
+
+  .MainContainer {
+    flex-direction: column;
+    gap: 32px;
+  }
+.left{
+    gap: 0px;
+}
+  .desktopRows {
+    display: none;
+  }
+
+  .mobileAccordion {
+    display: flex;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .MainContainer {
+    flex-direction: column;
+  }
+
+  .right {
+    max-width: 100%;
+  }
+
+  .image {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+
+[dir='rtl'] .MainContainer {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .heading {
+  font-family: var(--font-kufi);
+}
+
+[dir='rtl'] .rowContent {
+  direction: rtl;
+}
+
+[dir='rtl'] .rowTitle,
+[dir='rtl'] .rowDesc {
+  font-family: var(--font-kufi);
+  text-align: right;
+}
+
+[dir='rtl'] .accordionTrigger {
+  text-align: right;
+}
+
+[dir='rtl'] .accordionTitle,
+[dir='rtl'] .accordionDesc {
+  font-family: var(--font-kufi);
+  text-align: right;
+}

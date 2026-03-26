@@ -1,0 +1,134 @@
+  .Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    background: url('./1.png');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .MainContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    gap: 10px;
+  padding:
+  clamp(67px, calc(67px + (33 * ((100vw - 320px) / 1120))), 100px)
+  clamp(24px, calc(24px + (85 * ((100vw - 320px) / 1120))), 109px)
+  clamp(40px, calc(40px + (53 * ((100vw - 320px) / 1120))), 93px)
+  clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  }
+  .LeftConatiner {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .LeftConatiner h3 {
+    font-size: var(--fs-46);
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    font-family: var(--font-pp-hatton);
+  }
+  .LeftConatiner p {
+    font-size: var(--fs-18);
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    line-height: 130%;
+    max-width: 500px;
+    font-family: var(--font-poppins);
+  }
+
+  .contactCta {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: #292929;
+    color: #ffffff;
+    font-family: var(--font-poppins);
+    font-size:14px;
+    font-weight: 400;
+    border: none;
+    padding: 9px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  @media (max-width: 640px) {
+    .Main {
+      background: #ffffff;
+      height: auto;
+      padding: 100px 24px 80px 24px;
+    }
+
+    .MainContainer {
+      flex-direction: column;
+      padding: 0;
+      gap: 0px;
+    }
+  .LeftConatiner{
+      gap: 0px;
+  }
+    .LeftConatiner h3 {
+      color: #414141;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .LeftConatiner p {
+      color: #414141;
+      max-width: 100%;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .RightContainer {
+      display: none;
+    }
+
+    .contactCta {
+      display: flex;
+    }
+  }
+  /* ── Tablet / small desktop: stack vertically ──────────────────────── */
+  @media (min-width: 641px) and (max-width: 1100px) {
+    .Main {
+      height: auto;
+      min-height: 100svh;
+      align-items: flex-start;
+    }
+
+    .MainContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+      padding: 80px 48px 60px 48px;
+    }
+
+    .LeftConatiner p {
+      max-width: 600px;
+    }
+
+    .RightContainer {
+      width: 100%;
+      max-width: 677px;
+    }
+  }
+
+  @media (min-width: 1101px) {
+    .Main {
+      height: auto;
+      min-height: 100svh;
+    }
+  }
+[dir='rtl'] .contactCta svg {
+  transform: scaleX(-1);
+}

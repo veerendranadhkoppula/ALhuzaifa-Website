@@ -28,7 +28,7 @@ const Footer = () => {
               <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
               <li><Link href={`/${locale}/craftmanship`}>{t.footer.craftmanship}</Link></li>
               <li><Link href={`/${locale}/portfolio`}>{t.footer.portfolio}</Link></li>
-              <li><Link href={`/${locale}/contact`}>{t.footer.contact}</Link></li>
+              <li><Link href={`/${locale}/contact-us`}>{t.footer.contact}</Link></li>
             </ul>
           </div>
 
@@ -37,7 +37,7 @@ const Footer = () => {
             <ul className={styles.columnList}>
               <li><Link href={`/${locale}/services/residential`}>{t.footer.residential}</Link></li>
               <li><Link href={`/${locale}/services/hospitality`}>{t.footer.hospitality}</Link></li>
-              <li><Link href={`/${locale}/services/signature-closets`}>{t.footer.signatureClosets}</Link></li>
+              <li><Link href={`/${locale}/services/commercial`}>{t.footer.commercial}</Link></li>
             </ul>
           </div>
 
@@ -77,7 +77,7 @@ const Footer = () => {
               <ul className={styles.columnList}>
                 <li><Link href={`/${locale}/services/residential`}>{t.footer.residential}</Link></li>
                 <li><Link href={`/${locale}/services/hospitality`}>{t.footer.hospitality}</Link></li>
-                <li><Link href={`/${locale}/services/signature-closets`}>{t.footer.signatureClosets}</Link></li>
+                <li><Link href={`/${locale}/services/commercial`}>{t.footer.commercial}</Link></li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,185 @@
+.main {
+  width: 100%;
+  background-color: #ffffff;
+  padding:
+    0px
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+    clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-25);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+}
+
+.desc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 33px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 33px 24px 63px 24px;
+  min-height: 320px;
+}
+
+.cardLight {
+  background-color: #EFEAE4;
+}
+
+.cardDark {
+  background-color: #B2AAA2;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-pp-hatton);
+  font-size: var(--fs-25);
+  font-weight: 400;
+  color: #69594F;
+  margin: 0;
+}
+
+.cardDark .cardTitle {
+  color: #ffffff;
+}
+
+.cardDesc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #69594F;
+  margin: 0;
+  max-width: 253px;
+}
+
+.cardDark .cardDesc {
+  color: #ffffff;
+}
+
+.cardNum {
+  font-family: var(--font-pp-hatton);
+  font-size: var(--fs-32);
+  font-weight: 400;
+  color: #69594F;
+  flex-shrink: 0;
+}
+
+.cardDark .cardNum {
+  color: #ffffff;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+.cardImg {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+
+@media (min-width: 641px) and (max-width: 1140px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    min-height: 280px;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .main {
+    padding: 0px 24px 80px 24px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 26px 26px 20px 26px;
+  }
+  .header{
+    gap: 8px;
+  }
+.MainContainer{
+    gap: 25px   ;
+}
+  .cardTitle {
+    font-size: 20px;
+  }
+.title{
+    font-size: 20px;
+}
+.desc, .cardDesc{
+    font-size: 14px;
+}
+  .cardNum {
+    font-size: 20px;
+  }
+
+  .cardImg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+[dir='rtl'] .header {
+  text-align: right;
+}
+
+

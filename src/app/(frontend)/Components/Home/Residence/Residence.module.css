@@ -17,6 +17,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   width: 100%;
   gap: 30px;
 }
+.emblaContainer a, .desktopGrid a{
+  text-decoration: none;
+  color: inherit;
+}
 
 .heading {
   display: flex;
@@ -148,7 +152,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .mobileCarousel {
     display: block;
   }
-
+.mobileCarousel a{
+  text-decoration: none;
+  color: inherit;
+}
   .headingText {
     font-size: 20px;
   }

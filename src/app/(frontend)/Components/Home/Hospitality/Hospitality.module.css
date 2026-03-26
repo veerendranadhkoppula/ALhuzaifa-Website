@@ -127,7 +127,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   flex-direction: column;
   gap: 15px;
 }
-
+.emblaContainer a, .desktopGrid a{
+  text-decoration: none;
+  color: inherit;
+}
 @media (max-width: 720px) {
   .Main {
     padding: 0 0px 40px 24px;
@@ -140,7 +143,11 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .arrows {
     display: flex;
   }
-
+.mobileCarousel a{
+  text-decoration: none;
+  color: inherit;
+}
+  
   .desktopGrid {
     display: none;
   }

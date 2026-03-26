@@ -29,7 +29,10 @@ export const Users: CollectionConfig = {
           value: 'aluhuzaifa-editor',
         },
       ],
-      saveToJWT: true, // important for access control
+      access: {
+          update: ({ req: { user } }) => user?.role === 'developer',
+      },
+      saveToJWT: true,
     },
   ],
 }

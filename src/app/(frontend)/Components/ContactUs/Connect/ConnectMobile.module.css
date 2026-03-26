@@ -1,0 +1,79 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0px 24px 80px 24px;
+}
+.MainContainer{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+.adress, .email, .phone, .social{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #A7A7A780;
+}
+.adress h3, .email h3, .phone h3, .social h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #414141;
+    text-transform: capitalize;
+    font-family: var(--font-pp-hatton);
+}
+.adress p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #414141;
+    max-width: 200px;
+    text-transform: capitalize;
+    font-family: var(--font-poppins);
+}
+.email a , .phone a, .socialslist a{
+    color: inherit;
+    text-decoration: none;
+}
+.email p, .phone p, .social p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #414141;
+    cursor: pointer;
+    font-family: var(--font-poppins);
+}
+.socialslist {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-direction: row;
+}
+.socialslist p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #414141;
+    font-family: var(--font-poppins);
+    cursor: pointer;
+}
+@media (min-width: 640px){
+    .main{
+       display: none;
+    }
+}
+[dir='rtl'] .phone p,
+[dir='rtl'] .email p {
+  direction: ltr;
+  text-align: right;
+}
+[dir='rtl'] .socialslist{
+   justify-content: right;
+}

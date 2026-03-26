@@ -27,7 +27,10 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   flex-direction: row;
   width: 100%;
 }
-
+.sheetSubLinks a, .sheetLinks a{
+  color: inherit;
+  text-decoration: none;
+}
 .Left {
   display: flex;
   justify-content: left;
@@ -112,9 +115,12 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 .dropdown {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  border: 1px solid rgba(231, 231, 231, 0.5);
+  left: -20%;
+  background-color: #FFFFFFA6;
+  backdrop-filter: blur(63px);
+  -webkit-backdrop-filter: blur(63px);
+  box-shadow: 0px 4px 29.7px 0px rgba(65, 65, 65, 0.12);
+  border: none;
   display: flex;
   flex-direction: column;
   min-width: 160px;
@@ -124,7 +130,6 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 2000;
 }
-
 .dropdownWrapper:hover .dropdown {
   opacity: 1;
   pointer-events: all;
@@ -338,3 +343,20 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 
 
 
+.servicesLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdownChevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.dropdownWrapper:hover .dropdownChevron {
+  transform: rotate(180deg);
+}

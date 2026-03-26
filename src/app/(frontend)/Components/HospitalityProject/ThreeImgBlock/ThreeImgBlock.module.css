@@ -1,0 +1,114 @@
+.main {
+  width: 100%;
+  background-color: #ffffff;
+  padding:
+    0px
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+    clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+
+.desktopGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.03);
+}
+
+.mobileCarousel {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding:
+      0px
+      clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+      clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+      clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  }
+
+  .desktopGrid {
+    display: none;
+  }
+
+  .mobileCarousel {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+    width: 100%;
+  }
+
+
+  .embla {
+    overflow: hidden;
+    width: 100%;
+  }
+
+
+  .emblaContainer {
+    display: flex;
+    gap: 15px;
+  }
+
+  .emblaSlide {
+    flex: 0 0 90%;
+    min-width: 0;
+  }
+
+  .slideImageWrap {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .arrows {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+    padding-top: 4px;
+  }
+
+  .arrowBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+  }
+
+  .muted {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+}
+
+[dir='rtl'] .emblaContainer {
+  direction: rtl;
+}
+
+[dir='rtl'] .arrows {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}

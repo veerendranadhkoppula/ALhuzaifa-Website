@@ -1,0 +1,61 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+   padding:
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+.MainContainer{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 160px;
+    width: 100%;
+}
+.Top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+}
+.Top h3{
+    font-size: var(--fs-25);
+    font-weight: 700;
+    color: #414141;
+    text-transform: capitalize;
+    font-family: var(--font-poppins);
+}
+.Bottom{
+    display: flex;
+    justify-content: left;
+    
+}
+.Bottom p{
+    font-size: var(--fs-18);
+    font-weight: 400;
+    color: #414141;
+    font-family: var(--font-poppins);
+    margin: 0;
+    max-width: 806px;
+}
+@media (max-width: 640px) {
+   .main{
+    padding: 80px 24px 80px 24px;
+   }
+    .Top{
+       display: none;
+    }
+    .Bottom p{
+        font-size: 14px;
+        max-width: 100%;
+    }
+}
+[dir='rtl'] .Bottom {
+  justify-content: right;
+}

@@ -130,3 +130,15 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
 [dir="rtl"] .link svg {
   transform: scaleX(-1);
 }
+[dir="rtl"] .imageTitle {
+  font-family: var(--font-alexandria);
+  font-size: var(--fs-54);
+}
+[dir="rtl"] .desc {
+  font-family: var(--font-kufi);
+}
+@media (max-width: 640px) {
+  [dir="rtl"] .imageTitle {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,54 @@
+.Main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    background: url('./1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100svh;
+}
+.MainContainer{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding:
+0px
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+clamp(50px, calc(50px + (50 * ((100vw - 320px) / 1120))), 100px)
+clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+
+}
+.MainContainer h3{
+    font-size: var(--fs-46);
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: var(--font-pp-hatton);
+    max-width: 600px;
+}
+.MainContainer p{
+    font-size: var(--fs-18);
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 130%;
+    font-family: var(--font-poppins);
+    max-width: 512px;
+}
+@media (max-width: 768px) {
+    .MainContainer h3{
+        font-size: 24px;
+        max-width: 100%;
+    }
+    .MainContainer p{
+        font-size: 14px;
+        max-width: 100%;
+    }
+    .MainContainer{
+        gap: 8px;
+        padding: 0px 24px 50px 24px;
+    }
+}

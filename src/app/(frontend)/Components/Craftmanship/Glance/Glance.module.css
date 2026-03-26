@@ -1,0 +1,213 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding:
+    0px
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
+    clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
+    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+
+.MainContainer {
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-25);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+}
+
+
+.desktopSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.desktopGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+gap: clamp(20px, calc(20px + (35 * ((100vw - 320px) / 1120))), 55px);
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 369px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.03);
+}
+
+.cardTitle {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  color: #414141;
+  margin: 0;
+  margin-top: 25px;
+}
+
+.cardDesc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+  margin-top: 1px;
+  line-height: 140%;
+}
+
+
+.mobileSection {
+  display: none;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.mobileTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.arrowBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.muted {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.emblaContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.emblaSlide {
+  flex: 0 0 75%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;   
+}
+
+.slideImageWrap {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .desktopSection {
+    display: none;
+  }
+
+  .mobileSection {
+    display: flex;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+.mobileTop{
+    padding-right: 24px;
+}
+
+  .cardDesc {
+    font-size: 14px;
+    margin-top: 1px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+  .main{
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .desktopGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .imageWrap {
+    height: 280px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .imageWrap {
+    height: 128px;
+  }
+
+
+}
+
+[dir='rtl'] .heading {
+  font-family: var(--font-kufi);
+}
+
+[dir='rtl'] .cardTitle,
+[dir='rtl'] .cardDesc {
+  font-family: var(--font-kufi);
+  text-align: right;
+}
+
+[dir='rtl'] .mobileTop {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .arrows {
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .emblaContainer {
+  direction: rtl;
+}

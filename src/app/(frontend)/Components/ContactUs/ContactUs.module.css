@@ -1,0 +1,12 @@
+.mobileFormSection {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .mobileFormSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #ffffff;
+  }
+}

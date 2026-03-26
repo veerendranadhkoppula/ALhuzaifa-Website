@@ -6,6 +6,11 @@ const defaultLocale = 'en'
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
+
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api')) {
+    return NextResponse.next()
+  }
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   )
@@ -16,5 +21,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api|favicon.ico|fonts|images|icons|.*\\..*).*)'],
+  matcher: ['/((?!_next|api|admin|favicon.ico|fonts|images|icons|.*\\..*).*)'],
 }

@@ -5,22 +5,22 @@ import TwoBlock from './TwoBlock/TwoBlock'
 import Hospitality from './Hospitality/Hospitality'
 import LogosLoop from './LogosLoop/LogosLoop'
 import Residence from './Residence/Residence'
-import SignatureClosets from './SignatureClosets/SignatureClosets'
+import SignatureCloset from './SignatureCloset/SignatureCloset'
 import WorldAlhuzaifa from './WorldAlhuzaifa/WorldAlhuzaifa'
 import Contact from './Contact/Contact'
 
-const Home = () => {
+const Home = ({ locale, hospitalityProjects, residentialProjects,brochureUrl  }) => {
   return (
     <>
       <Landing />
       <TextContainer />
       <TwoBlock />
-      <Hospitality />
+      <Hospitality projects={hospitalityProjects} locale={locale} />
       <LogosLoop />
-      <Residence />
-      <SignatureClosets />
+      <Residence projects={residentialProjects} locale={locale} />
+      <SignatureCloset />
       <WorldAlhuzaifa />
-      <Contact />
+      <Contact brochureUrl={brochureUrl} /> 
     </>
   )
 }

@@ -41,3 +41,12 @@
     }
     
 }
+[dir='rtl'] .MainContainer h3 {
+    font-family: var(--font-alexandria);
+    font-size: var(--fs-96);
+}
+@media (max-width: 640px) {
+    [dir='rtl'] .MainContainer h3 {
+        font-size: 32px;
+    }
+}
