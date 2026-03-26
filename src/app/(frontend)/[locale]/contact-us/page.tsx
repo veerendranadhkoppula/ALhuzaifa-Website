@@ -1,8 +1,8 @@
-import ContactUS from '../../Components/ContactUS/ContactUS'
+import ContactUs from '../../Components/ContactUs/ContactUs'
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  return <ContactUS />
+  return <ContactUs />
 }
 
 export function generateStaticParams() {
