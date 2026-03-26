@@ -12,3 +12,4 @@ export default async function ResidentialProjectPage({
   if (!project) return notFound()
   return <ResidentialProject project={project} locale={locale} />
 }
+
