@@ -68,6 +68,8 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-weight: 700;
     color: #69594F;
     margin: 0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
     font-family: var(--font-poppins);
 }
 .mob{
@@ -113,4 +115,14 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 
 [dir="rtl"] .explore svg {
   transform: scaleX(-1);
+}
+[dir="rtl"] .top h3, [dir="rtl"] .top p {
+  font-family: var(--font-kufi);
+}
+[dir="rtl"] .explore h4 {
+  font-family: var(--font-kufi);
+}
+.bottom a{
+    text-decoration: none;
+    color: inherit;
 }

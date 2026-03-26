@@ -190,3 +190,19 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 [dir="rtl"] .leftbottommob svg {
   transform: scaleX(-1);
 }
+.left a{
+    text-decoration: none;
+    color: inherit;
+}
+[dir="rtl"] .lefttop h3 {
+  font-family: var(--font-kufi);
+  
+}
+[dir="rtl"] .lefttop p {
+  font-family: var(--font-kufi);
+  
+}
+[dir="rtl"] .leftbottom p {
+  font-family: var(--font-kufi);
+  
+}

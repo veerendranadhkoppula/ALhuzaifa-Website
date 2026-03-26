@@ -142,3 +142,7 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
     font-size: 28px;
   }
 }
+.textContent a {
+  text-decoration: none;
+  color: inherit;
+}

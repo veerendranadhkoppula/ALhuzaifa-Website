@@ -5,9 +5,13 @@ import Image from 'next/image'
 import closet from './1.png'
 import closetm from './1m.png'
 import { useTranslation } from '../../../hooks/useTranslation'
+import Link from 'next/link'
+import { useLanguage } from '../../../context/LanguageContext'
 
 const SignatureCloset = () => {
   const { t } = useTranslation()
+  const { language } = useLanguage()
+  const locale = language
 
   return (
     <div className={styles.Main}>
@@ -17,12 +21,17 @@ const SignatureCloset = () => {
             <h3>{t.signatureClosets.title}</h3>
             <p>{t.signatureClosets.desc}</p>
           </div>
-          <div className={styles.leftbottom}>
+          <Link href={`/${locale}/craftmanship`} className={styles.leftbottom}>
             <p>{t.signatureClosets.link}</p>
-            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square"/>
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
+              <path
+                d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
+                stroke="#69594F"
+                strokeWidth="2"
+                strokeLinecap="square"
+              />
             </svg>
-          </div>
+          </Link>
         </div>
         <div className={styles.right}>
           <div className={styles.righttop}>
@@ -36,8 +45,19 @@ const SignatureCloset = () => {
           </div>
           <div className={styles.leftbottommob}>
             <p>{t.signatureClosets.link}</p>
-            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square"/>
+            <svg
+              width="17"
+              height="14"
+              viewBox="0 0 17 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
+                stroke="#69594F"
+                strokeWidth="2"
+                strokeLinecap="square"
+              />
             </svg>
           </div>
         </div>

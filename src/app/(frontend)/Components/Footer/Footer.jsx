@@ -54,9 +54,9 @@ const Footer = () => {
             <ul className={styles.columnList}>
               <li><a href="tel:+971800888247">{t.footer.phone}</a></li>
               <li><a href="mailto:Info@alhuzaifaproperties.com">{t.footer.email}</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.instagram}</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.linkedin}</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.facebook}</a></li>
+              <li><a href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.instagram}</a></li>
+              <li><a href="https://www.linkedin.com/company/al-huzaifa-furniture/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.linkedin}</a></li>
+              <li><a href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.facebook}</a></li>
             </ul>
           </div>
         </div>
