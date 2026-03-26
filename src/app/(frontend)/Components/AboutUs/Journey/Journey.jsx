@@ -69,11 +69,13 @@ useEffect(() => {
   if (timelineRef.current) {
     const buttons = timelineRef.current.querySelectorAll('button')
     if (buttons[selectedIndex]) {
-      buttons[selectedIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
-      })
+     
+      const container = timelineRef.current
+      const btn = buttons[selectedIndex]
+      const btnLeft = btn.offsetLeft
+      const btnWidth = btn.offsetWidth
+      const containerWidth = container.offsetWidth
+      container.scrollLeft = btnLeft - containerWidth / 2 + btnWidth / 2
     }
   }
 
