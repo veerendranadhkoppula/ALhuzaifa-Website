@@ -44,7 +44,6 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  flex: 1;
   min-width: 0;
 }
 
