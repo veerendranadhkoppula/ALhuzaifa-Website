@@ -23,72 +23,107 @@ const NextArrow = () => (
 )
 
 const Journey = () => {
-    const { t } = useTranslation()
-    const { isArabic } = useLanguage()
+  const { t } = useTranslation()
+  const { isArabic } = useLanguage()
 
-const milestones = t.aboutUs.milestones.map((m, i) => ({
-  ...m,
-  img: i % 2 === 0 ? one : two
-}))
+  const milestones = t.aboutUs.milestones.map((m, i) => ({
+    ...m,
+    img: i % 2 === 0 ? one : two
+  }))
+
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
   const [lineStyle, setLineStyle] = useState({ left: '0px', width: '0px' })
   const timelineRef = useRef(null)
+  const autoPlayRef = useRef(null)
 
   const current = milestones[selectedIndex]
   const next = milestones[selectedIndex + 1] ?? null
 
-const updateLine = () => {
-  if (!timelineRef.current) return
-  const buttons = timelineRef.current.querySelectorAll('button')
-  if (!buttons[selectedIndex] || !buttons[selectedIndex + 1]) return
-  const containerRect = timelineRef.current.getBoundingClientRect()
-  const startBtn = buttons[selectedIndex]
-  const endBtn = buttons[selectedIndex + 1]
-  const startRect = startBtn.getBoundingClientRect()
-  const endRect = endBtn.getBoundingClientRect()
-
-  const isRtl = document.documentElement.dir === 'rtl'
-
-  let left, right
-
-  if (isRtl) {
-    left = endRect.right - containerRect.left + 8
-    right = startRect.left - containerRect.left - 8
-  } else {
-    left = startRect.right - containerRect.left + 8
-    right = endRect.left - containerRect.left - 8
-  }
-
-  setLineStyle({ left: `${left}px`, width: `${Math.max(right - left, 0)}px` })
-}
-
-useEffect(() => {
-  updateLine()
-
-  if (timelineRef.current) {
+  const updateLine = () => {
+    if (!timelineRef.current) return
     const buttons = timelineRef.current.querySelectorAll('button')
-    if (buttons[selectedIndex]) {
-     
-      const container = timelineRef.current
-      const btn = buttons[selectedIndex]
-      const btnLeft = btn.offsetLeft
-      const btnWidth = btn.offsetWidth
-      const containerWidth = container.offsetWidth
-      container.scrollLeft = btnLeft - containerWidth / 2 + btnWidth / 2
+    if (!buttons[selectedIndex] || !buttons[selectedIndex + 1]) return
+    const containerRect = timelineRef.current.getBoundingClientRect()
+    const startBtn = buttons[selectedIndex]
+    const endBtn = buttons[selectedIndex + 1]
+    const startRect = startBtn.getBoundingClientRect()
+    const endRect = endBtn.getBoundingClientRect()
+
+    const isRtl = document.documentElement.dir === 'rtl'
+
+    let left, right
+
+    if (isRtl) {
+      left = endRect.right - containerRect.left + 8
+      right = startRect.left - containerRect.left - 8
+    } else {
+      left = startRect.right - containerRect.left + 8
+      right = endRect.left - containerRect.left - 8
     }
+
+    setLineStyle({ left: `${left}px`, width: `${Math.max(right - left, 0)}px` })
   }
 
-  window.addEventListener('resize', updateLine)
-  return () => window.removeEventListener('resize', updateLine)
-}, [selectedIndex])
-  const handleSelect = (index) => {
-    if (index === selectedIndex || animating) return
+  useEffect(() => {
+    updateLine()
+
+    if (timelineRef.current) {
+      const buttons = timelineRef.current.querySelectorAll('button')
+      if (buttons[selectedIndex]) {
+        const container = timelineRef.current
+        const btn = buttons[selectedIndex]
+        const btnLeft = btn.offsetLeft
+        const btnWidth = btn.offsetWidth
+        const containerWidth = container.offsetWidth
+        container.scrollLeft = btnLeft - containerWidth / 2 + btnWidth / 2
+      }
+    }
+
+    window.addEventListener('resize', updateLine)
+    return () => window.removeEventListener('resize', updateLine)
+  }, [selectedIndex])
+
+const selectedIndexRef = useRef(0)
+
+  const goToIndex = (index) => {
     setAnimating(true)
     setTimeout(() => {
       setSelectedIndex(index)
+      selectedIndexRef.current = index
       setAnimating(false)
     }, 300)
+  }
+
+  const startAutoPlay = () => {
+    stopAutoPlay()
+    autoPlayRef.current = setInterval(() => {
+      const isRtl = document.documentElement.dir === 'rtl'
+      const cur = selectedIndexRef.current
+      const last = milestones.length - 1
+      const nextIdx = isRtl
+        ? cur > 0 ? cur - 1 : last
+        : cur < last ? cur + 1 : 0
+      goToIndex(nextIdx)
+    }, 2000)
+  }
+  const stopAutoPlay = () => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current)
+      autoPlayRef.current = null
+    }
+  }
+
+  useEffect(() => {
+    startAutoPlay()
+    return () => stopAutoPlay()
+  }, [isArabic, milestones.length])
+
+  const handleSelect = (index) => {
+    if (index === selectedIndex || animating) return
+    stopAutoPlay()
+    goToIndex(index)
+    startAutoPlay()
   }
 
   const handlePrev = () => {
@@ -104,7 +139,7 @@ useEffect(() => {
       <div className={styles.MainContainer}>
 
         <div className={styles.top}>
-        <h3>{t.aboutUs.journeyTitle}</h3>
+          <h3>{t.aboutUs.journeyTitle}</h3>
         </div>
 
         <div className={`${styles.content} ${animating ? styles.fadeOut : styles.fadeIn}`}>
@@ -139,22 +174,22 @@ useEffect(() => {
             <span className={styles.year}>{current.year}</span>
             <h4 className={styles.title}>{current.title}</h4>
             <p className={styles.desc}>{current.desc}</p>
-        <div className={styles.mobileArrows}>
-  <button
-    className={`${styles.arrowBtn} ${selectedIndex === 0 ? styles.arrowMuted : ''}`}
-    onClick={handlePrev}
-    disabled={selectedIndex === 0}
-  >
-    <PrevArrow />
-  </button>
-  <button
-    className={`${styles.arrowBtn} ${selectedIndex === milestones.length - 1 ? styles.arrowMuted : ''}`}
-    onClick={handleNext}
-    disabled={selectedIndex === milestones.length - 1}
-  >
-    <NextArrow />
-  </button>
-</div>
+            <div className={styles.mobileArrows}>
+              <button
+                className={`${styles.arrowBtn} ${selectedIndex === 0 ? styles.arrowMuted : ''}`}
+                onClick={handlePrev}
+                disabled={selectedIndex === 0}
+              >
+                <PrevArrow />
+              </button>
+              <button
+                className={`${styles.arrowBtn} ${selectedIndex === milestones.length - 1 ? styles.arrowMuted : ''}`}
+                onClick={handleNext}
+                disabled={selectedIndex === milestones.length - 1}
+              >
+                <NextArrow />
+              </button>
+            </div>
             <div className={styles.mobileImg}>
               <Image src={current.img} alt={current.title} fill className={styles.img} />
             </div>
