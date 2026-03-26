@@ -44,7 +44,6 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  flex: 1;
   min-width: 0;
 }
 
@@ -67,6 +66,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   margin: 0;
   line-height: 130%;
   text-align: center;
+  max-width: 400px;
   font-family: var(--font-poppins);
 }
 
@@ -242,4 +242,16 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
 [dir="rtl"] .newsletter h5 svg,
 [dir="rtl"] .slideInner h5 svg {
   transform: scaleX(-1);
+}
+[dir="rtl"] .conat h3, [dir="rtl"] .newsletter h3,
+[dir="rtl"] .Brochure h3{
+  font-family: var(--font-alexandria);
+}
+[dir="rtl"] .conat p, [dir="rtl"] .newsletter p,
+[dir="rtl"] .Brochure p{
+  font-family: var(--font-kufi);
+}
+[dir="rtl"] .conat h5, [dir="rtl"] .newsletter h5,
+[dir="rtl"] .Brochure h5{
+  font-family: var(--font-kufi);
 }

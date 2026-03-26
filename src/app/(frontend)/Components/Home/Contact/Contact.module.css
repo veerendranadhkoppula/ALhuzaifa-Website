@@ -243,3 +243,15 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
 [dir="rtl"] .slideInner h5 svg {
   transform: scaleX(-1);
 }
+[dir="rtl"] .conat h3, [dir="rtl"] .newsletter h3,
+[dir="rtl"] .Brochure h3{
+  font-family: var(--font-alexandria);
+}
+[dir="rtl"] .conat p, [dir="rtl"] .newsletter p,
+[dir="rtl"] .Brochure p{
+  font-family: var(--font-kufi);
+}
+[dir="rtl"] .conat h5, [dir="rtl"] .newsletter h5,
+[dir="rtl"] .Brochure h5{
+  font-family: var(--font-kufi);
+}

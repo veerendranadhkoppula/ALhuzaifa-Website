@@ -210,3 +210,9 @@
     height:13px;
   }
 }
+[dir='rtl'] .title, [dir='rtl'] .successTitle {
+  font-family: var(--fs-alexandria);
+}
+[dir='rtl'] .desc, [dir='rtl'] .successDesc , [dir='rtl'] .input,  [dir='rtl'] .submitBtn{
+  font-family: var(--font-kufi);
+}
