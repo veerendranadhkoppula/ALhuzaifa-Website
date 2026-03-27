@@ -29,6 +29,9 @@
   color: #414141;
   margin: 0;
 }
+[dir='rtl'] .title {
+  font-family: var(--font-kufi);
+}
 
 .desc {
   font-family: var(--font-poppins);
@@ -37,6 +40,9 @@
   color: #414141;
   margin: 0;
   line-height: 140%;
+}
+[dir='rtl'] .desc {
+  font-family: var(--font-kufi);
 }
 
 
@@ -86,6 +92,9 @@
   text-align: center;
   padding: 0 20px;
 }
+[dir='rtl'] .overlayTitle {
+  font-family: var(--font-alexandria);
+}
 
 .descRow {
   display: grid;
@@ -106,6 +115,9 @@
   margin: 0;
   line-height: 140%;
   max-width: 90%;
+}
+[dir='rtl'] .itemDesc {
+  font-family: var(--font-kufi);
 }
 
 
@@ -154,6 +166,9 @@
     text-decoration: underline;
     text-underline-offset: 4px;
   }
+  [dir='rtl'] .mobileItemTitle {
+    font-family: var(--font-kufi);
+  }
 
   .mobileItemDesc {
     font-family: var(--font-poppins);
@@ -163,6 +178,9 @@
     margin: 0;
     line-height: 140%;
     margin-top: 3px;
+  }
+  [dir='rtl'] .mobileItemDesc {
+    font-family: var(--font-kufi);
   }
 }
 

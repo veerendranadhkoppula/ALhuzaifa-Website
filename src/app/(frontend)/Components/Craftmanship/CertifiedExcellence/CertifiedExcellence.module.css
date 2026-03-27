@@ -31,6 +31,9 @@
   color: #414141;
   margin: 0;
 }
+[dir="rtl"] .title {
+  font-family: var(--font-kufi);
+}
 
 .desc {
   font-family: var(--font-poppins);
@@ -40,6 +43,9 @@
   margin: 0;
   line-height: 140%;
   max-width: 513px;
+}
+[dir="rtl"] .desc {
+  font-family: var(--font-kufi);
 }
 
 
@@ -80,6 +86,9 @@
   text-align: center;
   line-height: 1.4;
   max-width: 212px;
+}
+[dir="rtl"] .cardLabel {
+  font-family: var(--font-kufi);
 }
 
 .mobileList {
@@ -131,6 +140,10 @@
     text-align: left;
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+  [dir="rtl"] .mobileItemText {
+    font-family: var(--font-kufi);
+    text-align: right;
   }
   .mobileItem svg{
     width: 13px;

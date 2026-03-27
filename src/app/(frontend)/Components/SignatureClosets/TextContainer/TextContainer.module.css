@@ -25,6 +25,9 @@
     margin: 0;
     font-family: var(--font-poppins);
 }
+[dir="rtl"] .MainContainer h3{
+    font-family: var(--font-kufi);
+}
 .MainContainer p{
     font-size: var(--fs-18);
     font-weight: 400;
@@ -33,6 +36,9 @@
     line-height: 140%;
     font-family: var(--font-poppins);
     max-width: 50%;
+}
+[dir="rtl"] .MainContainer p{
+    font-family: var(--font-kufi);
 }
 @media (max-width: 640px) {
     .Main{

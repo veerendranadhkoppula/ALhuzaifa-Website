@@ -369,3 +369,9 @@ clamp(12px, calc(12px + (48 * ((100vw - 320px) / 1120))), 60px)
 [dir='rtl'] .submitBtn {
  align-items: center;
 }
+[dir='rtl'] .heading{
+  font-family: var(--font-alexandria);
+}
+[dir='rtl'] .input , [dir='rtl'] .select , [dir='rtl'] .textarea , [dir='rtl'] .phoneInput, [dir='rtl'] .itemLabel , [dir='rtl'] .itemDial, [dir='rtl'] .selectPlaceholder, [dir='rtl'] .dropdownSearch, [dir='rtl'] .dropdownItem , [dir='rtl'] .submitBtn , [dir='rtl'] .statusRow , [dir='rtl'] .successMsg {
+  font-family: var(--font-kufi);
+}

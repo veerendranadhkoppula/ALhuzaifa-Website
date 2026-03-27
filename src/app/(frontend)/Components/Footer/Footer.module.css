@@ -48,6 +48,9 @@
   color: #414141;
   margin: 0;
 }
+[dir="rtl"] .columnTitle {
+  font-family: var(--font-kufi);
+}
 
 .columnList {
   list-style: none;
@@ -66,6 +69,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+[dir="rtl"] .columnList li a {
+  font-family: var(--font-kufi);
+}
+
 
 .columnList li a:hover {
   text-decoration: underline;
@@ -100,7 +107,9 @@
   margin: 0;
   text-align: center;
 }
-
+[dir="rtl"] .copyright {
+  font-family: var(--font-kufi);
+}
 
 @media (min-width: 901px) and (max-width: 1024px) {
   .topContainer {

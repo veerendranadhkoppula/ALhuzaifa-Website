@@ -36,3 +36,6 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         padding: 80px 24px;
     }
 }
+[dir="rtl"] .MainContainer p{
+    font-family: var(--font-alexandria);
+}

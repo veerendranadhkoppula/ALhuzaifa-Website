@@ -15,6 +15,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   transform: translateY(0);
   transition: transform 0.4s ease-in-out;
 }
+.activeLink {
+  font-weight: 700 !important;
+}
 
 .hide {
   transform: translateY(-100%);
@@ -47,6 +50,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   cursor: pointer;
   font-family: var(--font-poppins);
 }
+[dir="rtl"] .Left h4{
+  font-family: var(--font-kufi);
+}
 
 .Center {
   display: flex;
@@ -77,7 +83,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   cursor: pointer;
   font-family: var(--font-poppins);
 }
-
+[dir="rtl"] .Right h4{
+  font-family: var(--font-kufi);
+}
 .Right h3 {
   font-size: var(--fs-18);
   font-weight: 400;
@@ -86,7 +94,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   cursor: pointer;
   font-family: var(--font-kufi);
 }
-
+[dir="rtl"] .Right h3{
+  font-family: var(--font-poppins);
+}
 .MobileLeft {
   display: none;
 }
@@ -111,7 +121,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   cursor: pointer;
   font-family: var(--font-poppins);
 }
-
+[dir="rtl"] .dropdownWrapper h4{
+  font-family: var(--font-kufi);
+}
 .dropdown {
   position: absolute;
   top: 100%;
@@ -144,6 +156,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   padding: 12px 20px;
   cursor: pointer;
   display: block;
+}
+[dir="rtl"] .dropdown span{
+  font-family: var(--font-kufi);
 }
 
 .dropdown span:hover {
@@ -225,7 +240,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   font-weight: 600;
   color: #414141;
 }
-
+[dir="rtl"] .sheetLinkItem span{
+  font-family: var(--font-kufi);
+}
 .sheetSubLinks {
   display: flex;
   flex-direction: column;
@@ -243,7 +260,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   font-weight: 400;
   color: #414141;
 }
-
+[dir="rtl"] .sheetSubItem span{
+  font-family: var(--font-kufi);
+}
 .sheetBottom {
   margin-top: auto;
   display: flex;
@@ -258,6 +277,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   font-size: 14px;
   font-weight: 400;
   color: #414141;
+}
+[dir="rtl"] .arabicText{
+  font-family: var(--font-poppins);
 }
 .Main a{
   color: inherit;

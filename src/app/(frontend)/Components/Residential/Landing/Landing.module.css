@@ -33,6 +33,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .top h3 {
+  font-family: var(--font-alexandria);
+  font-size: var(--fs-96);
+}
 .top img{
     width: 100%;
     max-width: 1080px;  
@@ -54,6 +58,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
+[dir="rtl"] .bottom h3 {
+  font-family: var(--font-kufi);
+}
 .bottom p{
     font-size: var(--fs-18);
     font-weight: 400;
@@ -62,6 +69,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     line-height: 130%;
     max-width: 1030px;
     font-family: var(--font-poppins);
+}
+[dir="rtl"] .bottom p {
+  font-family: var(--font-kufi);
 }
 @media (max-width: 1040px) {
     .main{
@@ -103,4 +113,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         padding: 120px 24px 60px 24px;
     }
   
+}
+@media (max-width: 640px) {
+   [dir="rtl"] .top h3 {
+    font-size: 24px;
+}
 }

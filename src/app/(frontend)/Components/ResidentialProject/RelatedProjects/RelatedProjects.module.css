@@ -19,7 +19,9 @@
   font-family: var(--font-poppins);
   margin: 0;
 }
-
+[dir="rtl"] .heading {
+  font-family: var(--font-kufi);
+}
 
 .desktopSection {
   display: flex;
@@ -77,7 +79,9 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
+[dir="rtl"] .title {
+  font-family: var(--font-kufi);
+}
 .mobileSection {
   display: none;
 }

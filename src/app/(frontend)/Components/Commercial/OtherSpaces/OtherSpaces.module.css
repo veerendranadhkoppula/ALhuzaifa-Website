@@ -29,6 +29,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
+[dir="rtl"] .heading h3 {
+  font-family: var(--font-kufi);
+}
 .Cards{
     display: flex;
     justify-content: left;
@@ -76,6 +79,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-family: var(--font-pp-hatton);
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+[dir="rtl"] .CardBottom h4 {
+  font-family: var(--font-alexandria);
 }
 @media (max-width: 640px){
     .Cards{

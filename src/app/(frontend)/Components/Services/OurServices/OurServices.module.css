@@ -34,6 +34,9 @@
   color: #414141;
   margin: 0;
 }
+[dir="rtl"] .heading {
+  font-family: var(--font-kufi);
+}
 
 .intro {
   font-family: var(--font-poppins);
@@ -44,7 +47,9 @@
   line-height: 140%;
   padding-bottom: 55px;
 }
-
+[dir="rtl"] .intro {
+  font-family: var(--font-kufi);
+}
 
 .desktopGrid {
   display: grid;
@@ -67,6 +72,9 @@
   color: #414141;
   margin: 0;
 }
+[dir="rtl"] .serviceTitle {
+  font-family: var(--font-kufi);
+}
 
 .serviceDesc {
   font-family: var(--font-poppins);
@@ -76,7 +84,9 @@
   margin: 0;
   line-height: 140%;
 }
-
+[dir="rtl"] .serviceDesc {
+  font-family: var(--font-kufi);
+}
 
 .mobileAccordion {
   display: none;
@@ -107,6 +117,9 @@
   font-weight: 400;
   color: #414141;
 }
+[dir="rtl"] .accordionTitle {
+  font-family: var(--font-kufi);
+}
 
 .accordionIcon {
   flex-shrink: 0;
@@ -134,6 +147,9 @@
   margin: 0;
   line-height: 140%;
 }
+[dir="rtl"] .accordionDesc {
+  font-family: var(--font-kufi);
+}
 
 .cta {
   display: flex;
@@ -148,6 +164,9 @@
   text-decoration: none;
   width: fit-content;
   transition: opacity 0.2s ease;
+}
+[dir="rtl"].cta {
+  font-family: var(--font-kufi);
 }
 
 .cta:hover {

@@ -29,6 +29,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
+[dir="rtl"] .heading h3 {
+  font-family: var(--font-kufi);
+}
 .Cards{
     display: flex;
     justify-content: left;
@@ -59,12 +62,19 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .CardOneTop h3 {
+  font-family: var(--font-alexandria);
+}
+
 .CardOneTop h4{
     font-size: var(--fs-32);
     font-weight: 500;
     color: #69594F;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
+}
+[dir="rtl"] .CardOneTop h4 {
+  font-family: var(--font-alexandria);
 }
 .CardOneBottom{
     display: flex;
@@ -101,6 +111,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .CardTwoTop h3 {
+  font-family: var(--font-alexandria);
+}
 .CardTwoTop h4{
     font-size: var(--fs-32);
     font-weight: 500;
@@ -108,6 +121,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .CardTwoTop h4 {
+  font-family: var(--font-alexandria);
+}
+
 .CardTwoBottom{
     display: flex;
     justify-content: center;
@@ -143,12 +160,18 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .CardThreeTop h3 {
+  font-family: var(--font-alexandria);
+}
 .CardThreeTop h4{
     font-size: var(--fs-32);
     font-weight: 500;
     color: #69594F;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
+}
+[dir="rtl"] .CardThreeTop h4 {
+  font-family: var(--font-alexandria);
 }
 .CardThreeBottom{
     display: flex;
@@ -185,12 +208,18 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .CardFourTop h3 {
+  font-family: var(--font-alexandria);
+}
 .CardFourTop h4{
     font-size: var(--fs-32);
     font-weight: 500;
     color: #FFFFFF;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
+}
+[dir="rtl"] .CardFourTop h4 {
+  font-family: var(--font-alexandria);
 }
 .CardFourBottom{
     display: flex;

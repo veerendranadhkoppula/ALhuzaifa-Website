@@ -6,6 +6,7 @@ import Link from 'next/link'
 import logo from './1.gif'
 import { useTranslation } from '../../hooks/useTranslation'
 import { useLanguage } from '../../context/LanguageContext'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const { t } = useTranslation()
@@ -16,6 +17,9 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false)
 
   const locale = language
+  const pathname = usePathname()
+
+  const isActive = (href) => pathname === href || pathname.startsWith(href + '/')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,11 +52,11 @@ const Navbar = () => {
         <div className={styles.MainContainer}>
           <div className={styles.Left}>
             <Link href={`/${locale}/about-us`}>
-              <h4>{t.navbar.aboutUs}</h4>
+              <h4 className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>{t.navbar.aboutUs}</h4>
             </Link>
             <div className={styles.dropdownWrapper}>
               <Link href={`/${locale}/services`} className={styles.servicesLink}>
-                <h4>{t.navbar.services}</h4>
+                <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>{t.navbar.services}</h4>
                 <svg
                   className={styles.dropdownChevron}
                   width="12"
@@ -81,7 +85,7 @@ const Navbar = () => {
               </div>
             </div>
             <Link href={`/${locale}/craftmanship`}>
-              <h4>{t.navbar.craftmanship}</h4>
+              <h4 className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>{t.navbar.craftmanship}</h4>
             </Link>
           </div>
 
@@ -111,10 +115,10 @@ const Navbar = () => {
               {t.navbar.languageSwitch}
             </h3>
             <Link href={`/${locale}/portfolio`}>
-              <h4>{t.navbar.portfolio}</h4>
+              <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>{t.navbar.portfolio}</h4>
             </Link>
             <Link href={`/${locale}/contact-us`}>
-              <h4>{t.navbar.contact}</h4>
+              <h4 className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>{t.navbar.contact}</h4>
             </Link>
           </div>
 
@@ -163,7 +167,7 @@ const Navbar = () => {
           ].map((item) => (
             <Link key={item.key} href={item.href}>
               <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-                <span>{item.label}</span>
+                <span className={isActive(item.href) ? styles.activeLink : ''}>{item.label}</span>
               </div>
             </Link>
           ))}
@@ -173,7 +177,7 @@ const Navbar = () => {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
           >
             <Link href={`/${locale}/services`} onClick={() => setMenuOpen(false)}>
-              <span>{t.navbar.services}</span>
+              <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>{t.navbar.services}</span>
             </Link>
             <span
               style={{ padding: '0 8px', cursor: 'pointer' }}

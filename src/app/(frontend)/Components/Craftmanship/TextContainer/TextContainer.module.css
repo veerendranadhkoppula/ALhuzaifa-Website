@@ -25,6 +25,9 @@ align-items: center;
     text-align: center;
     font-family: var(--font-pp-hatton);
 }
+[dir="rtl"] .MainContainer h4{
+    font-family: var(--font-alexandria);
+}
 @media (max-width: 640px) {
     .Main{
         padding: 80px 24px 80px 24px;

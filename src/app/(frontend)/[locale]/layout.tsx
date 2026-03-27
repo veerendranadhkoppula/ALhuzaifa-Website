@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import { Poppins, Noto_Kufi_Arabic } from 'next/font/google'
 import { LanguageProvider } from '../context/LanguageContext'
+import LoaderWrapper from '../Components/Loader/LoaderWrapper'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default async function LocaleLayout({
   return (
     <html lang={isArabic ? 'ar' : 'en'} dir={isArabic ? 'rtl' : 'ltr'}>
       <body className={`${poppins.variable} ${kufi.variable}`}>
+        <LoaderWrapper />
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>

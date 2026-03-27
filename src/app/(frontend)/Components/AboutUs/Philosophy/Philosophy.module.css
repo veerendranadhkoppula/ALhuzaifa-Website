@@ -78,3 +78,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         padding: 0px 24px 80px 24px;
     }
 }
+[dir="rtl"] .Right h3{
+    font-family: var(--font-kufi);
+   
+}
+[dir="rtl"] .Right p{
+    font-family: var(--font-alexandria);
+}

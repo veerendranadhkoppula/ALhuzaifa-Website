@@ -41,6 +41,9 @@
   line-height: 140%;
   max-width: 800px;
 }
+[dir='rtl'] .descriptionWrap p {
+  font-family: var(--font-kufi);
+}
 
 @media (max-width: 640px) {
   .main {

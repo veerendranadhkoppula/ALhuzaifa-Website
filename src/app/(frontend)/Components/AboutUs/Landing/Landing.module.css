@@ -62,3 +62,15 @@
         padding-bottom: 40px;
     }
 }
+[dir="rtl"] .MainContainer h4{
+    font-family: var(--font-alexandria);
+    font-size: var(--fs-96);
+}
+[dir="rtl"] .MainContainer p{
+    font-family: var(--font-kufi);
+}
+@media (max-width: 640px) {
+    [dir="rtl"] .MainContainer h4{
+        font-size: 24px;
+    }
+}

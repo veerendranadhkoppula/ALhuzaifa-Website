@@ -25,7 +25,9 @@
   font-family: var(--font-poppins);
   margin: 0;
 }
-
+[dir='rtl'] .title {
+  font-family: var(--font-kufi);
+}
 .descriptionWrap p {
   font-size: var(--fs-18);
   font-weight: 400;
@@ -33,6 +35,9 @@
   font-family: var(--font-poppins);
   margin: 0;
   line-height: 140%;
+}
+[dir='rtl'] .descriptionWrap p {
+  font-family: var(--font-kufi);
 }
 
 .imageWrap {

@@ -31,6 +31,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
+[dir='rtl'] .Top h3 {
+  font-family: var(--font-kufi);
+}
 .Bottom{
     display: flex;
     justify-content: left;
@@ -43,6 +46,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-family: var(--font-poppins);
     margin: 0;
     max-width: 806px;
+}
+[dir='rtl'] .Bottom p {
+  font-family: var(--font-kufi);
 }
 @media (max-width: 640px) {
    .main{

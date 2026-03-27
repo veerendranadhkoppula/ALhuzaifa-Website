@@ -34,7 +34,9 @@ gap: clamp(24px, calc(24px + (119 * ((100vw - 320px) / 1120))), 143px);
   color: #414141;
   margin: 0;
 }
-
+[dir="rtl"] .heading {
+  font-family: var(--font-kufi);
+}
 
 .desktopRows {
   display: flex;
@@ -68,6 +70,9 @@ padding-bottom: clamp(0px, calc(0px + (50 * ((100vw - 320px) / 1120))), 50px);
   font-weight: 400;
   color: #414141;
 }
+[dir="rtl"] .rowTitle {
+  font-family: var(--font-kufi);
+}
 
 .rowDesc {
   font-family: var(--font-poppins);
@@ -76,6 +81,9 @@ padding-bottom: clamp(0px, calc(0px + (50 * ((100vw - 320px) / 1120))), 50px);
   color: #414141;
   margin: 0;
   line-height: 140%;
+}
+[dir="rtl"] .rowDesc {
+  font-family: var(--font-kufi);
 }
 
 
@@ -122,6 +130,9 @@ padding-bottom: clamp(0px, calc(0px + (50 * ((100vw - 320px) / 1120))), 50px);
   font-weight: 400;
   color: #414141;
 }
+[dir="rtl"] .accordionTitle {
+  font-family: var(--font-kufi);
+}
 
 .accordionIcon {
   flex-shrink: 0;
@@ -147,6 +158,9 @@ padding-bottom: clamp(0px, calc(0px + (50 * ((100vw - 320px) / 1120))), 50px);
   color: #414141;
   margin: 0;
   line-height: 140%;
+}
+[dir="rtl"] .accordionDesc {
+  font-family: var(--font-kufi);
 }
 
 @media (max-width: 640px) {

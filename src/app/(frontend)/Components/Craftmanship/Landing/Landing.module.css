@@ -29,6 +29,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-family: var(--font-pp-hatton);
     max-width: 600px;
 }
+[dir="rtl"] .MainContainer h3{
+    font-family: var(--font-alexandria);
+    font-size: var(--fs-96);
+}
 .MainContainer p{
     font-size: var(--fs-18);
     font-weight: 400;
@@ -37,6 +41,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     line-height: 130%;
     font-family: var(--font-poppins);
     max-width: 512px;
+}
+[dir="rtl"] .MainContainer p{
+    font-family: var(--font-kufi);
 }
 @media (max-width: 768px) {
     .MainContainer h3{
@@ -51,4 +58,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         gap: 8px;
         padding: 0px 24px 50px 24px;
     }
+}
+@media (max-width: 640px) {
+  [dir="rtl"] .MainContainer h3{
+    font-size: 28px;
+  }
+   
 }

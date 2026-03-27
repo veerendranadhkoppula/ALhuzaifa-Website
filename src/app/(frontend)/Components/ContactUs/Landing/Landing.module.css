@@ -98,7 +98,7 @@
       display: flex;
     }
   }
-  /* ── Tablet / small desktop: stack vertically ──────────────────────── */
+
   @media (min-width: 641px) and (max-width: 1100px) {
     .Main {
       height: auto;
@@ -131,4 +131,16 @@
   }
 [dir='rtl'] .contactCta svg {
   transform: scaleX(-1);
+}
+[dir='rtl'] .LeftConatiner h3 {
+  font-family: var(--font-alexandria);
+  font-size: var(--fs-96);
+}
+[dir='rtl'] .LeftConatiner p {
+  font-family: var(--font-kufi);
+}
+@media (max-width: 640px) {
+  [dir='rtl'] .LeftConatiner h3 {
+    font-size: 28px;
+  }
 }

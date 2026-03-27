@@ -77,3 +77,9 @@
 [dir='rtl'] .socialslist{
    justify-content: right;
 }
+[dir='rtl'] .socialslist p, [dir='rtl'] .phone p, [dir='rtl'] .email p, [dir='rtl'] .adress p{
+   font-family: var(--font-kufi);
+}
+[dir='rtl'] .adress h3, [dir='rtl'] .email h3, [dir='rtl'] .phone h3, [dir='rtl'] .social h3{
+   font-family: var(--font-alexandria);
+}

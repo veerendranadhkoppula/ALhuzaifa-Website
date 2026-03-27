@@ -111,3 +111,12 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         width: 13px;
     }
 }
+[dir="rtl"] .top h3{
+    font-family: var(--font-kufi);
+}
+[dir="rtl"] .top p{
+    font-family: var(--font-kufi);
+}
+[dir="rtl"] .content h4{
+    font-family: var(--font-kufi);
+}

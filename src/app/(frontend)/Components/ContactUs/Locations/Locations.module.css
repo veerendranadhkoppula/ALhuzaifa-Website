@@ -170,3 +170,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
  [dir='rtl'] .adresstop svg {
   transform: scaleX(-1);
 }
+[dir="rtl"] .heading p, [dir="rtl"] .adresstop h4, [dir="rtl"] .addressbottom p, [dir="rtl"] .addressbottom p {
+  font-family: var(--font-kufi);
+
+}

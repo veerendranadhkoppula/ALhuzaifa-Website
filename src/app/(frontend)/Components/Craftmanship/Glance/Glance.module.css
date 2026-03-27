@@ -22,7 +22,9 @@
   color: #414141;
   margin: 0;
 }
-
+[dir="rtl"] .heading {
+  font-family: var(--font-kufi);
+}
 
 .desktopSection {
   display: flex;
@@ -69,7 +71,9 @@ gap: clamp(20px, calc(20px + (35 * ((100vw - 320px) / 1120))), 55px);
   margin: 0;
   margin-top: 25px;
 }
-
+[dir="rtl"] .cardTitle {
+  font-family: var(--font-kufi);
+}
 .cardDesc {
   font-family: var(--font-poppins);
   font-size: var(--fs-18);
@@ -79,7 +83,9 @@ gap: clamp(20px, calc(20px + (35 * ((100vw - 320px) / 1120))), 55px);
   margin-top: 1px;
   line-height: 140%;
 }
-
+[dir="rtl"] .cardDesc {
+  font-family: var(--font-kufi);
+}
 
 .mobileSection {
   display: none;

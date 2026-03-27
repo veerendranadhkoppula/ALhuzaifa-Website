@@ -36,6 +36,9 @@ flex-direction: column;
     margin: 0;
     font-family: var(--font-poppins);
 }
+[dir="rtl"] .top h3{
+    font-family: var(--font-kufi);
+}
 .top p{
     font-size: var(--fs-18);
     font-weight: 400;
@@ -44,6 +47,9 @@ flex-direction: column;
     line-height: 130%;
     font-family: var(--font-poppins);
     max-width: 50%;
+}
+[dir="rtl"] .top p{
+    font-family: var(--font-kufi);
 }
 .bottom{
     display: flex;

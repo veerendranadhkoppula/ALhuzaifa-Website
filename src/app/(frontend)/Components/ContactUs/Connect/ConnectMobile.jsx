@@ -44,17 +44,17 @@ const ConnectMobile = () => {
             <h3>{t.contactPage.letsConnect}</h3>
             <div className={styles.socialslist}>
               <p>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en" target="_blank" rel="noopener noreferrer">
                   {t.contactPage.instagram}
                 </a>
               </p>
               <p>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/al-huzaifa-furniture/" target="_blank" rel="noopener noreferrer">
                   {t.contactPage.linkedin}
                 </a>
               </p>
               <p>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/" target="_blank" rel="noopener noreferrer">
                   {t.contactPage.facebook}
                 </a>
               </p>
