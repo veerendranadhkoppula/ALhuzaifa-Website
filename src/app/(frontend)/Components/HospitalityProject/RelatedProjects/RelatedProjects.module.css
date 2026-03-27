@@ -186,7 +186,11 @@
   }
 }
 
-
+@media (min-width: 1025px) and (max-width: 1440px) {
+   .imageWrap {
+    height: 450px;
+  }
+}
 
 [dir='rtl'] .cardBottom svg {
   transform: scaleX(-1);

@@ -117,12 +117,23 @@
     column-gap: 32px;
     row-gap: 40px;
   }
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   .imageWrap {
+    height: 400px;
+   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .grid {
     column-gap: 48px;
   }
+  .imageWrap {
+    height: 500px;
+   }
 }
  [dir='rtl'] .cardBottom svg {
   transform: scaleX(-1);

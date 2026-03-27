@@ -117,11 +117,19 @@
     column-gap: 32px;
     row-gap: 40px;
   }
+    .imageWrap {
+    aspect-ratio: unset;
+    height: 400px;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .grid {
     column-gap: 48px;
+  }
+    .imageWrap {
+    aspect-ratio: unset;
+    height: 450px;
   }
 }
  [dir='rtl'] .cardBottom svg {

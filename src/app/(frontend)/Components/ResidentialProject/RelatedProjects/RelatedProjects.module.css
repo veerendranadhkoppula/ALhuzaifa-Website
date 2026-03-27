@@ -199,3 +199,8 @@
   flex-direction: row-reverse;
 }
 
+@media (min-width: 1025px) and (max-width: 1440px) {
+   .imageWrap {
+    height: 450px;
+  }
+}
