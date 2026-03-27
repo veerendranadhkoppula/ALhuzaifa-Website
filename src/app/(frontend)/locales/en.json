@@ -340,5 +340,15 @@
     "step3Desc": "Experience your design in 3D or Virtual Reality.",
     "step4Title": "Completion",
     "step4Desc": "Precision-built, effortlessly installed, and ready to admire."
-  }
+  },
+  "Pagenotfound": {
+  "code": "404",
+  "title": "Page not found",
+  "desc": "The page you are looking for is no longer available. Let us guide you back or assist you further.",
+  "returnLabel": "Return to",
+  "homepageLink": "Homepage",
+  "helpLabel": "Need help?",
+  "contactLink": "Contact Us"
+}
+
 }

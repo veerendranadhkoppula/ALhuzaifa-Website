@@ -35,7 +35,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 }
 [dir="rtl"] .top h3 {
   font-family: var(--font-alexandria);
-  font-size: var(--fs-96);
+
 }
 .top img{
     width: 100%;

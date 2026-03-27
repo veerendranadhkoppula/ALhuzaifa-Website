@@ -40,16 +40,20 @@ export default async function LocaleLayout({
   const { locale } = await params
   const isArabic = locale === 'ar'
 
+  // Only the root layout should render <html> and <body>.
+  // Use a wrapper div to set dir/lang and apply font variables.
   return (
-    <html lang={isArabic ? 'ar' : 'en'} dir={isArabic ? 'rtl' : 'ltr'}>
-      <body className={`${poppins.variable} ${kufi.variable}`}>
-        <LoaderWrapper />
-        <LanguageProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </LanguageProvider>
-      </body>
-    </html>
+    <div
+      lang={isArabic ? 'ar' : 'en'}
+      dir={isArabic ? 'rtl' : 'ltr'}
+      className={`${poppins.variable} ${kufi.variable}`}
+    >
+      <LoaderWrapper />
+      <LanguageProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </LanguageProvider>
+    </div>
   )
 }
