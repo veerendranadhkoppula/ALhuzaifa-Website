@@ -4,16 +4,19 @@ import Footer from '../Components/Footer/Footer'
 import { Poppins, Noto_Kufi_Arabic } from 'next/font/google'
 import { LanguageProvider } from '../context/LanguageContext'
 import LoaderWrapper from '../Components/Loader/LoaderWrapper'
+import styles from '../frontend-root.module.css'
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
   variable: '--font-poppins',
 })
 
 const kufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap',
   variable: '--font-kufi',
 })
 
@@ -46,7 +49,7 @@ export default async function LocaleLayout({
     <div
       lang={isArabic ? 'ar' : 'en'}
       dir={isArabic ? 'rtl' : 'ltr'}
-      className={`${poppins.variable} ${kufi.variable}`}
+      className={`${poppins.variable} ${kufi.variable} ${styles.frontendRoot}`}
     >
       <LoaderWrapper />
       <LanguageProvider>

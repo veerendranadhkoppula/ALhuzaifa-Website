@@ -1,0 +1,36 @@
+.frontendRoot {
+  font-family: var(--font-poppins);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+
+.frontendRoot *,
+.frontendRoot *::before,
+.frontendRoot *::after {
+  box-sizing: border-box;
+}
+
+
+.frontendRoot img,
+.frontendRoot picture,
+.frontendRoot video,
+.frontendRoot svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.frontendRoot {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.frontendRoot > main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

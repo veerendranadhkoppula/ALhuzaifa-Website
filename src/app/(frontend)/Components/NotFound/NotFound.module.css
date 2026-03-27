@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  box-sizing: border-box;
   min-height: 100svh;
   background-color: #ffffff;
  padding:
@@ -10,6 +12,11 @@
   clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
   clamp(40px, calc(40px + (10 * ((100vw - 320px) / 1120))), 50px)
   clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+}
+
+
+.main {
+  overflow-x: hidden;
 }
 
 .MainContainer {
