@@ -85,63 +85,63 @@
     "landingHeading": "Crafting spaces since 1976",
     "landingDesc": "Where contemporary design, refined materials, and meticulous detailing come together in perfect harmony.",
     "journeyTitle": "Al - Huziafa The Evolving Journey",
-    "milestones": [
-      {
-        "year": 1976,
-        "title": "Sharjah debut",
-        "desc": "Our very first showroom in Sharjah lays the cornerstone for our vision. The future of furniture fashion begins here."
-      },
-      {
-        "year": 2001,
-        "title": "UAE Expansion",
-        "desc": "We unveil luxury-living experiential showrooms across the Emirates, redefining how spaces are experienced."
-      },
-      {
-        "year": 2008,
-        "title": "Design Evolution",
-        "desc": "A pivotal chapter as we redefine our design language, blending tradition with contemporary luxury."
-      },
-      {
-        "year": 2009,
-        "title": "New Horizons",
-        "desc": "Expanding our portfolio with fresh concepts and bold design philosophies that captivate a new generation."
-      },
-      {
-        "year": 2014,
-        "title": "Regional Presence",
-        "desc": "Establishing a commanding presence across the region, synonymous with refined craftsmanship and innovation."
-      },
-      {
-        "year": 2018,
-        "title": "Design Studio Launch",
-        "desc": "Al Huzaifa Design Studio officially opens, offering bespoke interior design consultations and signature collections."
-      },
-      {
-        "year": 2020,
-        "title": "Digital Transformation",
-        "desc": "Embracing the future with a comprehensive digital presence and virtual design experiences."
-      },
-      {
-        "year": 2021,
-        "title": "Sustainability Pledge",
-        "desc": "A commitment to sustainable luxury — sourcing responsibly and designing with the future in mind."
-      },
-      {
-        "year": 2022,
-        "title": "Global Collaborations",
-        "desc": "Partnering with world-renowned designers and artisans to bring unparalleled collections to our clientele."
-      },
-      {
-        "year": 2023,
-        "title": "Signature Closets",
-        "desc": "Launching our exclusive Signature Closets line — where personal style meets architectural precision."
-      },
-      {
-        "year": 2025,
-        "title": "The Next Chapter",
-        "desc": "Continuing to shape the future of luxury living, design, and hospitality across the globe."
-      }
-    ],
+   "milestones": [
+  {
+    "year": 1976,
+    "title": "Sharjah Debut",
+    "desc": "Our very first showroom in Sharjah lays the cornerstone for our vision. The future of furniture fashion begins here."
+  },
+  {
+    "year": 2001,
+    "title": "UAE Expansion",
+    "desc": "We unveil luxury-living experiential showrooms across the Emirates, redefining how spaces are experienced."
+  },
+  {
+    "year": 2008,
+    "title": "Projects Division",
+    "desc": "Launch of our dedicated division, partnering to create exquisite turnkey concepts for F&B and hospitality."
+  },
+  {
+    "year": 2009,
+    "title": "Manufacturing Excellence",
+    "desc": "Opening of our state-of-the-art manufacturing unit, enhancing quality and agility."
+  },
+  {
+    "year": 2014,
+    "title": "Abu Dhabi Presence",
+    "desc": "Al Huzaifa Furniture arrives in the capital, bringing our signature elegance to a new audience."
+  },
+  {
+    "year": 2018,
+    "title": "Dubai Flagship",
+    "desc": "An elevated expression of luxury, our flagship showroom opens in Al Wasl, Dubai."
+  },
+  {
+    "year": 2020,
+    "title": "Innovating The Range",
+    "desc": "Expanding the Design Studio portfolio and introducing luxury wardrobes to our collection."
+  },
+  {
+    "year": 2021,
+    "title": "Design Studio Establishment",
+    "desc": "Introduction of our bespoke interior design consultancy, setting new standards for customisation."
+  },
+  {
+    "year": 2022,
+    "title": "Design Studio Expansion",
+    "desc": "Extending our design expertise to Abu Dhabi, offering tailored experiences to discerning clients."
+  },
+  {
+    "year": 2023,
+    "title": "Innovating The Range",
+    "desc": "Expanding the Design Studio portfolio and introducing luxury wardrobes to our collection."
+  },
+  {
+    "year": 2025,
+    "title": "Foray Into Real Estate",
+    "desc": "Launched Al Huzaifa Properties with debut project Solevá."
+  }
+],
     "textOne": "For 50 years, Al Huzaifa has been at the forefront of refined living. From humble beginnings to a hallmark of luxury design, our journey is defined by craftsmanship, innovation, and enduring elegance. Every chapter reflects our passion for interiors and furniture that are timeless and transformative.",
     "textTwo": "At Al Huzaifa Design Studio, we go beyond design. We curate immersive worlds of elegance, where every detail is intentional, every material speaks of refinement, and every space becomes a personal expression of luxury. From bespoke furniture to turnkey interiors, we bring vision to life with precision and artistry.",
     "philosophyTitle": "Our Philosophy",
