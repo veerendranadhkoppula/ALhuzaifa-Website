@@ -34,6 +34,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     color: #414141;
     text-transform: capitalize;
     font-family: var(--font-poppins);
+    margin: 0;
 }
 .address{
     display: flex;
@@ -55,6 +56,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-transform: capitalize;
     text-decoration: underline;
     text-underline-offset: 3px;
+    margin: 0;
     font-family: var(--font-poppins);
 }
 .addressbottom{
@@ -69,6 +71,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-weight: 400;
     color: #414141;
     text-transform: capitalize;
+    margin: 0;
     font-family: var(--font-poppins);
 }
 .RightContainer{
