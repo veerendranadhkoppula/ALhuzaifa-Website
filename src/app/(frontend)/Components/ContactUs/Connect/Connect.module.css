@@ -78,6 +78,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
     color: #414141;
     cursor: pointer;
     text-transform: capitalize;
+    margin:0;
     font-family: var(--font-poppins);
 }
 .email p{
