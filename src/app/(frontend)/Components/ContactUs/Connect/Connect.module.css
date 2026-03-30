@@ -49,6 +49,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
     color: #414141;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
+    margin: 0;
 }
 .adress p{
     font-size: var(--fs-18);
@@ -58,6 +59,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
     text-transform: capitalize;
     font-family: var(--font-poppins);
     cursor: pointer;
+    margin: 0;
 }
 .sline{
     width: 1px;
@@ -82,6 +84,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
      font-size: var(--fs-18);
     font-weight: 400;
     cursor: pointer;
+    margin: 0;
     color: #414141;
     font-family: var(--font-poppins);
 }
@@ -90,6 +93,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
     font-weight: 400;
     cursor: pointer;
     color: #414141;
+    margin: 0;
     font-family: var(--font-poppins);
 }
 @media (max-width: 640px) {

@@ -29,6 +29,7 @@
     font-size: 20px;
     font-weight: 400;
     color: #414141;
+    margin: 0;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
@@ -37,6 +38,7 @@
     font-weight: 400;
     color: #414141;
     max-width: 200px;
+    margin: 0;
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
@@ -49,6 +51,7 @@
     font-weight: 400;
     color: #414141;
     cursor: pointer;
+    margin: 0;
     font-family: var(--font-poppins);
 }
 .socialslist {
@@ -63,6 +66,7 @@
     color: #414141;
     font-family: var(--font-poppins);
     cursor: pointer;
+    margin: 0;
 }
 @media (min-width: 640px){
     .main{
