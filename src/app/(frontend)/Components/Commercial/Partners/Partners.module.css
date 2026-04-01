@@ -29,6 +29,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     color: #414141;
     text-transform: capitalize;
     font-family: var(--font-poppins);
+    margin: 0;
 }
 [dir="rtl"] .left h3 {
   font-family: var(--font-kufi);

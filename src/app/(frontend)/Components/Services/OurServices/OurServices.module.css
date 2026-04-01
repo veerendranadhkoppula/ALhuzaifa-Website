@@ -262,17 +262,11 @@
   font-family: var(--font-kufi);
 }
 
-[dir='rtl'] .MainContainer {
-  flex-direction: row-reverse;
-}
 
 [dir='rtl'] .desktopGrid {
   direction: rtl;
 }
 
-[dir='rtl'] .serviceItem {
-  align-items: flex-end;
-}
 
 [dir='rtl'] .accordionTrigger {
   flex-direction: row-reverse;
@@ -287,7 +281,7 @@
 
 [dir='rtl'] .cta {
   font-family: var(--font-kufi);
-  flex-direction: row-reverse;
+
 }
 
 [dir='rtl'] .cta svg {

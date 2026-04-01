@@ -30,6 +30,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-size: var(--fs-46);
     font-weight: 400;
     color: #414141;
+    margin: 0;
     text-transform: capitalize;
     font-family: var(--font-pp-hatton);
 }
@@ -55,6 +56,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-size: var(--fs-25);
     font-weight: 700;
     color: #414141;
+    margin: 0;
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }

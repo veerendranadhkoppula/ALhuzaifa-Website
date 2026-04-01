@@ -76,12 +76,12 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-weight: 700;
     color: #69594F;
     text-transform: capitalize;
-    font-family: var(--font-pp-hatton);
+    font-family: var(--font-poppins);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 [dir="rtl"] .CardBottom h4 {
-  font-family: var(--font-alexandria);
+  font-family: var(--font-kufi);
 }
 @media (max-width: 640px){
     .Cards{

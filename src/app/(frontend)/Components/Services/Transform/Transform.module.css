@@ -22,10 +22,14 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     display: flex;
     justify-content: left;
 }
+[dir="rtl"] .heading {
+  justify-content: right;
+}
 .heading h3{
     font-size: var(--fs-25);
     font-weight: 700;
     color: #414141;
+    margin: 0;
     text-transform: capitalize;
     font-family: var(--font-poppins);
 }
@@ -75,13 +79,14 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     font-size: var(--fs-18);
     font-weight: 700;
     color: #69594F;
+    margin: 0;
     text-transform: capitalize;
-    font-family: var(--font-pp-hatton);
+    font-family: var(--font-poppins);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 [dir="rtl"] .CardBottom h4 {
-  font-family: var(--font-alexandria);
+  font-family: var(--font-kufi);
 }
 @media (max-width: 640px){
     .Cards{
