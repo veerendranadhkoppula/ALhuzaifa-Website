@@ -10,7 +10,10 @@
     clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
     clamp(24px, calc(24px + (29 * ((100vw - 320px) / 1120))), 53px);
 }
-
+[dir='rtl'] .main {
+  padding-right: clamp(24px, calc(24px + (29 * ((100vw - 320px) / 1120))), 53px);
+  padding-left: clamp(24px, calc(24px + (289 * ((100vw - 320px) / 1120))), 313px);
+}
 .MainContainer {
   display: flex;
   justify-content: space-between;
@@ -243,7 +246,7 @@
   background: transparent;
   border: none;
   outline: none;
-  padding: 0px 20px 16px 0;
+  padding: 0px 20px 16px 6px;
   width: 100%;
   appearance: none;
   -webkit-appearance: none;
@@ -432,11 +435,7 @@
 
 [dir='rtl'] .phoneInput {
   direction: ltr;
-  text-align: left;
-}
-
-[dir='rtl'] .phoneWrap {
-  flex-direction: row-reverse;
+  text-align: right;
 }
 
 [dir='rtl'] .selectWrap {
@@ -464,7 +463,6 @@
 
 [dir='rtl'] .submitBtn {
   font-family: var(--font-kufi);
-  flex-direction: row-reverse;
 }
 
 [dir='rtl'] .submitBtn svg {

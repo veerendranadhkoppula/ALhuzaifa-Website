@@ -463,7 +463,6 @@
 
 [dir='rtl'] .submitBtn {
   font-family: var(--font-kufi);
-  flex-direction: row-reverse;
 }
 
 [dir='rtl'] .submitBtn svg {
