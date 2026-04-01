@@ -60,11 +60,20 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     flex-direction: column;
     gap: 15px;
     width: 100%;
+    overflow: hidden !important;
 }
 .card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.bottom a{
+    text-decoration: none;
+    color: inherit;
+}
+.card:hover img {
+  transform: scale(1.01);
 }
 .content{
     display: flex;

@@ -110,7 +110,7 @@
   .arrows {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap:8px;
   }
 
   .arrowBtn {

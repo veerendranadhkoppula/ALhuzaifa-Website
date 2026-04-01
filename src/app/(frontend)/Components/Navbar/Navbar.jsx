@@ -90,17 +90,8 @@ const Navbar = () => {
           </div>
 
           <div className={styles.MobileLeft} onClick={() => setMenuOpen(true)}>
-            <svg
-              width="24"
-              height="16"
-              viewBox="0 0 24 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z"
-                fill="#414141"
-              />
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="#414141" />
             </svg>
           </div>
 
@@ -138,20 +129,8 @@ const Navbar = () => {
       <div className={`${styles.sheet} ${menuOpen ? styles.sheetOpen : ''}`}>
         <div className={styles.sheetTop}>
           <button className={styles.closeBtn} onClick={() => setMenuOpen(false)}>
-            <svg
-              width="35"
-              height="35"
-              viewBox="0 0 35 35"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M26.25 8.75L8.75 26.25M8.75 8.75L26.25 26.25"
-                stroke="#414141"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M26.25 8.75L8.75 26.25M8.75 8.75L26.25 26.25" stroke="#414141" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
@@ -159,18 +138,14 @@ const Navbar = () => {
         <div className={styles.sheetDivider} />
 
         <div className={styles.sheetLinks}>
-          {[
-            { key: 'aboutUs', label: t.navbar.aboutUs, href: `/${locale}/about-us` },
-            { key: 'craftmanship', label: t.navbar.craftmanship, href: `/${locale}/craftmanship` },
-            { key: 'portfolio', label: t.navbar.portfolio, href: `/${locale}/portfolio` },
-            { key: 'contact', label: t.navbar.contact, href: `/${locale}/contact` },
-          ].map((item) => (
-            <Link key={item.key} href={item.href}>
-              <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-                <span className={isActive(item.href) ? styles.activeLink : ''}>{item.label}</span>
-              </div>
-            </Link>
-          ))}
+
+
+          <Link href={`/${locale}/about-us`}>
+            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>{t.navbar.aboutUs}</span>
+            </div>
+          </Link>
+
 
           <div
             className={styles.sheetLinkItem}
@@ -197,11 +172,7 @@ const Navbar = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
-                  fill="#414141"
-                  fillOpacity="0.5"
-                />
+                <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5" />
               </svg>
             </span>
           </div>
@@ -224,16 +195,30 @@ const Navbar = () => {
               </Link>
             </div>
           )}
+
+ 
+          <Link href={`/${locale}/craftmanship`}>
+            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>{t.navbar.craftmanship}</span>
+            </div>
+          </Link>
+
+          <Link href={`/${locale}/portfolio`}>
+            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>{t.navbar.portfolio}</span>
+            </div>
+          </Link>
+
+          <Link href={`/${locale}/contact-us`}>
+            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>{t.navbar.contact}</span>
+            </div>
+          </Link>
+
         </div>
 
         <div className={styles.sheetBottom}>
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M14.6654 8.0026C14.6654 11.6845 11.6806 14.6693 7.9987 14.6693M14.6654 8.0026C14.6654 4.32071 11.6806 1.33594 7.9987 1.33594M14.6654 8.0026H1.33203M7.9987 14.6693C4.3168 14.6693 1.33203 11.6845 1.33203 8.0026M7.9987 14.6693C6.28685 12.8718 5.33203 10.4848 5.33203 8.0026C5.33203 5.52043 6.28685 3.13337 7.9987 1.33594M7.9987 14.6693C9.71054 12.8718 10.6654 10.4848 10.6654 8.0026C10.6654 5.52043 9.71054 3.13337 7.9987 1.33594M1.33203 8.0026C1.33203 4.32071 4.3168 1.33594 7.9987 1.33594"
               stroke="#414141"

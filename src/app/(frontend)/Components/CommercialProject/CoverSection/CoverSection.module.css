@@ -19,11 +19,14 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    #000000 0%,
-    transparent 60%
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    rgba(0, 0, 0, 0) 100%
   );
   z-index: 1;
 }
+
 .bgImage {
   object-fit: cover;
   object-position: center;
@@ -71,7 +74,15 @@
   .main {
     align-items: flex-end;
   }
-
+.imageWrapper::after {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.80) 0%,
+      rgba(0, 0, 0, 0.45) 40%,
+      rgba(0, 0, 0, 0.10) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
   .MainContainer {
     padding-left: 24px;
     gap: 8px;

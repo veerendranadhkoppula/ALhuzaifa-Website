@@ -151,15 +151,21 @@
 @media (max-width: 640px) {
   .main {
     padding: 50px 24px 80px 24px;
+      align-items: stretch; 
+       box-sizing: border-box; 
+       
   }
 
   .MainContainer {
     gap: 30px;
+ 
   }
-  .tabs{
-    justify-content: space-between;
-    width: 100%;
-  }
+  .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start; 
+}
 
   .grid {
     grid-template-columns: 1fr;

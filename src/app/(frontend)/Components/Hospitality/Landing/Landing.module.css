@@ -94,7 +94,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .top img {
     flex: 0 0 100%;   
     order: 1;         
-    max-height: 200px;
+    height: 315px;
   }
     .bottom h3{
         font-size: 20px;

@@ -42,14 +42,15 @@ const handleOpen = (url) => {
 
           <div className={styles.mobileList}>
             {certificates.map((cert) => (
-              <button
-                key={cert.id}
-                className={styles.mobileItem}
-                onClick={() => handleOpen(cert.file?.url)}
-              >
-                <span className={styles.mobileItemText}>{cert.title}</span>
-                <ArrowRight />
-              </button>
+             <button
+  key={cert.id}
+  className={styles.mobileItem}
+  onClick={() => handleOpen(cert.file?.url)}
+>
+  <span className={styles.mobileItemText}>
+    {cert.title}&nbsp;<span className={styles.mobileArrowInline}><ArrowRight /></span>
+  </span>
+</button>
             ))}
           </div>
         </div>
