@@ -56,7 +56,7 @@ const locale = language
               <h2 className={styles.imageTitle}>{t.twoBlock.block2Title}</h2>
             </div>
           </div>
-          <div className={styles.textContent}>
+          <div className={styles.textContenttwo}>
             <p className={styles.desc}>{t.twoBlock.block2Desc}</p>
             <Link href={`/${locale}/services`} >
             <h5 className={styles.link}>

@@ -95,7 +95,44 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
   text-decoration: none;
   flex-shrink: 0;
 }
+.textContenttwo{
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px 50px 0 0px;
+}
+[dir="rtl"] .textContenttwo{
+   padding: 25px 0px 0 50px;
+}
 
+.desc {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  color: #414141;
+  margin: 0;
+  line-height: 150%;
+}
+
+.link {
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  color: #69594F;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #69594F;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link svg {
+  text-decoration: none;
+  flex-shrink: 0;
+}
 @media (max-width: 640px) {
   .Main {
     padding: 0 0 80px 0;
@@ -114,9 +151,12 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
     font-size: 28px;
   }
 
-  .textContent {
+  .textContent ,.textContenttwo{
     padding: 20px 24px 0 24px;
     gap: 15px;
+  }
+  [dir="rtl"] .textContenttwo{
+    padding: 20px 24px 0 24px;
   }
 
   .desc {

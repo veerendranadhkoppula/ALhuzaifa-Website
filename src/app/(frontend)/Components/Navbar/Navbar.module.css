@@ -39,6 +39,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   justify-content: left;
   flex-direction: row;
   gap: 30px;
+  width: 33%;
   align-items: center;
 }
 
@@ -58,6 +59,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 33%;
 }
 
 .Center img {
@@ -73,6 +75,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   justify-content: right;
   flex-direction: row;
   gap: 30px;
+  width: 34%;
 }
 
 .Right h4 {
@@ -289,6 +292,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .Main {
     padding: 0px 40px;
     background-color: #ffffff;
+    
   }
 
   .Left {
@@ -327,6 +331,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 @media (max-width: 640px) {
   .Main {
     padding: 0px 24px;
+    height: 80px;
     background-color: #FFFFFF;
   }
 
