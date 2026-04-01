@@ -37,8 +37,9 @@ const Locations = () => {
               </div>
               <div className={styles.addressbottom}>
                 <p>{t.contactPage.dubaiAddress}</p>
+                 <p>{t.contactPage.dubaiPhone}</p>
               </div>
-              <p>{t.contactPage.dubaiPhone}</p>
+             
             </div>
             <div className={styles.address}>
               <div className={styles.adresstop}>

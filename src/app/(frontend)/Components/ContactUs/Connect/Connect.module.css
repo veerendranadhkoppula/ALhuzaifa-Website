@@ -143,6 +143,7 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
 }
 [dir='rtl'] .socialslist p{
     font-family: var(--font-kufi);
+    white-space: nowrap;
 }
 [dir='rtl'] .adress h3,
 [dir='rtl'] .email h3,

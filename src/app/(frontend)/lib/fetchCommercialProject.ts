@@ -13,6 +13,14 @@ export type CommercialProjectFull = {
   }
   contentBlocks: any[]
   relatedProjects: CommercialProject[]
+  meta?: {
+    title?: string
+    description?: string
+    image?: {
+      url: string
+      alt?: string
+    }
+  }
 }
 
 export async function fetchCommercialProject(

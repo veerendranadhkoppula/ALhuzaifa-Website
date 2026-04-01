@@ -13,6 +13,14 @@ export type HospitalityProjectFull = {
   }
   contentBlocks: any[]
   relatedProjects: HospitalityProject[]
+  meta?: {
+    title?: string
+    description?: string
+    image?: {
+      url: string
+      alt?: string
+    }
+  }
 }
 
 export async function fetchHospitalityProject(

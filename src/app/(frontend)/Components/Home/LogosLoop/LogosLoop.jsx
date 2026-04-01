@@ -7,7 +7,7 @@ import logo3 from './3.svg'
 import logo4 from './4.svg'
 import logo5 from './5.svg'
 import logo6 from './6.svg'
-import logo7 from './7.svg'
+import logo7 from './5.svg'
 import logo8 from './8.svg'
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8]
