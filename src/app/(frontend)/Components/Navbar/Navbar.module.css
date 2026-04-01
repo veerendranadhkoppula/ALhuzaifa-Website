@@ -42,6 +42,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   width: 33%;
   align-items: center;
 }
+[dir="rtl"] .Left {
+  justify-content: right;
+}
 
 .Left h4 {
   font-size: var(--fs-18);
@@ -77,7 +80,9 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   gap: 30px;
   width: 34%;
 }
-
+[dir="rtl"] .Right {
+  justify-content: left;
+}
 .Right h4 {
   font-size: var(--fs-18);
   font-weight: 400;
