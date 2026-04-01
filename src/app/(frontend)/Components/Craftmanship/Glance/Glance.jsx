@@ -9,6 +9,7 @@ import four from './4.png'
 import five from './5.png'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useTranslation } from '../../../hooks/useTranslation'
+import { useLanguage } from '../../../context/LanguageContext'
 
 const PrevArrow = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,11 +35,7 @@ const ITEMS = [
 
 const Glance = () => {
   const { t } = useTranslation()
-  const [isArabic, setIsArabic] = useState(false)
-
-  useEffect(() => {
-    setIsArabic(document.documentElement.dir === 'rtl')
-  }, [])
+  const { isArabic } = useLanguage()
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -80,7 +77,6 @@ const Glance = () => {
   return (
     <div className={styles.main}>
       <div className={styles.MainContainer}>
-
 
         <div className={styles.desktopSection}>
           <h3 className={styles.heading}>{t.CraftmanshipPage.glanceTitle}</h3>

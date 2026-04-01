@@ -193,3 +193,7 @@
 [dir='rtl'] .mobileItem svg {
   transform: scaleX(-1);
 }
+[dir='rtl'] .mobileList {
+  justify-content: right;
+  align-items: flex-start;
+}

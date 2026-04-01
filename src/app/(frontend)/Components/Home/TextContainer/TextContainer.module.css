@@ -34,6 +34,9 @@ clamp(80px, calc(80px + (120 * ((100vw - 320px) / 1120))), 200px)
         text-align: left;
         line-height: 120%;
     }
+    [dir='rtl'] .MainContainer p {
+        text-align: right;
+    }
     .MainContainer{
        justify-content: left;
        align-items: flex-start;

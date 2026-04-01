@@ -206,9 +206,6 @@ gap: clamp(20px, calc(20px + (35 * ((100vw - 320px) / 1120))), 55px);
   text-align: right;
 }
 
-[dir='rtl'] .mobileTop {
-  flex-direction: row-reverse;
-}
 
 [dir='rtl'] .arrows {
   flex-direction: row-reverse;
@@ -216,4 +213,19 @@ gap: clamp(20px, calc(20px + (35 * ((100vw - 320px) / 1120))), 55px);
 
 [dir='rtl'] .emblaContainer {
   direction: rtl;
+}
+@media (max-width: 640px) {
+  [dir="rtl"] .main {
+    padding-right: clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+    padding-left: 0px;
+  }
+
+  [dir="rtl"] .mobileTop {
+    padding-right: 0;
+    padding-left: 24px;
+  }
+}
+
+[dir='rtl'] .arrows {
+  flex-direction: row-reverse;
 }

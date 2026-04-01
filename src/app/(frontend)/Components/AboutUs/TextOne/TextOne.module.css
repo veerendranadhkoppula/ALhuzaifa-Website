@@ -33,6 +33,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         text-align: left;
 
     }
+    [dir='rtl'] .MainContainer p {
+        text-align: right;
+    }
     .Main{
         padding: 80px 24px;
     }

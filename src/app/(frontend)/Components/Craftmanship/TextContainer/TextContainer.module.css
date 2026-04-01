@@ -37,6 +37,9 @@ align-items: center;
         max-width: 890%;
         text-align: left;
     }
+    [dir='rtl'] .MainContainer h4 {
+        text-align: right;
+    }
     .MainContainer{
         justify-content: left;
         align-items: flex-start;
