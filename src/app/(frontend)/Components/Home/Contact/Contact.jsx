@@ -9,7 +9,7 @@ import NewsletterPopup from './NewsletterPopup/NewsletterPopup'
 import Link from 'next/link'
 
 const ArrowSvg = () => (
-  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className={styles.arrow} width="17" height="14" viewBox="0 0 17 14" fill="none">
     <path
       d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
       stroke="#69594F"

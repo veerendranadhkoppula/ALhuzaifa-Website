@@ -135,3 +135,21 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     text-decoration: none;
     color: inherit;
 }
+.top h3,
+.top p {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.explore:hover .arrow {
+  transform: translateX(6px);
+}
+
+
+[dir="rtl"] .explore:hover .arrow {
+  transform: translateX(-6px);
+}

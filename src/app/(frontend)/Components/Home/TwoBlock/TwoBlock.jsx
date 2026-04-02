@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import styles from './TwoBlock.module.css'
 import Image from 'next/image'
 import block1 from './1.png'
@@ -7,17 +7,70 @@ import block2 from './2.png'
 import Link from 'next/link'
 import { useTranslation } from '../../../hooks/useTranslation'
 import { useLanguage } from '../../../context/LanguageContext'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const TwoBlock = () => {
   const { t } = useTranslation()
   const { language } = useLanguage()
-const locale = language
+  const locale = language
+
+  const blockRefs = useRef([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      blockRefs.current.forEach((el) => {
+        if (!el) return
+
+        const title = el.querySelector(`.${styles.imageTitle}`)
+        const desc = el.querySelector(`.${styles.desc}`)
+        const link = el.querySelector(`.${styles.link}`)
+
+        const isRTL = document.dir === 'rtl'
+
+        gsap.fromTo(
+          title,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 60%',
+            },
+          }
+        )
+
+        gsap.fromTo(
+          [desc, link],
+          { opacity: 0, x: isRTL ? 50 : -50 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 45%',
+            },
+          }
+        )
+      })
+    })
+
+    return () => ctx.revert()
+  }, [])
 
   return (
     <div className={styles.Main}>
       <div className={styles.MainContainer}>
 
-        <div className={styles.block}>
+        <div className={styles.block} ref={(el) => (blockRefs.current[0] = el)}>
           <div className={styles.imageWrapper}>
             <Image
               src={block1}
@@ -32,18 +85,18 @@ const locale = language
           </div>
           <div className={styles.textContent}>
             <p className={styles.desc}>{t.twoBlock.block1Desc}</p>
-           <Link href={`/${locale}/craftmanship`}>
-            <h5 className={styles.link}>
-              {t.twoBlock.block1Link}
-              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square"/>
-              </svg>
-            </h5>
+            <Link href={`/${locale}/craftmanship`}>
+              <h5 className={styles.link}>
+                {t.twoBlock.block1Link}
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
+                  <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2"/>
+                </svg>
+              </h5>
             </Link>
           </div>
         </div>
 
-        <div className={styles.block}>
+        <div className={styles.block} ref={(el) => (blockRefs.current[1] = el)}>
           <div className={styles.imageWrapper}>
             <Image
               src={block2}
@@ -58,13 +111,13 @@ const locale = language
           </div>
           <div className={styles.textContenttwo}>
             <p className={styles.desc}>{t.twoBlock.block2Desc}</p>
-            <Link href={`/${locale}/services`} >
-            <h5 className={styles.link}>
-              {t.twoBlock.block2Link}
-              <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square"/>
-              </svg>
-            </h5>
+            <Link href={`/${locale}/services`}>
+              <h5 className={styles.link}>
+                {t.twoBlock.block2Link}
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
+                  <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2"/>
+                </svg>
+              </h5>
             </Link>
           </div>
         </div>

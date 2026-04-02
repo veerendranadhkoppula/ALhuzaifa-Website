@@ -12,6 +12,7 @@ clamp(80px, calc(80px + (120 * ((100vw - 320px) / 1120))), 200px)
 .MainContainer{
     display: flex;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
    width: 100%;
 }

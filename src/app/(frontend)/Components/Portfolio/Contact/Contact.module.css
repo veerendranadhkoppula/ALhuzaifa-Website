@@ -56,10 +56,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   margin: 0;
   font-family: var(--font-pp-hatton);
 }
-[dir="rtl"] .conat h3, [dir="rtl"] .newsletter h3,
-[dir="rtl"] .Brochure h3{
-  font-family: var(--font-alexandria);
-}
+
 .conat p,
 .Brochure p,
 .newsletter p {
@@ -72,10 +69,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   max-width: 400px;
   font-family: var(--font-poppins);
 }
-[dir="rtl"] .conat p, [dir="rtl"] .newsletter p,
-[dir="rtl"] .Brochure p{
-  font-family: var(--font-kufi);
-}
+
 .conat h5,
 .Brochure h5,
 .newsletter h5 {
@@ -92,10 +86,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   gap: 8px;
   text-align: center;
 }
-[dir="rtl"] .conat h5, [dir="rtl"] .newsletter h5,
-[dir="rtl"] .Brochure h5{
-  font-family: var(--font-kufi);
-}
+
 .conat h5 svg,
 .Brochure h5 svg,
 .newsletter h5 svg {
@@ -166,9 +157,6 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   margin: 0;
   font-family: var(--font-pp-hatton);
 }
-[dir="rtl"] .slideInner h3{
-  font-family: var(--font-alexandria);
-}
 
 .slideInner p {
   font-size: var(--fs-14);
@@ -178,9 +166,6 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   line-height: 130%;
   text-align: center;
   font-family: var(--font-poppins);
-}
-[dir="rtl"] .slideInner p{
-  font-family: var(--font-kufi);
 }
 
 .slideInner h5 {
@@ -195,9 +180,6 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-}
-[dir="rtl"] .slideInner h5{
-  font-family: var(--font-kufi);
 }
 
 .slideInner h5 svg {
@@ -260,4 +242,36 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
 [dir="rtl"] .newsletter h5 svg,
 [dir="rtl"] .slideInner h5 svg {
   transform: scaleX(-1);
+}
+[dir="rtl"] .conat h3, [dir="rtl"] .newsletter h3,
+[dir="rtl"] .Brochure h3{
+  font-family: var(--font-alexandria);
+}
+[dir="rtl"] .conat p, [dir="rtl"] .newsletter p,
+[dir="rtl"] .Brochure p{
+  font-family: var(--font-kufi);
+}
+[dir="rtl"] .conat h5, [dir="rtl"] .newsletter h5,
+[dir="rtl"] .Brochure h5{
+  font-family: var(--font-kufi);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+
+.conat h5:hover .arrow,
+.Brochure h5:hover .arrow,
+.newsletter h5:hover .arrow,
+.slideInner h5:hover .arrow {
+  transform: translateX(6px);
+}
+
+
+[dir="rtl"] .conat h5:hover .arrow,
+[dir="rtl"] .Brochure h5:hover .arrow,
+[dir="rtl"] .newsletter h5:hover .arrow,
+[dir="rtl"] .slideInner h5:hover .arrow {
+  transform: translateX(-6px);
 }

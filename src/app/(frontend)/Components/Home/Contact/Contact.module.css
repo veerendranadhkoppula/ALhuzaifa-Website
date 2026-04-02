@@ -255,3 +255,23 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
 [dir="rtl"] .Brochure h5{
   font-family: var(--font-kufi);
 }
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+
+.conat h5:hover .arrow,
+.Brochure h5:hover .arrow,
+.newsletter h5:hover .arrow,
+.slideInner h5:hover .arrow {
+  transform: translateX(6px);
+}
+
+
+[dir="rtl"] .conat h5:hover .arrow,
+[dir="rtl"] .Brochure h5:hover .arrow,
+[dir="rtl"] .newsletter h5:hover .arrow,
+[dir="rtl"] .slideInner h5:hover .arrow {
+  transform: translateX(-6px);
+}

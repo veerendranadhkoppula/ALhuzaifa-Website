@@ -186,3 +186,8 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
   text-decoration: none;
   color: inherit;
 }
+.imageTitle,
+.desc,
+.link {
+  opacity: 0;
+}

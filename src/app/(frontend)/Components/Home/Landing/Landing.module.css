@@ -7,6 +7,7 @@
     background: url('./1.png');
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 .MainContainer{
     display: flex;
@@ -19,6 +20,8 @@
     font-weight: 400;
     color: #FFFFFF;
     margin: 0;
+    opacity: 0;
+    transform: translateY(40px);
    font-family: var(--font-pp-hatton);
 }
 @media (max-width: 640px) {
