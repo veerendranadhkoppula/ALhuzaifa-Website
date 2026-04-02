@@ -34,6 +34,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   flex-direction: row;
  gap: clamp(30px, calc(30px + (30 * ((100vw - 320px) / 1120))), 60px);
   width: 100%;
+  overflow: visible;
 }
 
 .conat,
@@ -108,7 +109,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
 .dot {
@@ -151,7 +152,7 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
 }
 
 .slideInner h3 {
-  font-size: var(--fs-20);
+  font-size: 20px;
   font-weight: 400;
   color: #414141;
   margin: 0;
@@ -260,3 +261,20 @@ clamp(24px, calc(24px + (34 * ((100vw - 320px) / 1120))), 58px);
   transition: transform 0.3s ease;
 }
 
+
+@media (min-width: 721px) {
+  .conat,
+  .Brochure,
+  .newsletter {
+ backface-visibility: hidden;
+     transform: translate3d(0, 30px, 0);
+     will-change: transform, opacity;
+ 
+  }
+
+  .conat:hover,
+  .Brochure:hover,
+  .newsletter:hover {
+    transform: translateY(-6px);
+  }
+}
