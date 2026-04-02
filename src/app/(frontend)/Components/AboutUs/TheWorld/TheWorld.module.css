@@ -129,3 +129,8 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 [dir="rtl"] .content h4{
     font-family: var(--font-kufi);
 }
+.top h3,
+.top p,
+.card {
+  will-change: transform, opacity;
+}

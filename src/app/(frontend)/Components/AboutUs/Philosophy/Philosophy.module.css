@@ -85,3 +85,18 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 [dir="rtl"] .Right p{
     font-family: var(--font-alexandria);
 }
+.imageWrapper {
+  overflow: hidden;
+}
+
+.Image {
+  transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover .Image {
+  transform: scale(1.05);
+}
+.Right h3,
+.Right p {
+  will-change: transform, opacity;
+}

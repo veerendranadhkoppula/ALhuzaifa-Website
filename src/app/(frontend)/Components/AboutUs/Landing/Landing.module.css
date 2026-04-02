@@ -74,3 +74,8 @@
         font-size: 24px;
     }
 }
+.MainContainer h4,
+.MainContainer p {
+  overflow: hidden; 
+   opacity: 0;
+}
