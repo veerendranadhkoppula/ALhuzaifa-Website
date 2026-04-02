@@ -26,8 +26,6 @@ const SignatureCloset = () => {
       const title = sectionRef.current.querySelector(`.${styles.lefttop} h3`)
       const desc = sectionRef.current.querySelector(`.${styles.lefttop} p`)
       const link = sectionRef.current.querySelector(`.${styles.leftbottom}`)
-
-      // FORCE reset (important)
       gsap.set([title, desc, link], {
         opacity: 0,
         x: isRTL ? 60 : -60,
@@ -60,7 +58,6 @@ const SignatureCloset = () => {
 
           <Link href={`/${locale}/craftmanship`} className={styles.leftbottom}>
             <p>{t.signatureClosets.link}</p>
-            {/* ✅ YOUR SVG untouched */}
             <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
               <path
                 d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
@@ -87,7 +84,7 @@ const SignatureCloset = () => {
 
           <div className={styles.leftbottommob}>
             <p>{t.signatureClosets.link}</p>
-            {/* ✅ YOUR SVG untouched */}
+
             <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
               <path
                 d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
