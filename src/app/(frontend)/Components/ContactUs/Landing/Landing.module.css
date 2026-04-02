@@ -62,6 +62,7 @@
     width: fit-content;
   }
 
+
   @media (max-width: 640px) {
     .Main {
       background: #ffffff;

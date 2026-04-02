@@ -87,3 +87,14 @@
 [dir='rtl'] .adress h3, [dir='rtl'] .email h3, [dir='rtl'] .phone h3, [dir='rtl'] .social h3{
    font-family: var(--font-alexandria);
 }
+.adress,
+.email,
+.phone,
+.social {
+  will-change: transform, opacity;
+}
+
+.line,
+.sline {
+  will-change: transform;
+}

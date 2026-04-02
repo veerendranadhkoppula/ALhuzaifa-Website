@@ -18,6 +18,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     width: 100%;
     align-items: center;
 }
+  .adresstop a, .abuDhabiAddress a , .addressbottom a{
+  text-decoration: none;
+  color: inherit;
+  }
 .LeftContainer{
     display: flex;
     justify-content: left;

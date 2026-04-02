@@ -155,3 +155,14 @@ clamp(0px, calc(0px + (164 * ((100vw - 320px) / 1120))), 164px);
      font-family: var(--font-kufi);
     font-family: var(--font-kufi);
 }
+.adress,
+.email,
+.phone,
+.social {
+  will-change: transform, opacity;
+}
+
+.line,
+.sline {
+  will-change: transform;
+}
