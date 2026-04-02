@@ -206,3 +206,15 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   font-family: var(--font-kufi);
   
 }
+
+.righttop {
+  overflow: hidden;
+}
+
+.image {
+  transition: transform 0.6s ease;
+}
+
+.righttop:hover .image {
+  transform: scale(1.05);
+}
