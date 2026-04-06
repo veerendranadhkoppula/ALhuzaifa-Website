@@ -34,7 +34,7 @@ const NextArrow = () => (
 const Journey = () => {
   const { t } = useTranslation()
   const { isArabic } = useLanguage()
-const images = [one, two, three, four, five, six, seven, eight, nine, ten, elevn]
+  const images = [one, two, three, four, five, six, seven, eight, nine, ten, elevn]
   const milestones = t.aboutUs.milestones.map((m, i) => ({
     ...m,
     img: images[i % images.length]
@@ -42,6 +42,7 @@ const images = [one, two, three, four, five, six, seven, eight, nine, ten, elevn
 
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [animating, setAnimating] = useState(false)
+  const [slideDirection, setSlideDirection] = useState('next') // 'next' | 'prev'
   const [lineStyle, setLineStyle] = useState({ left: '0px', width: '0px' })
   const timelineRef = useRef(null)
   const autoPlayRef = useRef(null)
@@ -93,15 +94,16 @@ const images = [one, two, three, four, five, six, seven, eight, nine, ten, elevn
     return () => window.removeEventListener('resize', updateLine)
   }, [selectedIndex])
 
-const selectedIndexRef = useRef(0)
+  const selectedIndexRef = useRef(0)
 
-  const goToIndex = (index) => {
+  const goToIndex = (index, direction) => {
+    setSlideDirection(direction)
     setAnimating(true)
     setTimeout(() => {
       setSelectedIndex(index)
       selectedIndexRef.current = index
       setAnimating(false)
-    }, 300)
+    }, 350)
   }
 
   const startAutoPlay = () => {
@@ -113,9 +115,13 @@ const selectedIndexRef = useRef(0)
       const nextIdx = isRtl
         ? cur > 0 ? cur - 1 : last
         : cur < last ? cur + 1 : 0
-      goToIndex(nextIdx)
+      const direction = isRtl
+        ? (cur > 0 ? 'prev' : 'next')
+        : (cur < last ? 'next' : 'prev')
+      goToIndex(nextIdx, direction)
     }, 2000)
   }
+
   const stopAutoPlay = () => {
     if (autoPlayRef.current) {
       clearInterval(autoPlayRef.current)
@@ -130,8 +136,9 @@ const selectedIndexRef = useRef(0)
 
   const handleSelect = (index) => {
     if (index === selectedIndex || animating) return
+    const direction = index > selectedIndex ? 'next' : 'prev'
     stopAutoPlay()
-    goToIndex(index)
+    goToIndex(index, direction)
     startAutoPlay()
   }
 
@@ -143,6 +150,12 @@ const selectedIndexRef = useRef(0)
     if (selectedIndex < milestones.length - 1) handleSelect(selectedIndex + 1)
   }
 
+  // Determine animation class for desktop content
+  const getAnimationClass = () => {
+    if (!animating) return styles.slideIn
+    return slideDirection === 'next' ? styles.slideOutLeft : styles.slideOutRight
+  }
+
   return (
     <div className={styles.Main}>
       <div className={styles.MainContainer}>
@@ -151,7 +164,7 @@ const selectedIndexRef = useRef(0)
           <h3>{t.aboutUs.journeyTitle}</h3>
         </div>
 
-        <div className={`${styles.content} ${animating ? styles.fadeOut : styles.fadeIn}`}>
+        <div className={`${styles.content} ${getAnimationClass()}`}>
 
           <div className={styles.desktopContent}>
             <div className={styles.card}>
