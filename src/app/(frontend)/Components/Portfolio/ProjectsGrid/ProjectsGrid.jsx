@@ -63,7 +63,7 @@ const ProjectsGrid = ({ locale, hospitalityProjects, residentialProjects, commer
 
         <div className={styles.grid}>
           {projects.map((project) => (
-            <div key={project.id} className={styles.card}>
+            <Link key={project.id} className={styles.card}  href={`/${locale}/services/${activeTab}/${project.slug}`}>
               <div className={styles.imageWrap}>
                 <Image
                   src={project.thumbnailImage?.url}
@@ -73,17 +73,17 @@ const ProjectsGrid = ({ locale, hospitalityProjects, residentialProjects, commer
                   className={styles.image}
                 />
               </div>
-              <Link
-                href={`/${locale}/services/${activeTab}/${project.slug}`}
+              <div
+               
                 className={styles.cardBottom}
               >
                 <span className={styles.title}>{project.title}</span>
                 <ArrowRight />
-              </Link>
+              </div>
               {project.shortDescription && (
                 <p className={styles.desc}>{project.shortDescription}</p>
               )}
-            </div>
+            </Link>
           ))}
         </div>
 

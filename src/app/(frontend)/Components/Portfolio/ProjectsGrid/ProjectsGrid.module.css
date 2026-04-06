@@ -17,6 +17,10 @@
   gap: 68px;
   width: 100%;
 }
+.grid a{
+  text-decoration: none;
+  color: inherit;
+}
 
 .tabs {
   display: flex;
@@ -24,7 +28,17 @@
   gap: 20px;
   flex-wrap: wrap;
 }
-
+/* .tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 70px; 
+  z-index: 100;
+  background-color: #ffffff;
+  padding: 12px 0;
+} */
 .tab {
   font-family: var(--font-poppins);
   font-size: var(--fs-18);

@@ -392,3 +392,27 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 .dropdownWrapper:hover .dropdownChevron {
   transform: rotate(180deg);
 }
+
+.Left h4:hover {
+  font-weight: 700;
+}
+
+
+.Right h4:hover {
+  font-weight: 700;
+}
+
+
+.dropdownWrapper h4:hover {
+  font-weight: 700;
+}
+
+
+.dropdown span:hover {
+  font-weight: 600;
+}
+.Left h4,
+.Right h4,
+.dropdownWrapper h4 {
+  transition: font-weight 0.2s ease;
+}
