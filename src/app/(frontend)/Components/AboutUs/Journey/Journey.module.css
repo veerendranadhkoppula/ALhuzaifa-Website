@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   padding:
-    clamp(60px, calc(60px + (60 * ((100vw - 320px) / 1120))), 120px)
+    0px
     clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
     clamp(60px, calc(60px + (60 * ((100vw - 320px) / 1120))), 120px)
     clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
@@ -309,7 +309,7 @@ padding-right: clamp(0px, calc(0px + (81 * ((100vw - 320px) / 1120))), 81px);
     color: #414141;
   }
   .Main{
-    overflow: visible;
+    padding-top: 0px !important;
   }
 }
 

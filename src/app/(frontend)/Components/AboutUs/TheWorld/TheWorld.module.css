@@ -106,9 +106,12 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     .top p{
         font-size: 14px;
     }
+    .top{
+        gap: 4px;
+    }
     .bottom{
         flex-direction: column;
-        gap: 15px;
+        gap: 25px;
     }
     .content h4{
         font-size: 14px;

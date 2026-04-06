@@ -89,7 +89,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
         padding: 0px 24px 80px 24px;
     }
     .MainContainer{
-        gap: 15px;
+        gap: 30px;
     }
     .top h3{
         font-size: 20px;
