@@ -31,7 +31,7 @@ clamp(80px, calc(80px + (120 * ((100vw - 320px) / 1120))), 200px)
         padding: 80px 24px;
     }
     .MainContainer p{
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
         line-height: 120%;
     }

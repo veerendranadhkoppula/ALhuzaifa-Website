@@ -72,7 +72,7 @@
 .title {
   font-size: var(--fs-18);
   font-weight: 700;
-  color: #414141;
+  color: #69594F;
   font-family: var(--font-poppins);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -137,4 +137,45 @@
 }
  [dir='rtl'] .cardBottom svg {
   transform: scaleX(-1);
+}
+.viewMoreRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.viewMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #69594F;
+  color: #ffffff;
+  font-family: var(--font-poppins);
+  font-size: var(--fs-18);
+  font-weight: 400;
+  border: none;
+  padding: 7px 24px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+[dir='rtl'] .viewMoreBtn {
+  font-family: var(--font-kufi);
+  flex-direction: row-reverse;
+}
+
+[dir='rtl'] .viewMoreBtn svg {
+  transform: scaleX(-1);
+}
+
+.viewMoreBtn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .viewMoreBtn {
+    font-size: 14px;
+    padding: 9px 18px;
+  }
 }

@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { FullWidthImageBlock } from '../../blocks/FullWidthImage'
 import { TwoImagesBlock } from '../../blocks/TwoImages'
 import { ThreeImagesBlock } from '../../blocks/ThreeImages'
+import { FullWidthVideoBlock } from '../../blocks/FullWidthVideo'
 
 export const Hospitality: CollectionConfig = {
   slug: 'hospitality',
@@ -127,7 +128,7 @@ export const Hospitality: CollectionConfig = {
               admin: {
                 description: 'Build the project layout using image blocks',
               },
-              blocks: [FullWidthImageBlock, TwoImagesBlock, ThreeImagesBlock],
+            blocks: [FullWidthImageBlock, TwoImagesBlock, ThreeImagesBlock, FullWidthVideoBlock],
             },
           ],
         },

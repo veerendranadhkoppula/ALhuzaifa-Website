@@ -7,6 +7,7 @@ import TwoImageBlock from './TwoImageBlock/TwoImageBlock'
 import FullImgBlock from './FullImgBlock/FullImgBlock'
 import ThreeImgBlock from './ThreeImgBlock/ThreeImgBlock'
 import { useTranslation } from '../../hooks/useTranslation'
+import FullWidthVideoBlock from './FullWidthVideoBlock/FullWidthVideoBlock'
 import RelatedProjects from './RelatedProjects/RelatedProjects'
 
 const renderBlock = (block, index) => {
@@ -17,6 +18,8 @@ const renderBlock = (block, index) => {
       return <FullImgBlock key={index} block={block} />
     case 'threeImages':
       return <ThreeImgBlock key={index} block={block} />
+      case 'fullWidthVideo':
+  return <FullWidthVideoBlock key={index} block={block} />
     default:
       return null
   }

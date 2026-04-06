@@ -117,15 +117,15 @@ const OtherSpaces = () => {
 
         <div className={styles.Cards}>
           {cards.map((card) => (
-            <div key={card.id} className={styles.Card}>
+            <Link Link href={card.href} key={card.id} className={styles.Card}>
               <div className={styles.CardTop}>
                 <Image src={card.img} alt={card.label} className={styles.CardImg} />
               </div>
-              <Link href={card.href} className={styles.CardBottom}>
+              <div className={styles.CardBottom}>
                 <h4>{card.label}</h4>
                 <LinkArrow />
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
 
@@ -138,10 +138,10 @@ const OtherSpaces = () => {
                   <div className={styles.CardTop}>
                     <Image src={card.img} alt={card.label} className={styles.CardImg} />
                   </div>
-                  <Link href={card.href} className={styles.CardBottom}>
+                  <div className={styles.CardBottom}>
                     <h4>{card.label}</h4>
                     <LinkArrow />
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>

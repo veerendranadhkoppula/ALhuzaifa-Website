@@ -322,6 +322,15 @@ export interface Hospitality {
             blockName?: string | null;
             blockType: 'threeImages';
           }
+        | {
+            /**
+             * Upload an MP4 video file
+             */
+            video: number | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'fullWidthVideo';
+          }
       )[]
     | null;
   /**
@@ -414,6 +423,15 @@ export interface Commercial {
             id?: string | null;
             blockName?: string | null;
             blockType: 'threeImages';
+          }
+        | {
+            /**
+             * Upload an MP4 video file
+             */
+            video: number | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'fullWidthVideo';
           }
       )[]
     | null;
@@ -574,6 +592,15 @@ export interface Residential {
             id?: string | null;
             blockName?: string | null;
             blockType: 'threeImages';
+          }
+        | {
+            /**
+             * Upload an MP4 video file
+             */
+            video: number | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'fullWidthVideo';
           }
       )[]
     | null;
@@ -999,6 +1026,13 @@ export interface HospitalitySelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        fullWidthVideo?:
+          | T
+          | {
+              video?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   thumbnailImage?: T;
   relatedProjects?: T;
@@ -1049,6 +1083,13 @@ export interface CommercialSelect<T extends boolean = true> {
               firstImage?: T;
               secondImage?: T;
               thirdImage?: T;
+              id?: T;
+              blockName?: T;
+            };
+        fullWidthVideo?:
+          | T
+          | {
+              video?: T;
               id?: T;
               blockName?: T;
             };
@@ -1114,6 +1155,13 @@ export interface ResidentialSelect<T extends boolean = true> {
               firstImage?: T;
               secondImage?: T;
               thirdImage?: T;
+              id?: T;
+              blockName?: T;
+            };
+        fullWidthVideo?:
+          | T
+          | {
+              video?: T;
               id?: T;
               blockName?: T;
             };

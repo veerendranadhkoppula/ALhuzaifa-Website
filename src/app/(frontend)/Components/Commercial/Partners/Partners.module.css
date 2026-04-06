@@ -4,19 +4,17 @@
   align-items: center;
   width: 100%;
   background-color: #ffffff;
-  padding:
-    0px
-    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px)
-    clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
-    clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  padding-left:   clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
+  padding-right:     clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);;
+
 }
+
 
 .MainContainer {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  gap: 60px;
+  gap: 80px;
 }
 
 .left {
@@ -45,22 +43,18 @@
   color: #414141;
   font-family: var(--font-poppins);
   margin: 0;
+  max-width: 80%;
 }
 
 [dir="rtl"] .left p {
   font-family: var(--font-kufi);
 }
 
-.right {
+.bottom {
   display: flex;
   flex-direction: column;
   width: 100%;
   overflow: hidden;
-}
-
-.rowWrap {
-  display: flex;
-  flex-direction: column;
 }
 
 .divider {
@@ -69,13 +63,10 @@
   background-color: #4141414D;
 }
 
-
-
 .marqueeWrapper {
   width: 100%;
   overflow: hidden;
-  padding: clamp(20px, calc(20px + (16 * ((100vw - 320px) / 1120))), 36px) 0;
- 
+  padding: clamp(16px, calc(16px + (8 * ((100vw - 320px) / 1120))), 24px) 0;
   direction: ltr;
 }
 
@@ -89,16 +80,6 @@
   will-change: transform;
 }
 
-.marqueeReverse {
-  animation: marqueeRight 30s linear infinite;
-  animation-delay: -10s;
-}
-
-.marqueeRow3 {
-  animation: marqueeLeft 30s linear infinite;
-  animation-delay: -20s;
-}
-
 .marqueeWrapper:hover .marqueeTrack {
   animation-play-state: paused;
 }
@@ -108,18 +89,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(var(--right-width, 600px) / 4);
+  padding: 0 clamp(30px, calc(30px + (50 * ((100vw - 320px) / 1120))), 80px);
 }
 
 .logoImg {
   width: auto;
-  max-width: 94px;
-  max-height: 50px;
+  max-width: 80px;
+  max-height: 35px;
   object-fit: contain;
   height: auto;
   filter: grayscale(100%);
-  opacity: 0.7;
+  opacity: 0.6;
   transition: opacity 0.2s ease, filter 0.2s ease;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .logoItem:hover .logoImg {
@@ -132,25 +116,16 @@
   100% { transform: translateX(-50%); }
 }
 
-@keyframes marqueeRight {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-
-
 @media (max-width: 640px) {
   .main {
-    padding: 0px 24px 80px 24px;
+    padding: 0px 24px 0px 24px;
   }
 
   .MainContainer {
-    flex-direction: column;
     gap: 32px;
   }
 
   .left {
-    max-width: 100%;
     gap: 8px;
   }
 
@@ -160,15 +135,16 @@
 
   .left p {
     font-size: 14px;
+    max-width: 100%;
   }
 
   .logoItem {
-    width: calc(var(--right-width, 320px) / 3);
+    padding: 0 24px;
   }
 
   .logoImg {
-    max-width: 55px;
-    max-height: 36px;
+    max-width: 50px;
+    max-height: 26px;
   }
 
   .divider {
@@ -177,21 +153,16 @@
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
-  .MainContainer {
-    flex-direction: column;
-    gap: 32px;
-  }
-
   .left {
     max-width: 100%;
   }
 
   .logoImg {
-    max-width: 70px;
-    max-height: 44px;
+    max-width: 65px;
+    max-height: 30px;
   }
 
   .logoItem {
-    width: calc(var(--right-width, 600px) / 4);
+    padding: 0 30px;
   }
 }

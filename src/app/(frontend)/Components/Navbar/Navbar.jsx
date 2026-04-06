@@ -15,7 +15,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
-
+  const [languageOpen, setLanguageOpen] = useState(false)
   const locale = language
   const pathname = usePathname()
 
@@ -52,11 +52,15 @@ const Navbar = () => {
         <div className={styles.MainContainer}>
           <div className={styles.Left}>
             <Link href={`/${locale}/about-us`}>
-              <h4 className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>{t.navbar.aboutUs}</h4>
+              <h4 className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>
+                {t.navbar.aboutUs}
+              </h4>
             </Link>
             <div className={styles.dropdownWrapper}>
               <Link href={`/${locale}/services`} className={styles.servicesLink}>
-                <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>{t.navbar.services}</h4>
+                <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+                  {t.navbar.services}
+                </h4>
                 <svg
                   className={styles.dropdownChevron}
                   width="12"
@@ -85,13 +89,24 @@ const Navbar = () => {
               </div>
             </div>
             <Link href={`/${locale}/craftmanship`}>
-              <h4 className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>{t.navbar.craftmanship}</h4>
+              <h4 className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
+                {t.navbar.craftmanship}
+              </h4>
             </Link>
           </div>
 
           <div className={styles.MobileLeft} onClick={() => setMenuOpen(true)}>
-            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="#414141" />
+            <svg
+              width="24"
+              height="16"
+              viewBox="0 0 24 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z"
+                fill="#414141"
+              />
             </svg>
           </div>
 
@@ -102,14 +117,62 @@ const Navbar = () => {
           </div>
 
           <div className={styles.Right}>
-            <h3 onClick={toggleLanguage} style={{ cursor: 'pointer' }}>
-              {t.navbar.languageSwitch}
-            </h3>
+            <div className={styles.langWrapper}>
+              <button className={styles.langBtn}>
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8333 7.16667C13.8333 10.8486 10.8486 13.8333 7.16667 13.8333M13.8333 7.16667C13.8333 3.48477 10.8486 0.5 7.16667 0.5M13.8333 7.16667H0.5M7.16667 13.8333C3.48477 13.8333 0.5 10.8486 0.5 7.16667M7.16667 13.8333C5.45482 12.0359 4.5 9.64884 4.5 7.16667C4.5 4.68449 5.45482 2.29744 7.16667 0.5M7.16667 13.8333C8.87851 12.0359 9.83333 9.64884 9.83333 7.16667C9.83333 4.68449 8.87851 2.29744 7.16667 0.5M0.5 7.16667C0.5 3.48477 3.48477 0.5 7.16667 0.5"
+                    stroke="#414141"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <svg
+                  className={`${styles.dropdownChevron} ${languageOpen ? styles.dropdownChevronOpen : ''}`}
+                  width="12"
+                  height="7"
+                  viewBox="0 0 13 7"
+                  fill="none"
+                >
+                  <path
+                    d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
+                    fill="#414141"
+                    fillOpacity="0.5"
+                  />
+                </svg>
+              </button>
+              <div className={styles.langDropdown}>
+                <span
+                  onClick={() => {
+                    if (language !== 'en') toggleLanguage()
+                  }}
+                >
+                  English
+                </span>
+                <span
+                  onClick={() => {
+                    if (language !== 'ar') toggleLanguage()
+                  }}
+                >
+                  Arabic
+                </span>
+              </div>
+            </div>
             <Link href={`/${locale}/portfolio`}>
-              <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>{t.navbar.portfolio}</h4>
+              <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+                {t.navbar.portfolio}
+              </h4>
             </Link>
             <Link href={`/${locale}/contact-us`}>
-              <h4 className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>{t.navbar.contact}</h4>
+              <h4 className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>
+                {t.navbar.contact}
+              </h4>
             </Link>
           </div>
 
@@ -129,8 +192,20 @@ const Navbar = () => {
       <div className={`${styles.sheet} ${menuOpen ? styles.sheetOpen : ''}`}>
         <div className={styles.sheetTop}>
           <button className={styles.closeBtn} onClick={() => setMenuOpen(false)}>
-            <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26.25 8.75L8.75 26.25M8.75 8.75L26.25 26.25" stroke="#414141" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.25 8.75L8.75 26.25M8.75 8.75L26.25 26.25"
+                stroke="#414141"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
         </div>
@@ -138,11 +213,11 @@ const Navbar = () => {
         <div className={styles.sheetDivider} />
 
         <div className={styles.sheetLinks}>
-
-
           <Link href={`/${locale}/about-us`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>{t.navbar.aboutUs}</span>
+              <span className={isActive(`/${locale}/about-us`) ? styles.activeLink : ''}>
+                {t.navbar.aboutUs}
+              </span>
             </div>
           </Link>
 
@@ -151,7 +226,9 @@ const Navbar = () => {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
           >
             <Link href={`/${locale}/services`} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>{t.navbar.services}</span>
+              <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+                {t.navbar.services}
+              </span>
             </Link>
             <span
               style={{ padding: '0 8px', cursor: 'pointer' }}
@@ -171,7 +248,11 @@ const Navbar = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5" />
+                <path
+                  d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
+                  fill="#414141"
+                  fillOpacity="0.5"
+                />
               </svg>
             </span>
           </div>
@@ -195,29 +276,39 @@ const Navbar = () => {
             </div>
           )}
 
- 
           <Link href={`/${locale}/craftmanship`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>{t.navbar.craftmanship}</span>
+              <span className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
+                {t.navbar.craftmanship}
+              </span>
             </div>
           </Link>
 
           <Link href={`/${locale}/portfolio`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>{t.navbar.portfolio}</span>
+              <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+                {t.navbar.portfolio}
+              </span>
             </div>
           </Link>
 
           <Link href={`/${locale}/contact-us`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>{t.navbar.contact}</span>
+              <span className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>
+                {t.navbar.contact}
+              </span>
             </div>
           </Link>
-
         </div>
 
         <div className={styles.sheetBottom}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               d="M14.6654 8.0026C14.6654 11.6845 11.6806 14.6693 7.9987 14.6693M14.6654 8.0026C14.6654 4.32071 11.6806 1.33594 7.9987 1.33594M14.6654 8.0026H1.33203M7.9987 14.6693C4.3168 14.6693 1.33203 11.6845 1.33203 8.0026M7.9987 14.6693C6.28685 12.8718 5.33203 10.4848 5.33203 8.0026C5.33203 5.52043 6.28685 3.13337 7.9987 1.33594M7.9987 14.6693C9.71054 12.8718 10.6654 10.4848 10.6654 8.0026C10.6654 5.52043 9.71054 3.13337 7.9987 1.33594M1.33203 8.0026C1.33203 4.32071 4.3168 1.33594 7.9987 1.33594"
               stroke="#414141"

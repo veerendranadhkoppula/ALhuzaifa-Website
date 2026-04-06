@@ -8,6 +8,7 @@ import ImageWithDescriptionBlock from './ImageWithDescriptionBlock/ImageWithDesc
 import TwoImagesWithDescriptionsBlock from './TwoImagesWithDescriptionsBlock/TwoImagesWithDescriptionsBlock'
 import TitleDescriptionImageBlock from './TitleDescriptionImageBlock/TitleDescriptionImageBlock'
 import { useTranslation } from '../../hooks/useTranslation'
+import FullWidthVideoBlock from './FullWidthVideoBlock/FullWidthVideoBlock'
 import RelatedProjects from './RelatedProjects/RelatedProjects'
 
 const renderBlock = (block, index) => {
@@ -20,6 +21,8 @@ const renderBlock = (block, index) => {
       return <TitleDescriptionImageBlock key={index} block={block} />
     case 'threeImages':
       return <ThreeImgBlock key={index} block={block} />
+    case 'fullWidthVideo':
+      return <FullWidthVideoBlock key={index} block={block} />
     default:
       return null
   }
@@ -37,7 +40,7 @@ const ResidentialProject = ({ project, locale }) => {
         projects={project.relatedProjects || []}
         locale={locale}
         serviceSlug="residential"
-         heading={t.residentialPage.relatedProjects}
+        heading={t.residentialPage.relatedProjects}
       />
     </>
   )

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './ProjectsList.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,13 +7,15 @@ import { useTranslation } from '../../../hooks/useTranslation'
 
 const ArrowRight = () => (
   <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
-    <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L0.999999 6.91406" stroke="#414141" strokeWidth="2" strokeLinecap="square" />
+    <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L0.999999 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square" />
   </svg>
 )
 
 const ProjectsList = ({ locale, projects }) => {
   const { t } = useTranslation()
-
+const [visibleCount, setVisibleCount] = useState(9)
+const visibleProjects = projects.slice(0, visibleCount)
+const hasMore = projects.length > visibleCount
   if (!projects || projects.length === 0) return null
 
   return (
@@ -21,7 +23,7 @@ const ProjectsList = ({ locale, projects }) => {
       <div className={styles.MainContainer}>
         <h3 className={styles.heading}>{t.residentialPage.projectsHeading}</h3>
         <div className={styles.grid}>
-          {projects.map((project) => (
+         {visibleProjects.map((project) => (
             <Link
               key={project.id}
               href={`/${locale}/services/residential/${project.slug}`}
@@ -43,6 +45,17 @@ const ProjectsList = ({ locale, projects }) => {
             </Link>
           ))}
         </div>
+        {hasMore && (
+          <div className={styles.viewMoreRow}>
+            <button
+              className={styles.viewMoreBtn}
+              onClick={() => setVisibleCount((prev) => prev + 9)}
+            >
+              {t.portfolioPage.viewMore}
+        
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

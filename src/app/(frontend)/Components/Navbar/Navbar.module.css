@@ -416,3 +416,69 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 .dropdownWrapper h4 {
   transition: font-weight 0.2s ease;
 }
+.langWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  justify-content: center;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdownChevronOpen {
+  transform: rotate(180deg);
+}
+
+.langDropdown {
+  position: absolute;
+  top: 100%;
+  left: -120%;
+  background-color: #FFFFFFA6;
+  backdrop-filter: blur(63px);
+  -webkit-backdrop-filter: blur(63px);
+  box-shadow: 0px 4px 29.7px 0px rgba(65, 65, 65, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.langWrapper:hover .langDropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+.langWrapper:hover .dropdownChevron {
+  transform: rotate(180deg);
+}
+
+.langDropdown span {
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  font-weight: 400;
+  color: #414141;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: block;
+}
+
+[dir="rtl"] .langDropdown span {
+  font-family: var(--font-kufi);
+}
+
+.langDropdown span:hover {
+  background-color: #f7f4f1;
+  font-weight: 600;
+}

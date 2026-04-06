@@ -11,7 +11,10 @@
     clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
     clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 }
-
+.Cards a {
+  text-decoration: none;
+  color: inherit;
+}
 .MainContainer {
   display: flex;
   justify-content: left;

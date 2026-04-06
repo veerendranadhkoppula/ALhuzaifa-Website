@@ -3,10 +3,11 @@ import { ThreeImagesBlock } from '../../blocks/ThreeImages'
 import { ImageWithDescriptionBlock } from '../../blocks/ImageWithDescription'
 import { TwoImagesWithDescriptionsBlock } from '../../blocks/TwoImagesWithDescriptions'
 import { TitleDescriptionImageBlock } from '../../blocks/TitleDescriptionImage'
+import { FullWidthVideoBlock } from '../../blocks/FullWidthVideo'
 
 export const Residential: CollectionConfig = {
   slug: 'residential',
-   defaultSort: '-updatedAt',
+  defaultSort: '-updatedAt',
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'location', 'status', 'createdAt'],
@@ -130,6 +131,7 @@ export const Residential: CollectionConfig = {
                 TwoImagesWithDescriptionsBlock,
                 TitleDescriptionImageBlock,
                 ThreeImagesBlock,
+                FullWidthVideoBlock,
               ],
             },
           ],
