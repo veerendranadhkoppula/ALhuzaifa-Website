@@ -255,7 +255,7 @@
 }
 .itemLabel {
   font-family: var(--font-poppins);
-  font-size: 13px;
+  font-size: var(--fs-18);
   color: #414141;
   flex: 1;
 }
