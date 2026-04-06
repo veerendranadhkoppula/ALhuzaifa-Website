@@ -282,7 +282,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 }
 
 .arabicText {
-  font-family: var(--font-kufi);
+  font-family: var(--font-poppins);
   font-size: 14px;
   font-weight: 400;
   color: #414141;
@@ -365,7 +365,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     color: #414141;
     margin: 0;
     cursor: pointer;
-    font-family: var(--font-kufi);
+    font-family: var(--font-poppins);
   }
 
   .sheet {
