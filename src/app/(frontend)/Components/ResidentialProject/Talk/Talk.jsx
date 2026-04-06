@@ -91,8 +91,7 @@ const COUNTRIES = [
 ]
 
 const PROJECT_TYPE_KEYS = [
-  'residential', 'hospitality', 'commercial', 'bedroom',
-  'hallway', 'majlis', 'dining_room', 'living_room', 'home_office',
+  'residential', 'hospitality', 'commercial'
 ]
 
 function getFlagEmoji(countryCode) {
@@ -139,7 +138,9 @@ const Talk = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-
+const [projectOpen, setProjectOpen] = useState(false)
+const projectRef = useRef(null)
+useOutsideClick(projectRef, () => setProjectOpen(false))
   const dropdownRef = useRef(null)
   useOutsideClick(dropdownRef, () => setDropdownOpen(false))
 
@@ -283,20 +284,37 @@ const Talk = () => {
                   placeholder={t.contactPage.location} value={form.location} onChange={handleChange} />
                 <span className={styles.line} />
               </div>
-              <div className={styles.field}>
-                <div className={styles.selectWrap}>
-                  <select name="projectType"
-                    className={`${styles.select} ${!form.projectType ? styles.selectPlaceholder : ''}`}
-                    value={form.projectType} onChange={handleChange}>
-                    <option value="" disabled>{t.contactPage.projectType}</option>
-                    {PROJECT_TYPE_KEYS.map((key) => (
-                      <option key={key} value={key}>{t.contactPage.projectTypes[key]}</option>
-                    ))}
-                  </select>
-                  <ChevronDown open={false} />
-                </div>
-                <span className={styles.line} />
-              </div>
+            <div className={styles.field}>
+  <div className={styles.selectWrap} ref={projectRef}>
+    <button
+      type="button"
+      className={`${styles.select} ${!form.projectType ? styles.selectPlaceholder : ''}`}
+      onClick={() => setProjectOpen((o) => !o)}
+    >
+      {form.projectType ? t.contactPage.projectTypes[form.projectType] : t.contactPage.projectType}
+    </button>
+    <ChevronDown open={projectOpen} />
+    {projectOpen && (
+      <div className={styles.dropdown} style={{ width: '100%' }}>
+        <ul className={styles.dropdownList}>
+          {PROJECT_TYPE_KEYS.map((key) => (
+            <li
+              key={key}
+              className={`${styles.dropdownItem} ${form.projectType === key ? styles.dropdownItemActive : ''}`}
+              onClick={() => {
+                setForm((prev) => ({ ...prev, projectType: key }))
+                setProjectOpen(false)
+              }}
+            >
+              <span className={styles.itemLabel}>{t.contactPage.projectTypes[key]}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+  <span className={styles.line} />
+</div>
             </div>
 
             <div className={styles.fieldFull}>

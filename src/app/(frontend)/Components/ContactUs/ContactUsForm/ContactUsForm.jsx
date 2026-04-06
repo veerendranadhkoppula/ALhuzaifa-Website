@@ -94,12 +94,6 @@ const PROJECT_TYPE_KEYS = [
   'residential',
   'hospitality',
   'commercial',
-  'bedroom',
-  'hallway',
-  'majlis',
-  'dining_room',
-  'living_room',
-  'home_office',
 ]
 
 function getFlagEmoji(countryCode) {

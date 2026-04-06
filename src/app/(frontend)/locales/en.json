@@ -19,7 +19,7 @@
   "twoBlock": {
     "block1Title": "Craftmanship",
     "block1Desc": "At the core of our process is design-led production. Interior designers work in seamless collaboration with master artisans within our state-of-the-art regional manufacturing facility, ensuring design intent is realised with precision, artistry, and flawless execution.",
-    "block1Link": "Explore craftmanship",
+    "block1Link": "Explore Craftmanship",
     "block2Title": "Customizations",
     "block2Desc": "True luxury is personal. Every project is tailored to your lifestyle and aspirations, uniting bespoke design, fine craftmanship, and in-house manufacturing – ensuring every detail is considered and every space is distinctly yours.",
     "block2Link": "Explore Customizations"
@@ -157,13 +157,7 @@
     "projectTypes": {
       "residential": "Residential",
       "hospitality": "Hospitality",
-      "commercial": "Commercial",
-      "bedroom": "Bedroom",
-      "hallway": "Hallway",
-      "majlis": "Majlis / Diwaniya",
-      "dining_room": "Dining Room",
-      "living_room": "Living Room",
-      "home_office": "Home Office"
+      "commercial": "Commercial"
     },
     "landingDesc": "Whether you're planning a new space or refining an existing one, we welcome thoughtful conversations rooted in clarity, craft, and purpose.",
     "landingCta": "Contact Us",

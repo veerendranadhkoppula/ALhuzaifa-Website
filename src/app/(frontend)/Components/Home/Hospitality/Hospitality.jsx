@@ -77,8 +77,8 @@ const Hospitality = ({ projects = [], locale }) => {
       <div className={styles.MainContainer}>
         <div className={styles.heading}>
           <h3 className={styles.headingText}>
-            <span className={styles.thin}>{t.portfolio.label}</span>
-            <span className={styles.bold}> - {t.portfolio.hospitality}</span>
+            <span className={styles.thin}>{t.portfolio.label} - </span>
+            <span className={styles.bold}>{t.portfolio.hospitality}</span>
           </h3>
           {useCarousel && (
             <div className={styles.arrows}>

@@ -274,7 +274,7 @@ clamp(12px, calc(12px + (48 * ((100vw - 320px) / 1120))), 60px)
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #292929;
+  background: #69594F;
   color: #ffffff;
   font-family: var(--font-poppins);
   font-size: var(--fs-18);

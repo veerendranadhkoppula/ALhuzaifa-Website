@@ -179,13 +179,7 @@
     "projectTypes": {
       "residential": "سكني",
       "hospitality": "ضيافة",
-      "commercial": "تجاري",
-      "bedroom": "غرفة نوم",
-      "hallway": "ممر",
-      "majlis": "مجلس / ديوانية",
-      "dining_room": "غرفة طعام",
-      "living_room": "غرفة معيشة",
-      "home_office": "مكتب منزلي"
+      "commercial": "تجاري"
     },
     "facebook": "فيسبوك",
     "firstName": "الاسم الأول*",

@@ -6,6 +6,7 @@ import TheWorld from './TheWorld/TheWorld'
 import VideoContainer from './VideoContainer/VideoContainer'
 import Philosophy from './Philosophy/Philosophy'
 import Journey from './Journey/Journey'
+import Contact from '../Home/Contact/Contact'
 
 const AboutUs = () => {
   return (
@@ -17,6 +18,7 @@ const AboutUs = () => {
     <Philosophy />
     <Journey />
     <TheWorld />
+    <Contact />
 
     </>
   )
