@@ -6,6 +6,7 @@ import { TitleDescriptionImageBlock } from '../../blocks/TitleDescriptionImage'
 
 export const Residential: CollectionConfig = {
   slug: 'residential',
+   defaultSort: '-updatedAt',
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'location', 'status', 'createdAt'],

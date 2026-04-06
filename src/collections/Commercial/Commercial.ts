@@ -5,6 +5,7 @@ import { ThreeImagesBlock } from '../../blocks/ThreeImages'
 
 export const Commercial: CollectionConfig = {
   slug: 'commercial',
+   defaultSort: '-updatedAt',
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'location', 'status', 'createdAt'],

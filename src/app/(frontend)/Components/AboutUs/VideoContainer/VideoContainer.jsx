@@ -8,7 +8,7 @@ const VideoContainer = () => {
         <div className={styles.MainContainer}>
           <video
             className={styles.video}
-            src="/1.mp4"
+            src="/about.mp4"
             autoPlay
             loop
             muted

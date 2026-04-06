@@ -18,7 +18,7 @@ const Manufacturing = () => {
           <div className={styles.bottom}>
              <video
             className={styles.video}
-            src="/1.mp4"
+            src="/craftmanship.mp4"
             autoPlay
             loop
             muted

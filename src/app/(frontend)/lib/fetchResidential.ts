@@ -11,7 +11,7 @@ export type ResidentialProject = {
 export async function fetchResidentialProjects(locale: string): Promise<ResidentialProject[]> {
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/residential?where[status][equals]=published&depth=1&limit=100&locale=${locale}&select[title]=true&select[slug]=true&select[thumbnailImage]=true`,
+`${process.env.NEXT_PUBLIC_SERVER_URL}/api/residential?where[status][equals]=published&depth=1&limit=100&locale=${locale}&select[title]=true&select[slug]=true&select[thumbnailImage]=true&sort=-updatedAt`,
       { next: { revalidate: 60 } },
     )
     if (!res.ok) return []

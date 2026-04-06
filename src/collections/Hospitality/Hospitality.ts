@@ -5,10 +5,12 @@ import { ThreeImagesBlock } from '../../blocks/ThreeImages'
 
 export const Hospitality: CollectionConfig = {
   slug: 'hospitality',
+   defaultSort: '-updatedAt',
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'location', 'status', 'createdAt'],
     group: 'Services',
+    
   },
   access: {
     read: () => true,

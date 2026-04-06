@@ -2,8 +2,17 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styles from './Journey.module.css'
 import Image from 'next/image'
-import one from './1.png'
-import two from './2.png'
+import one from './1.webp'
+import two from './2.webp'
+import three from './3.webp'
+import four from './4.webp'
+import five from './5.webp'
+import six from './6.webp'
+import seven from './7.webp'
+import eight from './8.webp'
+import nine from './9.webp'
+import ten from './10.webp'
+import elevn from './10.webp'
 import { useTranslation } from '../../../hooks/useTranslation'
 import { useLanguage } from '../../../context/LanguageContext'
 
@@ -25,10 +34,10 @@ const NextArrow = () => (
 const Journey = () => {
   const { t } = useTranslation()
   const { isArabic } = useLanguage()
-
+const images = [one, two, three, four, five, six, seven, eight, nine, ten, elevn]
   const milestones = t.aboutUs.milestones.map((m, i) => ({
     ...m,
-    img: i % 2 === 0 ? one : two
+    img: images[i % images.length]
   }))
 
   const [selectedIndex, setSelectedIndex] = useState(0)
