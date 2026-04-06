@@ -101,7 +101,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   color: #414141;
   margin: 0;
   cursor: pointer;
-  font-family: var(--font-kufi);
+  font-family: var(--font-poppins);
 }
 [dir="rtl"] .Right h3{
   font-family: var(--font-poppins);
