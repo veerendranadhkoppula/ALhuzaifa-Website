@@ -32,7 +32,25 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   color: #414141;
   font-weight: 400;
 }
-
+.viewAll{
+  display: flex;
+  justify-content: right;
+}
+.heading a{
+  text-decoration: none;
+  color: inherit;
+}
+.viewAll p{
+  font-size: var(--fs-18);
+  margin: 0;
+  font-family: var(--font-poppins);
+  color: #69594F;
+   font-weight: 700;
+   text-decoration: underline;
+   cursor: pointer;
+   align-self: self-end;
+   text-underline-offset: 3px;
+}
 
 
 .bold {
@@ -135,7 +153,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .Main {
     padding: 0 0px 40px 24px;
   }
-
+.viewAll{
+  display: none;
+}
   .MainContainer {
     gap: 20px;
   }
@@ -210,4 +230,28 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 }
 [dir="rtl"] .cardLabel {
   font-family: var(--font-kufi);
+}
+.viewAllMobile {
+  display: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 720px) {
+  .viewAllMobile {
+    display: flex;
+    justify-content: center;
+    padding-right: 24px;
+  }
+
+  .viewAllMobile p {
+    font-size: 14px;
+    margin: 0;
+    font-family: var(--font-poppins);
+    color: #69594F;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-offset: 3px;
+  }
 }

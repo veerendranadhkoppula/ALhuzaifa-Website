@@ -2,7 +2,7 @@
   "navbar": {
     "aboutUs": "About us",
     "services": "Services",
-    "craftmanship": "Craftmanship",
+    "craftmanship": "Craftsmanship",
     "portfolio": "Portfolio",
     "contact": "Contact",
     "languageSwitch": "Arabic",
@@ -14,19 +14,19 @@
     "heading": "Crafting Your Signature Style"
   },
   "textContainer": {
-    "body": "At Al Huzaifa Design Studio, we go beyond design. We curate immersive worlds of elegance - where every detail is intentional, every material speaks of refinement, and every space becomes a personal expression of luxury."
+    "body": "A fully integrated Design Studio shaping residential and commercial spaces. From bespoke homes to landmark destinations, creativity meets precision. Beyond design, we curate immersive worlds of refined living."
   },
   "twoBlock": {
-    "block1Title": "Craftmanship",
+    "block1Title": "Craftsmanship",
     "block1Desc": "At the core of our process is design-led production. Interior designers work in seamless collaboration with master artisans within our state-of-the-art regional manufacturing facility, ensuring design intent is realised with precision, artistry, and flawless execution.",
-    "block1Link": "Explore Craftmanship",
-    "block2Title": "Customizations",
-    "block2Desc": "True luxury is personal. Every project is tailored to your lifestyle and aspirations, uniting bespoke design, fine craftmanship, and in-house manufacturing – ensuring every detail is considered and every space is distinctly yours.",
-    "block2Link": "Explore Customizations"
+    "block1Link": "Explore Craftsmanship",
+    "block2Title": "Customisation",
+    "block2Desc": "True luxury is personal. Every project is tailored to your lifestyle and aspirations, uniting bespoke design, fine craftsmanship, and in-house manufacturing – ensuring every detail is considered and every space is distinctly yours.",
+    "block2Link": "Explore Customisation"
   },
   "signatureClosets": {
     "title": "Signature Closets",
-    "desc": "From the visionary minds of Al Huzaifa Design Studio, Signature Closets unite manufacturing excellence with audacious customization. Each collection is tailored to reflect your aesthetic and lifestyle, a perfect balance of structure, sophistication, and soul.",
+    "desc": "From walk-ins to pole systems, crafted in luxurious materials—storage, elevated to a statement. Tailored in detail, defined by a luxury that is refined, functional, and ever evolving.",
     "link": "Explore Signature Closets"
   },
   "worldAlhuzaifa": {
@@ -58,7 +58,9 @@
     "residence": "Residence",
     "project1": "Avli by tashas",
     "project2": "Loren",
-    "project3": "Toto"
+    "project3": "Toto",
+    "textl": "View More"
+    
   },
   "footer": {
     "studioTitle": "Studio",

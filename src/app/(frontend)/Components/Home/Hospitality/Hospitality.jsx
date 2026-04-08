@@ -100,6 +100,10 @@ const Hospitality = ({ projects = [], locale }) => {
               </button>
             </div>
           )}
+          <Link href={`/${locale}/services/hospitality`} className={styles.viewAll}>
+            <p>{t.portfolio.textl}</p>
+          </Link>
+          
         </div>
 
         <div className={styles.desktopGrid}>
@@ -174,7 +178,9 @@ const Hospitality = ({ projects = [], locale }) => {
             </Link>
           )}
         </div>
-
+    <Link href={`/${locale}/services/hospitality`} className={styles.viewAllMobile}>
+          <p>{t.portfolio.textl}</p>
+        </Link>
       </div>
     </div>
   )
