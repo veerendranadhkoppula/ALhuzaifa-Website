@@ -90,14 +90,14 @@ const COUNTRIES = [
   { label: 'Yemen', value: 'YE', dialCode: '+967' },
 ]
 
-const PROJECT_TYPE_KEYS = [
-  'residential', 'hospitality', 'commercial'
-]
+const PROJECT_TYPE_KEYS = ['residential', 'hospitality', 'commercial']
 
 function getFlagEmoji(countryCode) {
-  return countryCode.toUpperCase().split('').map((c) =>
-    String.fromCodePoint(0x1f1e6 - 65 + c.charCodeAt(0))
-  ).join('')
+  return countryCode
+    .toUpperCase()
+    .split('')
+    .map((c) => String.fromCodePoint(0x1f1e6 - 65 + c.charCodeAt(0)))
+    .join('')
 }
 
 function useOutsideClick(ref, onClose) {
@@ -112,7 +112,13 @@ function useOutsideClick(ref, onClose) {
 
 function ChevronDown({ open }) {
   return (
-    <svg className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`} width="13" height="7" viewBox="0 0 13 7" fill="none">
+    <svg
+      className={`${styles.chevron} ${open ? styles.chevronOpen : ''}`}
+      width="13"
+      height="7"
+      viewBox="0 0 13 7"
+      fill="none"
+    >
       <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5" />
     </svg>
   )
@@ -121,7 +127,10 @@ function ChevronDown({ open }) {
 function ArrowRight() {
   return (
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-      <path d="M-0.00133734 6.66688L-0.00133727 5.17206L8.74139 5.17206L4.73431 1.06132L5.76886 -2.58748e-07L11.5391 5.91947L5.76886 11.8389L4.73431 10.7776L8.74139 6.66688L-0.00133734 6.66688Z" fill="white" />
+      <path
+        d="M-0.00133734 6.66688L-0.00133727 5.17206L8.74139 5.17206L4.73431 1.06132L5.76886 -2.58748e-07L11.5391 5.91947L5.76886 11.8389L4.73431 10.7776L8.74139 6.66688L-0.00133734 6.66688Z"
+        fill="white"
+      />
     </svg>
   )
 }
@@ -130,17 +139,22 @@ const Talk = () => {
   const { t } = useTranslation()
 
   const [form, setForm] = useState({
-    firstName: '', lastName: '', email: '',
-    phone: '', location: '', projectType: '', message: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    location: '',
+    projectType: '',
+    message: '',
   })
   const [selectedCountry, setSelectedCountry] = useState(COUNTRIES[0])
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
-const [projectOpen, setProjectOpen] = useState(false)
-const projectRef = useRef(null)
-useOutsideClick(projectRef, () => setProjectOpen(false))
+  const [projectOpen, setProjectOpen] = useState(false)
+  const projectRef = useRef(null)
+  useOutsideClick(projectRef, () => setProjectOpen(false))
   const dropdownRef = useRef(null)
   useOutsideClick(dropdownRef, () => setDropdownOpen(false))
 
@@ -157,12 +171,15 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
 
   const filteredCountries = useMemo(
     () => COUNTRIES.filter((c) => c.label.toLowerCase().includes(searchTerm.toLowerCase())),
-    [searchTerm]
+    [searchTerm],
   )
 
   const isValid =
-    form.firstName.trim() && form.lastName.trim() &&
-    form.email.trim() && form.phone.trim().length > 4 && form.message.trim()
+    form.firstName.trim() &&
+    form.lastName.trim() &&
+    form.email.trim() &&
+    form.phone.trim().length > 4 &&
+    form.message.trim()
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -202,9 +219,13 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
       setSubmitted(true)
       setTimeout(() => setSubmitted(false), 4000)
       setForm({
-        firstName: '', lastName: '', email: '',
+        firstName: '',
+        lastName: '',
+        email: '',
         phone: `${selectedCountry.dialCode} `,
-        location: '', projectType: '', message: '',
+        location: '',
+        projectType: '',
+        message: '',
       })
     } catch (err) {
       console.error('Form submit error:', err)
@@ -217,7 +238,6 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
   return (
     <div className={styles.main}>
       <div className={styles.MainContainer}>
-
         <div className={styles.left}>
           <h3>{t.contactPage.landingTitle}</h3>
           <p>{t.contactPage.landingDesc}</p>
@@ -225,46 +245,87 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
 
         <div className={styles.right}>
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
-
             <div className={styles.row}>
               <div className={styles.field}>
-                <input name="firstName" className={styles.input} type="text"
-                  placeholder={t.contactPage.firstName} value={form.firstName} onChange={handleChange} required />
+                <input
+                  name="firstName"
+                  className={styles.input}
+                  type="text"
+                  placeholder={t.contactPage.firstName}
+                  value={form.firstName}
+                  onChange={handleChange}
+                  required
+                />
                 <span className={styles.line} />
               </div>
               <div className={styles.field}>
-                <input name="lastName" className={styles.input} type="text"
-                  placeholder={t.contactPage.lastName} value={form.lastName} onChange={handleChange} required />
+                <input
+                  name="lastName"
+                  className={styles.input}
+                  type="text"
+                  placeholder={t.contactPage.lastName}
+                  value={form.lastName}
+                  onChange={handleChange}
+                  required
+                />
                 <span className={styles.line} />
               </div>
             </div>
 
             <div className={styles.row}>
               <div className={styles.field}>
-                <input name="email" className={styles.input} type="email"
-                  placeholder={t.contactPage.emailAddress} value={form.email} onChange={handleChange} required />
+                <input
+                  name="email"
+                  className={styles.input}
+                  type="email"
+                  placeholder={t.contactPage.emailAddress}
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
                 <span className={styles.line} />
               </div>
               <div className={styles.field}>
                 <div className={styles.phoneWrap} ref={dropdownRef}>
-                  <button type="button" className={styles.flagBtn}
-                    onClick={() => setDropdownOpen((o) => !o)} aria-label="Select country code">
+                  <button
+                    type="button"
+                    className={styles.flagBtn}
+                    onClick={() => setDropdownOpen((o) => !o)}
+                    aria-label="Select country code"
+                  >
                     <span className={styles.flagEmoji}>{getFlagEmoji(selectedCountry.value)}</span>
                     <ChevronDown open={dropdownOpen} />
                   </button>
-                  <input name="phone" className={styles.phoneInput} type="tel"
+                  <input
+                    name="phone"
+                    className={styles.phoneInput}
+                    type="tel"
                     placeholder={`${selectedCountry.dialCode} __ __ __ __`}
-                    value={form.phone} onChange={handleChange} required />
+                    value={form.phone}
+                    onChange={handleChange}
+                    required
+                  />
                   {dropdownOpen && (
                     <div className={styles.dropdown}>
-                      <input type="text" className={styles.dropdownSearch}
+                      <input
+                        type="text"
+                        className={styles.dropdownSearch}
                         placeholder={t.contactPage.searchCountry}
-                        value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} autoFocus />
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        autoFocus
+                      />
                       <ul className={styles.dropdownList}>
                         {filteredCountries.map((c) => (
-                          <li key={c.value}
+                          <li
+                            key={c.value}
                             className={`${styles.dropdownItem} ${selectedCountry.value === c.value ? styles.dropdownItemActive : ''}`}
-                            onClick={() => { setSelectedCountry(c); setDropdownOpen(false); setSearchTerm('') }}>
+                            onClick={() => {
+                              setSelectedCountry(c)
+                              setDropdownOpen(false)
+                              setSearchTerm('')
+                            }}
+                          >
                             <span className={styles.itemFlag}>{getFlagEmoji(c.value)}</span>
                             <span className={styles.itemLabel}>{c.label}</span>
                             <span className={styles.itemDial}>{c.dialCode}</span>
@@ -280,54 +341,72 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
 
             <div className={styles.row}>
               <div className={styles.field}>
-                <input name="location" className={styles.input} type="text"
-                  placeholder={t.contactPage.location} value={form.location} onChange={handleChange} />
+                <input
+                  name="location"
+                  className={styles.input}
+                  type="text"
+                  placeholder={t.contactPage.location}
+                  value={form.location}
+                  onChange={handleChange}
+                />
                 <span className={styles.line} />
               </div>
-            <div className={styles.field}>
-  <div className={styles.selectWrap} ref={projectRef}>
-    <button
-      type="button"
-      className={`${styles.select} ${!form.projectType ? styles.selectPlaceholder : ''}`}
-      onClick={() => setProjectOpen((o) => !o)}
-    >
-      {form.projectType ? t.contactPage.projectTypes[form.projectType] : t.contactPage.projectType}
-    </button>
-    <ChevronDown open={projectOpen} />
-    {projectOpen && (
-      <div className={styles.dropdown} style={{ width: '100%' }}>
-        <ul className={styles.dropdownList}>
-          {PROJECT_TYPE_KEYS.map((key) => (
-            <li
-              key={key}
-              className={`${styles.dropdownItem} ${form.projectType === key ? styles.dropdownItemActive : ''}`}
-              onClick={() => {
-                setForm((prev) => ({ ...prev, projectType: key }))
-                setProjectOpen(false)
-              }}
-            >
-              <span className={styles.itemLabel}>{t.contactPage.projectTypes[key]}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )}
-  </div>
-  <span className={styles.line} />
-</div>
+              <div className={styles.field}>
+                <div className={styles.selectWrap} ref={projectRef}>
+                  <button
+                    type="button"
+                    className={`${styles.select} ${!form.projectType ? styles.selectPlaceholder : ''}`}
+                    onClick={() => setProjectOpen((o) => !o)}
+                  >
+                    {form.projectType
+                      ? t.contactPage.projectTypes[form.projectType]
+                      : t.contactPage.projectType}
+                  </button>
+                  <ChevronDown open={projectOpen} />
+                  {projectOpen && (
+                    <div className={styles.dropdown} style={{ width: '100%' }}>
+                      <ul className={styles.dropdownList}>
+                        {PROJECT_TYPE_KEYS.map((key) => (
+                          <li
+                            key={key}
+                            className={`${styles.dropdownItem} ${form.projectType === key ? styles.dropdownItemActive : ''}`}
+                            onClick={() => {
+                              setForm((prev) => ({ ...prev, projectType: key }))
+                              setProjectOpen(false)
+                            }}
+                          >
+                            <span className={styles.itemLabel}>
+                              {t.contactPage.projectTypes[key]}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <span className={styles.line} />
+              </div>
             </div>
 
             <div className={styles.fieldFull}>
-              <textarea name="message" className={styles.textarea}
+              <textarea
+                name="message"
+                className={styles.textarea}
                 placeholder={t.contactPage.message}
-                value={form.message} onChange={handleChange} required rows={1} />
+                value={form.message}
+                onChange={handleChange}
+                required
+                rows={1}
+              />
               <span className={styles.line} />
             </div>
 
             <div className={styles.submitRow}>
-              <button type="submit"
+              <button
+                type="submit"
                 className={`${styles.submitBtn} ${!isValid ? styles.submitBtnMuted : ''}`}
-                disabled={!isValid || loading}>
+                disabled={!isValid || loading}
+              >
                 {loading ? t.contactPage.submitting : t.contactPage.submitBtn}
                 {!loading && <ArrowRight />}
               </button>
@@ -336,10 +415,8 @@ useOutsideClick(projectRef, () => setProjectOpen(false))
             <div className={styles.statusRow} aria-live="polite">
               {submitted && <p className={styles.successMsg}>{t.contactPage.successMsg}</p>}
             </div>
-
           </form>
         </div>
-
       </div>
     </div>
   )
