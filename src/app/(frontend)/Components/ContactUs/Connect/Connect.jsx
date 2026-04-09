@@ -17,8 +17,8 @@ const Connect = () => {
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray(
         sectionRef.current.querySelectorAll(
-          `.${styles.adress}, .${styles.email}, .${styles.phone}, .${styles.social}`
-        )
+          `.${styles.adress}, .${styles.email}, .${styles.phone}, .${styles.social}`,
+        ),
       )
 
       const hLines = sectionRef.current.querySelectorAll(`.${styles.line}`)
@@ -37,62 +37,93 @@ const Connect = () => {
 
       tl.to(hLines[0], {
         scaleX: 1,
-        duration: 1.2,
+        duration: 0.8,
         ease: 'expo.out',
       })
 
-      .to(items[0], {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          items[0],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(vLines[0], {
-        scaleY: 1,
-        duration: 1,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          vLines[0],
+          {
+            scaleY: 1,
+            duration: 0.7,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(items[1], {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          items[1],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(vLines[1], {
-        scaleY: 1,
-        duration: 1,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          vLines[1],
+          {
+            scaleY: 1,
+            duration: 0.7,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(items[2], {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          items[2],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(vLines[2], {
-        scaleY: 1,
-        duration: 1,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          vLines[2],
+          {
+            scaleY: 1,
+            duration: 0.7,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(items[3], {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'expo.out',
-      }, "-=0.8")
+        .to(
+          items[3],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
 
-      .to(hLines[1], {
-        scaleX: 1,
-        duration: 1.2,
-        ease: 'expo.out',
-      }, "-=1")
-
+        .to(
+          hLines[1],
+          {
+            scaleX: 1,
+            duration: 0.8,
+            ease: 'expo.out',
+          },
+          '-=0.6',
+        )
     }, sectionRef)
 
     return () => ctx.revert()
@@ -113,14 +144,18 @@ const Connect = () => {
 
           <div className={styles.email}>
             <h3>{t.contactPage.email}</h3>
-            <p><a href="mailto:hello@alhuzaifa.com">{t.contactPage.emailText}</a></p>
+            <p>
+              <a href="mailto:hello@alhuzaifa.com">{t.contactPage.emailText}</a>
+            </p>
           </div>
 
           <div className={styles.sline}></div>
 
           <div className={styles.phone}>
             <h3>{t.contactPage.phone}</h3>
-            <p><a href="tel:+97141234567">{t.contactPage.phoneText}</a></p>
+            <p>
+              <a href="tel:+97141234567">{t.contactPage.phoneText}</a>
+            </p>
           </div>
 
           <div className={styles.sline}></div>
@@ -128,9 +163,27 @@ const Connect = () => {
           <div className={styles.social}>
             <h3>{t.contactPage.letsConnect}</h3>
             <div className={styles.socialslist}>
-              <a href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en" target="_blank" rel="noopener noreferrer"><p>{t.contactPage.instagram}</p></a>
-              <a href="https://www.linkedin.com/company/al-huzaifa-furniture/" target="_blank" rel="noopener noreferrer"><p>{t.contactPage.linkedin}</p></a>
-              <a href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/" target="_blank" rel="noopener noreferrer"><p>{t.contactPage.facebook}</p></a>
+              <a
+                href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>{t.contactPage.instagram}</p>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/al-huzaifa-furniture/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>{t.contactPage.linkedin}</p>
+              </a>
+              <a
+                href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>{t.contactPage.facebook}</p>
+              </a>
             </div>
           </div>
         </div>

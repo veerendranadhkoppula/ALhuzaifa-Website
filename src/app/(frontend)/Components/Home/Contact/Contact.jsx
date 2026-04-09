@@ -31,7 +31,6 @@ const Contact = ({ brochureUrl }) => {
 
   const sectionRef = useRef(null)
 
-  // ✅ EMBLA (UNCHANGED)
   const autoplay = Autoplay({ delay: 2000, stopOnInteraction: true })
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'center', direction: isArabic ? 'rtl' : 'ltr' },
@@ -77,7 +76,7 @@ const Contact = ({ brochureUrl }) => {
 
       tl.to(hLines[0], {
         scaleX: 1,
-        duration: 1.4,
+        duration: 0.9,
         ease: 'expo.out',
       })
 
@@ -86,21 +85,21 @@ const Contact = ({ brochureUrl }) => {
           {
             opacity: 1,
             y: 0,
-            duration: 1.3,
+            duration: 0.8,
             ease: 'expo.out',
             force3D: true,
           },
-          '-=0.9',
+          '-=0.6',
         )
 
         .to(
           vLines[0],
           {
             scaleY: 1,
-            duration: 1.1,
+            duration: 0.7, // was 1.1
             ease: 'expo.out',
           },
-          '-=0.8',
+          '-=0.5', // was -=0.8
         )
 
         .to(
@@ -108,21 +107,21 @@ const Contact = ({ brochureUrl }) => {
           {
             opacity: 1,
             y: 0,
-            duration: 1.3,
+            duration: 0.8,
             ease: 'expo.out',
             force3D: true,
           },
-          '-=0.9',
+          '-=0.6',
         )
 
         .to(
           vLines[1],
           {
             scaleY: 1,
-            duration: 1.1,
+            duration: 0.7,
             ease: 'expo.out',
           },
-          '-=0.8',
+          '-=0.5',
         )
 
         .to(
@@ -130,21 +129,21 @@ const Contact = ({ brochureUrl }) => {
           {
             opacity: 1,
             y: 0,
-            duration: 1.3,
+            duration: 0.8,
             ease: 'expo.out',
             force3D: true,
           },
-          '-=0.9',
+          '-=0.6',
         )
 
         .to(
           hLines[1],
           {
             scaleX: 1,
-            duration: 1.4,
+            duration: 0.9,
             ease: 'expo.out',
           },
-          '-=1.1',
+          '-=0.7',
         )
     }, sectionRef)
 
