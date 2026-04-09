@@ -30,9 +30,9 @@
     "link": "Explore Signature Closets"
   },
   "worldAlhuzaifa": {
-    "title": "The World of Al-Huzaifa",
+    "title": "The World of Al Huzaifa",
     "desc": "A legacy shaped by design, craftsmanship, and refined living. The World of Al Huzaifa brings together our Design Studio, Furniture, and Properties - uniting creativity, manufacturing excellence, and timeless elegance to create spaces that captivate.",
-    "link": "Explore the world of Al-Huzaifa"
+    "link": "Explore the world of Al Huzaifa"
   },
   "contact": {
     "contactTitle": "Contact",
@@ -55,7 +55,7 @@
   "portfolio": {
     "label": "Portfolio",
     "hospitality": "Hospitality Projects",
-    "residence": "Residence Projects",
+    "residence": "Residential Projects",
     "project1": "Avli by tashas",
     "project2": "Loren",
     "project3": "Toto",
@@ -70,7 +70,7 @@
     "contact": "Contact",
     "servicesTitle": "Services",
     "residential": "Residential",
-    "hospitality": "Hospitality (F&B)",
+    "hospitality": "Hospitality",
     "commercial": "Commercial",
     "legalTitle": "Legal",
     "privacyPolicy": "Privacy Policy",

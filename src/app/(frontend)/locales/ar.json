@@ -57,7 +57,7 @@
   "portfolio": {
     "label": "الضيافة",
 "hospitality": "مشاريع الضيافة",
-"residence": "مشاريع سكنية",
+"residence": "المشاريع السكنية",
     "project1": "أفلي باي تاشاس",
     "project2": "لورين",
     "project3": "توتو",
@@ -71,7 +71,7 @@
     "contact": "تواصل معنا",
     "servicesTitle": "الخدمات",
     "residential": "السكني",
-    "hospitality": "الضيافة (م&ب)",
+  "hospitality": "الضيافة",
     "commercial": "التجاري",
     "legalTitle": "قانوني",
     "privacyPolicy": "سياسة الخصوصية",
