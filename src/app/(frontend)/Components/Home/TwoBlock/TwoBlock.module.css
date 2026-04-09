@@ -93,25 +93,7 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
   line-height: 150%;
 }
 
-.link {
-  font-family: var(--font-poppins);
-  font-size: var(--fs-18);
-  font-weight: 700;
-  color: #69594F;
-  margin: 0;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-color: #69594F;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.link svg {
-  text-decoration: none;
-  flex-shrink: 0;
-}
 .textContenttwo{
    display: flex;
   flex-direction: column;
