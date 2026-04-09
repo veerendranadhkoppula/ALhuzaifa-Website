@@ -34,7 +34,7 @@ padding: clamp(
     }
     .MainContainer p{
         font-size: 18px;
-        text-align: left;
+        text-align: center;
         line-height: 120%;
     }
     [dir='rtl'] .MainContainer p {

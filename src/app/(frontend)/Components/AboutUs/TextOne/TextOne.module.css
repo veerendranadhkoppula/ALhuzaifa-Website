@@ -31,7 +31,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     .MainContainer p{
         font-size: 18px;
         justify-content: left;
-        text-align: left;
+        text-align: center;
 
     }
     [dir='rtl'] .MainContainer p {

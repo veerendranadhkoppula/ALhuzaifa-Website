@@ -19,15 +19,15 @@
   "twoBlock": {
     "block1Title": "Craftsmanship",
     "block1Desc": "At the core of our process is design-led production. Interior designers work in seamless collaboration with master artisans within our state-of-the-art regional manufacturing facility, ensuring design intent is realised with precision, artistry, and flawless execution.",
-    "block1Link": "Explore Craftsmanship",
+    "block1Link": "Explore craftsmanship",
     "block2Title": "Customisation",
     "block2Desc": "True luxury is personal. Every project is tailored to your lifestyle and aspirations, uniting bespoke design, fine craftsmanship, and in-house manufacturing – ensuring every detail is considered and every space is distinctly yours.",
-    "block2Link": "Explore Customisation"
+    "block2Link": "Explore customisation"
   },
   "signatureClosets": {
     "title": "Signature Closets",
     "desc": "From walk-ins to pole systems, crafted in luxurious materials—storage, elevated to a statement. Tailored in detail, defined by a luxury that is refined, functional, and ever evolving.",
-    "link": "Explore Signature Closets"
+    "link": "Explore signature closets"
   },
   "worldAlhuzaifa": {
     "title": "The World of Al Huzaifa",
@@ -59,7 +59,7 @@
     "project1": "Avli by tashas",
     "project2": "Loren",
     "project3": "Toto",
-    "textl": "View More"
+    "textl": "View more"
   },
   "footer": {
     "studioTitle": "Studio",
@@ -150,7 +150,7 @@
     "theWorldTitle": "The World of Al Huzaifa",
     "theWorldDesc": "A legacy shaped by design, craftsmanship, and refined living. The World of Al Huzaifa brings together our Design Studio, Furniture, and Properties - uniting creativity, manufacturing excellence, and timeless elegance to create spaces that captivate.",
     "designStudio": "Design studio",
-    "furniture": "Al-Huzaifa furniture",
+    "furniture": "Al Huzaifa furniture",
     "properties": "Al Huzaifa properties"
   },
   "contactPage": {
@@ -203,7 +203,7 @@
     "craftsmanship": "Craftsmanship",
     "deliveryInstallation": "Delivery & Installation",
     "transformHeading": "Spaces We Transform",
-    "hospitality": "Hospitality (F&B)",
+    "hospitality": "Hospitality",
     "residential": "Residential",
     "commercial": "Commercial",
     "ourServicesTitle": "Our Services",

@@ -17,7 +17,7 @@ const ArrowSvg = () => (
   <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
     <path
       d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L0.999999 6.91406"
-      stroke="#414141"
+      stroke="#69594F"
       strokeWidth="2"
       strokeLinecap="square"
     />

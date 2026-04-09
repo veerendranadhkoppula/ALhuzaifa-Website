@@ -66,7 +66,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
     .Bottom p{
         font-size: 18px;
         max-width: 320px;
-        text-align: left;
+        text-align: center;
     }
     [dir='rtl'] .Bottom p {
         text-align: right;
