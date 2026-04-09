@@ -5,7 +5,7 @@
     "craftmanship": "Craftsmanship",
     "portfolio": "Projects",
     "contact": "Contact",
-    "languageSwitch": "Arabic",
+    "languageSwitch": "Ar",
     "hospitality": "Hospitality",
     "residential": "Residential",
     "commercial": "Commercial"
@@ -60,7 +60,6 @@
     "project2": "Loren",
     "project3": "Toto",
     "textl": "View More"
-    
   },
   "footer": {
     "studioTitle": "Studio",

@@ -116,14 +116,14 @@ const Navbar = () => {
                     if (language !== 'en') toggleLanguage()
                   }}
                 >
-                  English
+                  En
                 </span>
                 <span
                   onClick={() => {
                     if (language !== 'ar') toggleLanguage()
                   }}
                 >
-                  Arabic
+                  Ar
                 </span>
               </div>
             </div>
