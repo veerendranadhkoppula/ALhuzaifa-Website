@@ -48,15 +48,20 @@ const Journey = () => {
   const autoPlayRef = useRef(null)
 
   const current = milestones[selectedIndex]
-  const next = milestones[selectedIndex + 1] ?? null
+ const isLast = selectedIndex === milestones.length - 1
+const next = isLast
+  ? milestones[selectedIndex - 1] ?? null
+  : milestones[selectedIndex + 1] ?? null
+
 
   const updateLine = () => {
     if (!timelineRef.current) return
     const buttons = timelineRef.current.querySelectorAll('button')
-    if (!buttons[selectedIndex] || !buttons[selectedIndex + 1]) return
+const isLast = selectedIndex === milestones.length - 1
+if (!buttons[isLast ? selectedIndex - 1 : selectedIndex] || !buttons[isLast ? selectedIndex : selectedIndex + 1]) return
     const containerRect = timelineRef.current.getBoundingClientRect()
-    const startBtn = buttons[selectedIndex]
-    const endBtn = buttons[selectedIndex + 1]
+const startBtn = isLast ? buttons[selectedIndex - 1] : buttons[selectedIndex]
+const endBtn = isLast ? buttons[selectedIndex] : buttons[selectedIndex + 1]
     const startRect = startBtn.getBoundingClientRect()
     const endRect = endBtn.getBoundingClientRect()
 
@@ -226,7 +231,7 @@ const Journey = () => {
             {milestones.map((m, i) => (
               <button
                 key={m.year}
-                className={`${styles.yearBtn} ${i === selectedIndex ? styles.yearActive : ''} ${i === selectedIndex + 1 && next ? styles.yearActiveEnd : ''}`}
+                className={`${styles.yearBtn} ${i === selectedIndex ? styles.yearActive : ''} ${isLast ? (i === selectedIndex - 1 ? styles.yearActiveEnd : '') : (i === selectedIndex + 1 && next ? styles.yearActiveEnd : '')}`}
                 onClick={() => handleSelect(i)}
               >
                 {m.year}

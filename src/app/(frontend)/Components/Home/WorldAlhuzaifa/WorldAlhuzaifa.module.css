@@ -143,6 +143,10 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   transform: translateY(40px);
 }
 
+.desk {
+  opacity: 0;
+  transform: translateY(40px);
+}
 .arrow {
   transition: transform 0.3s ease;
 }

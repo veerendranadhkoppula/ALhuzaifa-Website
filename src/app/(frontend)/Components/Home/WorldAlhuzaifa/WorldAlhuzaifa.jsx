@@ -18,7 +18,7 @@ const WorldAlhuzaifa = () => {
   const locale = language
 
   const topRef = useRef(null)
-
+const bottomImgRef = useRef(null)
   useEffect(() => {
     const ctx = gsap.context(() => {
       const isRTL = document.dir === 'rtl'
@@ -38,6 +38,20 @@ const WorldAlhuzaifa = () => {
           },
         }
       )
+      gsap.fromTo(
+  bottomImgRef.current,
+  { opacity: 0, y: 40 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: bottomImgRef.current,
+      start: 'top 70%',
+    },
+  }
+)
     })
 
     return () => ctx.revert()
@@ -52,7 +66,7 @@ const WorldAlhuzaifa = () => {
         </div>
 
         <div className={styles.bottom}>
-          <div className={styles.desk}>
+<div className={styles.desk} ref={bottomImgRef}>
             <Image src={world} alt={t.worldAlhuzaifa.title} />
           </div>
 
