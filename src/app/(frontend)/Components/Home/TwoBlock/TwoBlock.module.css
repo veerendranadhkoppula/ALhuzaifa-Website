@@ -191,3 +191,7 @@ clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px)
 .link {
   opacity: 0;
 }
+.MainContainer a {
+  color: inherit;
+  text-decoration: none;
+}

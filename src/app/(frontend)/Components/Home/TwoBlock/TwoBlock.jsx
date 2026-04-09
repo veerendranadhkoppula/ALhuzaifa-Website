@@ -70,7 +70,7 @@ const TwoBlock = () => {
     <div className={styles.Main}>
       <div className={styles.MainContainer}>
 
-        <div className={styles.block} ref={(el) => (blockRefs.current[0] = el)}>
+        <Link href={`/${locale}/craftsmanship`} className={styles.block} ref={(el) => (blockRefs.current[0] = el)}>
           <div className={styles.imageWrapper}>
             <Image
               src={block1}
@@ -85,18 +85,18 @@ const TwoBlock = () => {
           </div>
           <div className={styles.textContent}>
             <p className={styles.desc}>{t.twoBlock.block1Desc}</p>
-            <Link href={`/${locale}/craftmanship`}>
+            <div>
               <h5 className={styles.link}>
                 {t.twoBlock.block1Link}
                 <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
                   <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2"/>
                 </svg>
               </h5>
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
 
-        <div className={styles.block} ref={(el) => (blockRefs.current[1] = el)}>
+        <Link href={`/${locale}/services`} className={styles.block} ref={(el) => (blockRefs.current[1] = el)}>
           <div className={styles.imageWrapper}>
             <Image
               src={block2}
@@ -111,16 +111,16 @@ const TwoBlock = () => {
           </div>
           <div className={styles.textContenttwo}>
             <p className={styles.desc}>{t.twoBlock.block2Desc}</p>
-            <Link href={`/${locale}/services`}>
+            <div>
               <h5 className={styles.link}>
                 {t.twoBlock.block2Link}
                 <svg width="17" height="14" viewBox="0 0 17 14" fill="none">
                   <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2"/>
                 </svg>
               </h5>
-            </Link>
+            </div>
           </div>
-        </div>
+        </Link>
 
       </div>
     </div>

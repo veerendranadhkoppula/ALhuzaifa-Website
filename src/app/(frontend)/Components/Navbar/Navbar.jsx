@@ -61,8 +61,8 @@ const Navbar = () => {
     {t.navbar.services}
   </h4>
 </Link>
-            <Link href={`/${locale}/craftmanship`}>
-              <h4 className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
+            <Link href={`/${locale}/craftsmanship`}>
+              <h4 className={isActive(`/${locale}/craftsmanship`) ? styles.activeLink : ''}>
                 {t.navbar.craftmanship}
               </h4>
             </Link>
@@ -218,9 +218,9 @@ const Navbar = () => {
   </div>
 </Link>
     
-          <Link href={`/${locale}/craftmanship`}>
+          <Link href={`/${locale}/craftsmanship`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
+              <span className={isActive(`/${locale}/craftsmanship`) ? styles.activeLink : ''}>
                 {t.navbar.craftmanship}
               </span>
             </div>

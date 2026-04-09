@@ -26,7 +26,7 @@ const Footer = () => {
             <h4 className={styles.columnTitle}>{t.footer.studioTitle}</h4>
             <ul className={styles.columnList}>
               <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
-              <li><Link href={`/${locale}/craftmanship`}>{t.footer.craftmanship}</Link></li>
+              <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
               <li><Link href={`/${locale}/portfolio`}>{t.footer.portfolio}</Link></li>
               <li><Link href={`/${locale}/contact-us`}>{t.footer.contact}</Link></li>
             </ul>
@@ -67,7 +67,7 @@ const Footer = () => {
               <h4 className={styles.columnTitle}>{t.footer.studioTitle}</h4>
               <ul className={styles.columnList}>
                 <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
-                <li><Link href={`/${locale}/craftmanship`}>{t.footer.craftmanship}</Link></li>
+                <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
                 <li><Link href={`/${locale}/portfolio`}>{t.footer.portfolio}</Link></li>
                 <li><Link href={`/${locale}/contact`}>{t.footer.contact}</Link></li>
               </ul>
