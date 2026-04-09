@@ -56,38 +56,11 @@ const Navbar = () => {
                 {t.navbar.aboutUs}
               </h4>
             </Link>
-            <div className={styles.dropdownWrapper}>
-              <Link href={`/${locale}/services`} className={styles.servicesLink}>
-                <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
-                  {t.navbar.services}
-                </h4>
-                <svg
-                  className={styles.dropdownChevron}
-                  width="12"
-                  height="7"
-                  viewBox="0 0 13 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
-                    fill="#414141"
-                    fillOpacity="0.5"
-                  />
-                </svg>
-              </Link>
-              <div className={styles.dropdown}>
-                <Link href={`/${locale}/services/hospitality`}>
-                  <span>{t.navbar.hospitality}</span>
-                </Link>
-                <Link href={`/${locale}/services/residential`}>
-                  <span>{t.navbar.residential}</span>
-                </Link>
-                <Link href={`/${locale}/services/commercial`}>
-                  <span>{t.navbar.commercial}</span>
-                </Link>
-              </div>
-            </div>
+          <Link href={`/${locale}/services`}>
+  <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+    {t.navbar.services}
+  </h4>
+</Link>
             <Link href={`/${locale}/craftmanship`}>
               <h4 className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
                 {t.navbar.craftmanship}
@@ -164,11 +137,27 @@ const Navbar = () => {
                 </span>
               </div>
             </div>
-            <Link href={`/${locale}/portfolio`}>
-              <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
-                {t.navbar.portfolio}
-              </h4>
-            </Link>
+          <div className={styles.dropdownWrapper}>
+  <Link href={`/${locale}/portfolio`} className={styles.servicesLink}>
+    <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+      {t.navbar.portfolio}
+    </h4>
+    <svg className={styles.dropdownChevron} width="12" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5"/>
+    </svg>
+  </Link>
+  <div className={styles.dropdown}>
+    <Link href={`/${locale}/portfolio/hospitality`}>
+      <span>{t.navbar.hospitality}</span>
+    </Link>
+    <Link href={`/${locale}/portfolio/residential`}>
+      <span>{t.navbar.residential}</span>
+    </Link>
+    <Link href={`/${locale}/portfolio/commercial`}>
+      <span>{t.navbar.commercial}</span>
+    </Link>
+  </div>
+</div>
             <Link href={`/${locale}/contact-us`}>
               <h4 className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>
                 {t.navbar.contact}
@@ -221,61 +210,14 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div
-            className={styles.sheetLinkItem}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
-          >
-            <Link href={`/${locale}/services`} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
-                {t.navbar.services}
-              </span>
-            </Link>
-            <span
-              style={{ padding: '0 8px', cursor: 'pointer' }}
-              onClick={(e) => {
-                e.stopPropagation()
-                setServicesOpen(!servicesOpen)
-              }}
-            >
-              <svg
-                style={{
-                  transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                  transition: 'transform 0.2s',
-                }}
-                width="12"
-                height="7"
-                viewBox="0 0 13 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
-                  fill="#414141"
-                  fillOpacity="0.5"
-                />
-              </svg>
-            </span>
-          </div>
-          {servicesOpen && (
-            <div className={styles.sheetSubLinks}>
-              <Link href={`/${locale}/services/hospitality`}>
-                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-                  <span>{t.navbar.hospitality}</span>
-                </div>
-              </Link>
-              <Link href={`/${locale}/services/residential`}>
-                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-                  <span>{t.navbar.residential}</span>
-                </div>
-              </Link>
-              <Link href={`/${locale}/services/commercial`}>
-                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-                  <span>{t.navbar.commercial}</span>
-                </div>
-              </Link>
-            </div>
-          )}
-
+       <Link href={`/${locale}/services`}>
+  <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+    <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+      {t.navbar.services}
+    </span>
+  </div>
+</Link>
+    
           <Link href={`/${locale}/craftmanship`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
               <span className={isActive(`/${locale}/craftmanship`) ? styles.activeLink : ''}>
@@ -284,13 +226,49 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <Link href={`/${locale}/portfolio`}>
-            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-              <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
-                {t.navbar.portfolio}
-              </span>
-            </div>
-          </Link>
+       <div
+  className={styles.sheetLinkItem}
+  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+>
+  <Link href={`/${locale}/portfolio`} onClick={() => setMenuOpen(false)}>
+    <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+      {t.navbar.portfolio}
+    </span>
+  </Link>
+  <span
+    style={{ padding: '0 8px', cursor: 'pointer' }}
+    onClick={(e) => {
+      e.stopPropagation()
+      setServicesOpen(!servicesOpen)
+    }}
+  >
+    <svg
+      style={{ transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}
+      width="12" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5"/>
+    </svg>
+  </span>
+</div>
+{servicesOpen && (
+  <div className={styles.sheetSubLinks}>
+    <Link href={`/${locale}/portfolio/hospitality`}>
+      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+        <span>{t.navbar.hospitality}</span>
+      </div>
+    </Link>
+    <Link href={`/${locale}/portfolio/residential`}>
+      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+        <span>{t.navbar.residential}</span>
+      </div>
+    </Link>
+    <Link href={`/${locale}/portfolio/commercial`}>
+      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+        <span>{t.navbar.commercial}</span>
+      </div>
+    </Link>
+  </div>
+)}
 
           <Link href={`/${locale}/contact-us`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>

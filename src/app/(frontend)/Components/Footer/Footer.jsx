@@ -35,9 +35,9 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/services/residential`}>{t.footer.residential}</Link></li>
-              <li><Link href={`/${locale}/services/hospitality`}>{t.footer.hospitality}</Link></li>
-              <li><Link href={`/${locale}/services/commercial`}>{t.footer.commercial}</Link></li>
+              <li><Link href={`/${locale}/portfolio/residential`}>{t.footer.residential}</Link></li>
+              <li><Link href={`/${locale}/portfolio/hospitality`}>{t.footer.hospitality}</Link></li>
+              <li><Link href={`/${locale}/portfolio/commercial`}>{t.footer.commercial}</Link></li>
             </ul>
           </div>
 
@@ -75,9 +75,9 @@ const Footer = () => {
             <div className={styles.column}>
               <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
               <ul className={styles.columnList}>
-                <li><Link href={`/${locale}/services/residential`}>{t.footer.residential}</Link></li>
-                <li><Link href={`/${locale}/services/hospitality`}>{t.footer.hospitality}</Link></li>
-                <li><Link href={`/${locale}/services/commercial`}>{t.footer.commercial}</Link></li>
+                <li><Link href={`/${locale}/portfolio/residential`}>{t.footer.residential}</Link></li>
+                <li><Link href={`/${locale}/portfolio/hospitality`}>{t.footer.hospitality}</Link></li>
+                <li><Link href={`/${locale}/portfolio/commercial`}>{t.footer.commercial}</Link></li>
               </ul>
             </div>
           </div>

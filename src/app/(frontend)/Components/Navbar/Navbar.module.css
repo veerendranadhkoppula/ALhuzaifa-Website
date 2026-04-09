@@ -79,6 +79,7 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   justify-content: right;
   flex-direction: row;
   gap: 30px;
+  align-items: center;
   flex: 1;
 }
 [dir="rtl"] .Right {

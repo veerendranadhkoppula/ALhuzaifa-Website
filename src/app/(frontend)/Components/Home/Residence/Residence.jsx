@@ -10,20 +10,31 @@ import { useTranslation } from '../../../hooks/useTranslation'
 const PrevArrow = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="12" cy="12" r="11.5" stroke="#8F8677" />
-    <path d="M14.0137 17.842C14.2394 18.0526 14.6053 18.0527 14.8309 17.842C15.0564 17.6311 15.0564 17.2892 14.8309 17.0784L9.39496 12.0006L14.8309 6.92164C15.0564 6.71088 15.0563 6.36898 14.8309 6.15811C14.6053 5.94727 14.2394 5.94732 14.0137 6.15811L8.16916 11.6177C7.94354 11.8285 7.94368 12.1704 8.16916 12.3813L14.0137 17.842Z" fill="#8F8677" />
+    <path
+      d="M14.0137 17.842C14.2394 18.0526 14.6053 18.0527 14.8309 17.842C15.0564 17.6311 15.0564 17.2892 14.8309 17.0784L9.39496 12.0006L14.8309 6.92164C15.0564 6.71088 15.0563 6.36898 14.8309 6.15811C14.6053 5.94727 14.2394 5.94732 14.0137 6.15811L8.16916 11.6177C7.94354 11.8285 7.94368 12.1704 8.16916 12.3813L14.0137 17.842Z"
+      fill="#8F8677"
+    />
   </svg>
 )
 
 const NextArrow = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="12" cy="12" r="11.5" stroke="#8F8677" />
-    <path d="M9.98626 17.842C9.76055 18.0526 9.39467 18.0527 9.16905 17.842C8.94365 17.6311 8.94365 17.2892 9.16905 17.0784L14.605 12.0006L9.16905 6.92164C8.94356 6.71088 8.94374 6.36898 9.16905 6.15811C9.39472 5.94727 9.76056 5.94732 9.98626 6.15811L15.8308 11.6177C16.0565 11.8285 16.0563 12.1704 15.8308 12.3813L9.98626 17.842Z" fill="#8F8677" />
+    <path
+      d="M9.98626 17.842C9.76055 18.0526 9.39467 18.0527 9.16905 17.842C8.94365 17.6311 8.94365 17.2892 9.16905 17.0784L14.605 12.0006L9.16905 6.92164C8.94356 6.71088 8.94374 6.36898 9.16905 6.15811C9.39472 5.94727 9.76056 5.94732 9.98626 6.15811L15.8308 11.6177C16.0565 11.8285 16.0563 12.1704 15.8308 12.3813L9.98626 17.842Z"
+      fill="#8F8677"
+    />
   </svg>
 )
 
 const LinkArrow = () => (
   <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406" stroke="#69594F" strokeWidth="2" strokeLinecap="square" />
+    <path
+      d="M9.9227 12.4141L15.5312 6.91406L9.9227 1.41406M14.2566 6.91406L1 6.91406"
+      stroke="#69594F"
+      strokeWidth="2"
+      strokeLinecap="square"
+    />
   </svg>
 )
 
@@ -100,7 +111,7 @@ const Residence = ({ projects = [], locale }) => {
               </button>
             </div>
           )}
-           <Link href={`/${locale}/services/residential`} className={styles.viewAll}>
+          <Link href={`/${locale}/portfolio/residential`} className={styles.viewAll}>
             <p>{t.portfolio.textl}</p>
           </Link>
         </div>
@@ -109,7 +120,7 @@ const Residence = ({ projects = [], locale }) => {
           {projects.map((p) => (
             <Link
               key={p.id}
-              href={`/${locale}/services/residential/${p.slug}`}
+              href={`/${locale}/portfolio/residential/${p.slug}`}
               className={styles.card}
             >
               <div className={styles.imgWrapper}>
@@ -136,7 +147,7 @@ const Residence = ({ projects = [], locale }) => {
                 {projects.map((p) => (
                   <Link
                     key={p.id}
-                    href={`/${locale}/services/residential/${p.slug}`}
+                    href={`/${locale}/portfolio/residential/${p.slug}`}
                     className={styles.emblaSlide}
                   >
                     <div className={styles.imgWrapper}>
@@ -158,7 +169,7 @@ const Residence = ({ projects = [], locale }) => {
             </div>
           ) : (
             <Link
-              href={`/${locale}/services/residential/${projects[0]?.slug}`}
+              href={`/${locale}/portfolio/residential/${projects[0]?.slug}`}
               className={styles.card}
             >
               <div className={styles.imgWrapper}>
@@ -177,7 +188,7 @@ const Residence = ({ projects = [], locale }) => {
             </Link>
           )}
         </div>
- <Link href={`/${locale}/services/residential`} className={styles.viewAllMobile}>
+        <Link href={`/${locale}/portfolio/residential`} className={styles.viewAllMobile}>
           <p>{t.portfolio.textl}</p>
         </Link>
       </div>
