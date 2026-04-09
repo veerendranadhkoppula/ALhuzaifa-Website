@@ -27,7 +27,7 @@ const Footer = () => {
             <ul className={styles.columnList}>
               <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
               <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
-              <li><Link href={`/${locale}/portfolio`}>{t.footer.portfolio}</Link></li>
+              <li><Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link></li>
               <li><Link href={`/${locale}/contact-us`}>{t.footer.contact}</Link></li>
             </ul>
           </div>
@@ -35,9 +35,9 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/portfolio/residential`}>{t.footer.residential}</Link></li>
-              <li><Link href={`/${locale}/portfolio/hospitality`}>{t.footer.hospitality}</Link></li>
-              <li><Link href={`/${locale}/portfolio/commercial`}>{t.footer.commercial}</Link></li>
+              <li><Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link></li>
+              <li><Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link></li>
+              <li><Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link></li>
             </ul>
           </div>
 
@@ -68,16 +68,16 @@ const Footer = () => {
               <ul className={styles.columnList}>
                 <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
                 <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
-                <li><Link href={`/${locale}/portfolio`}>{t.footer.portfolio}</Link></li>
+                <li><Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link></li>
                 <li><Link href={`/${locale}/contact`}>{t.footer.contact}</Link></li>
               </ul>
             </div>
             <div className={styles.column}>
               <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
               <ul className={styles.columnList}>
-                <li><Link href={`/${locale}/portfolio/residential`}>{t.footer.residential}</Link></li>
-                <li><Link href={`/${locale}/portfolio/hospitality`}>{t.footer.hospitality}</Link></li>
-                <li><Link href={`/${locale}/portfolio/commercial`}>{t.footer.commercial}</Link></li>
+                <li><Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link></li>
+                <li><Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link></li>
+                <li><Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link></li>
               </ul>
             </div>
           </div>

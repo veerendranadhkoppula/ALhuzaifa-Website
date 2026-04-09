@@ -110,7 +110,7 @@ const Residence = ({ projects = [], locale }) => {
               </button>
             </div>
           )}
-          <Link href={`/${locale}/portfolio/residential`} className={styles.viewAll}>
+          <Link href={`/${locale}/projects/residential`} className={styles.viewAll}>
             <p>{t.portfolio.textl}</p>
           </Link>
         </div>
@@ -119,7 +119,7 @@ const Residence = ({ projects = [], locale }) => {
           {projects.map((p) => (
             <Link
               key={p.id}
-              href={`/${locale}/portfolio/residential/${p.slug}`}
+              href={`/${locale}/projects/residential/${p.slug}`}
               className={styles.card}
             >
               <div className={styles.imgWrapper}>
@@ -146,7 +146,7 @@ const Residence = ({ projects = [], locale }) => {
                 {projects.map((p) => (
                   <Link
                     key={p.id}
-                    href={`/${locale}/portfolio/residential/${p.slug}`}
+                    href={`/${locale}/projects/residential/${p.slug}`}
                     className={styles.emblaSlide}
                   >
                     <div className={styles.imgWrapper}>
@@ -168,7 +168,7 @@ const Residence = ({ projects = [], locale }) => {
             </div>
           ) : (
             <Link
-              href={`/${locale}/portfolio/residential/${projects[0]?.slug}`}
+              href={`/${locale}/projects/residential/${projects[0]?.slug}`}
               className={styles.card}
             >
               <div className={styles.imgWrapper}>
@@ -187,7 +187,7 @@ const Residence = ({ projects = [], locale }) => {
             </Link>
           )}
         </div>
-        <Link href={`/${locale}/portfolio/residential`} className={styles.viewAllMobile}>
+        <Link href={`/${locale}/projects/residential`} className={styles.viewAllMobile}>
           <p>{t.portfolio.textl}</p>
         </Link>
       </div>

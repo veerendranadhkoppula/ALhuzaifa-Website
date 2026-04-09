@@ -32,7 +32,7 @@ const hasMore = projects.length > visibleCount
            {visibleProjects.map((project) => (
             <Link
               key={project.id}
-              href={`/${locale}/portfolio/commercial/${project.slug}`}
+              href={`/${locale}/projects/commercial/${project.slug}`}
               className={styles.card}
             >
               <div className={styles.imageWrap}>

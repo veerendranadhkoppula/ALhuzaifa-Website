@@ -56,11 +56,11 @@ const Navbar = () => {
                 {t.navbar.aboutUs}
               </h4>
             </Link>
-          <Link href={`/${locale}/services`}>
-  <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
-    {t.navbar.services}
-  </h4>
-</Link>
+            <Link href={`/${locale}/services`}>
+              <h4 className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+                {t.navbar.services}
+              </h4>
+            </Link>
             <Link href={`/${locale}/craftsmanship`}>
               <h4 className={isActive(`/${locale}/craftsmanship`) ? styles.activeLink : ''}>
                 {t.navbar.craftmanship}
@@ -92,20 +92,10 @@ const Navbar = () => {
           <div className={styles.Right}>
             <div className={styles.langWrapper}>
               <button className={styles.langBtn}>
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.8333 7.16667C13.8333 10.8486 10.8486 13.8333 7.16667 13.8333M13.8333 7.16667C13.8333 3.48477 10.8486 0.5 7.16667 0.5M13.8333 7.16667H0.5M7.16667 13.8333C3.48477 13.8333 0.5 10.8486 0.5 7.16667M7.16667 13.8333C5.45482 12.0359 4.5 9.64884 4.5 7.16667C4.5 4.68449 5.45482 2.29744 7.16667 0.5M7.16667 13.8333C8.87851 12.0359 9.83333 9.64884 9.83333 7.16667C9.83333 4.68449 8.87851 2.29744 7.16667 0.5M0.5 7.16667C0.5 3.48477 3.48477 0.5 7.16667 0.5"
-                    stroke="#414141"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.6484 10.6484C20.6484 16.1713 16.1713 20.6484 10.6484 20.6484M20.6484 10.6484C20.6484 5.12559 16.1713 0.648438 10.6484 0.648438M20.6484 10.6484H0.648438M10.6484 20.6484C5.12559 20.6484 0.648438 16.1713 0.648438 10.6484M10.6484 20.6484C8.08067 17.9523 6.64844 14.3717 6.64844 10.6484C6.64844 6.92518 8.08067 3.34459 10.6484 0.648438M10.6484 20.6484C13.2162 17.9523 14.6484 14.3717 14.6484 10.6484C14.6484 6.92518 13.2162 3.34459 10.6484 0.648438M0.648438 10.6484C0.648438 5.12559 5.12559 0.648438 10.6484 0.648438" stroke="#414141" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
                 <svg
                   className={`${styles.dropdownChevron} ${languageOpen ? styles.dropdownChevronOpen : ''}`}
                   width="12"
@@ -137,27 +127,38 @@ const Navbar = () => {
                 </span>
               </div>
             </div>
-          <div className={styles.dropdownWrapper}>
-  <Link href={`/${locale}/portfolio`} className={styles.servicesLink}>
-    <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
-      {t.navbar.portfolio}
-    </h4>
-    <svg className={styles.dropdownChevron} width="12" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5"/>
-    </svg>
-  </Link>
-  <div className={styles.dropdown}>
-    <Link href={`/${locale}/portfolio/hospitality`}>
-      <span>{t.navbar.hospitality}</span>
-    </Link>
-    <Link href={`/${locale}/portfolio/residential`}>
-      <span>{t.navbar.residential}</span>
-    </Link>
-    <Link href={`/${locale}/portfolio/commercial`}>
-      <span>{t.navbar.commercial}</span>
-    </Link>
-  </div>
-</div>
+            <div className={styles.dropdownWrapper}>
+              <Link href={`/${locale}/projects`} className={styles.servicesLink}>
+                <h4 className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+                  {t.navbar.portfolio}
+                </h4>
+                <svg
+                  className={styles.dropdownChevron}
+                  width="12"
+                  height="7"
+                  viewBox="0 0 13 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
+                    fill="#414141"
+                    fillOpacity="0.5"
+                  />
+                </svg>
+              </Link>
+              <div className={styles.dropdown}>
+                <Link href={`/${locale}/projects/hospitality`}>
+                  <span>{t.navbar.hospitality}</span>
+                </Link>
+                <Link href={`/${locale}/projects/residential`}>
+                  <span>{t.navbar.residential}</span>
+                </Link>
+                <Link href={`/${locale}/projects/commercial`}>
+                  <span>{t.navbar.commercial}</span>
+                </Link>
+              </div>
+            </div>
             <Link href={`/${locale}/contact-us`}>
               <h4 className={isActive(`/${locale}/contact-us`) ? styles.activeLink : ''}>
                 {t.navbar.contact}
@@ -210,14 +211,14 @@ const Navbar = () => {
             </div>
           </Link>
 
-       <Link href={`/${locale}/services`}>
-  <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
-    <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
-      {t.navbar.services}
-    </span>
-  </div>
-</Link>
-    
+          <Link href={`/${locale}/services`}>
+            <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/services`) ? styles.activeLink : ''}>
+                {t.navbar.services}
+              </span>
+            </div>
+          </Link>
+
           <Link href={`/${locale}/craftsmanship`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>
               <span className={isActive(`/${locale}/craftsmanship`) ? styles.activeLink : ''}>
@@ -226,49 +227,60 @@ const Navbar = () => {
             </div>
           </Link>
 
-       <div
-  className={styles.sheetLinkItem}
-  style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
->
-  <Link href={`/${locale}/portfolio`} onClick={() => setMenuOpen(false)}>
-    <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
-      {t.navbar.portfolio}
-    </span>
-  </Link>
-  <span
-    style={{ padding: '0 8px', cursor: 'pointer' }}
-    onClick={(e) => {
-      e.stopPropagation()
-      setServicesOpen(!servicesOpen)
-    }}
-  >
-    <svg
-      style={{ transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}
-      width="12" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z" fill="#414141" fillOpacity="0.5"/>
-    </svg>
-  </span>
-</div>
-{servicesOpen && (
-  <div className={styles.sheetSubLinks}>
-    <Link href={`/${locale}/portfolio/hospitality`}>
-      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-        <span>{t.navbar.hospitality}</span>
-      </div>
-    </Link>
-    <Link href={`/${locale}/portfolio/residential`}>
-      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-        <span>{t.navbar.residential}</span>
-      </div>
-    </Link>
-    <Link href={`/${locale}/portfolio/commercial`}>
-      <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
-        <span>{t.navbar.commercial}</span>
-      </div>
-    </Link>
-  </div>
-)}
+          <div
+            className={styles.sheetLinkItem}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+          >
+            <Link href={`/${locale}/projects`} onClick={() => setMenuOpen(false)}>
+              <span className={isActive(`/${locale}/portfolio`) ? styles.activeLink : ''}>
+                {t.navbar.portfolio}
+              </span>
+            </Link>
+            <span
+              style={{ padding: '0 8px', cursor: 'pointer' }}
+              onClick={(e) => {
+                e.stopPropagation()
+                setServicesOpen(!servicesOpen)
+              }}
+            >
+              <svg
+                style={{
+                  transform: servicesOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                  transition: 'transform 0.2s',
+                }}
+                width="12"
+                height="7"
+                viewBox="0 0 13 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.0625 6.75L12.1247 0H0.000322342L6.0625 6.75Z"
+                  fill="#414141"
+                  fillOpacity="0.5"
+                />
+              </svg>
+            </span>
+          </div>
+          {servicesOpen && (
+            <div className={styles.sheetSubLinks}>
+              <Link href={`/${locale}/projects/hospitality`}>
+                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+                  <span>{t.navbar.hospitality}</span>
+                </div>
+              </Link>
+              <Link href={`/${locale}/projects/residential`}>
+                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+                  <span>{t.navbar.residential}</span>
+                </div>
+              </Link>
+              <Link href={`/${locale}/projects/commercial`}>
+                <div className={styles.sheetSubItem} onClick={() => setMenuOpen(false)}>
+                  <span>{t.navbar.commercial}</span>
+                </div>
+              </Link>
+            </div>
+          )}
 
           <Link href={`/${locale}/contact-us`}>
             <div className={styles.sheetLinkItem} onClick={() => setMenuOpen(false)}>

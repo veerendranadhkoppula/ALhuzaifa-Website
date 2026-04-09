@@ -40,9 +40,9 @@ const ProjectsGrid = ({ locale, hospitalityProjects, residentialProjects, commer
   }
 
   const viewMoreLinks = {
-    hospitality: `/${locale}/portfolio/hospitality`,
-    residential: `/${locale}/portfolio/residential`,
-    commercial: `/${locale}/portfolio/commercial`,
+    hospitality: `/${locale}/projects/hospitality`,
+    residential: `/${locale}/projects/residential`,
+    commercial: `/${locale}/projects/commercial`,
   }
 
   return (
@@ -63,7 +63,7 @@ const ProjectsGrid = ({ locale, hospitalityProjects, residentialProjects, commer
 
         <div className={styles.grid}>
           {projects.map((project) => (
-            <Link key={project.id} className={styles.card}  href={`/${locale}/portfolio/${activeTab}/${project.slug}`}>
+            <Link key={project.id} className={styles.card}  href={`/${locale}/projects/${activeTab}/${project.slug}`}>
               <div className={styles.imageWrap}>
                 <Image
                   src={project.thumbnailImage?.url}

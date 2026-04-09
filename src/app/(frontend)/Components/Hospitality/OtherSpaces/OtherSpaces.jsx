@@ -34,13 +34,13 @@ const CARDS = (t, locale) => [
     id: 1,
     img: two,
     label: t.hospitalityPage.otherspacesone,
-    href: `/${locale}/portfolio/residential`,
+    href: `/${locale}/projects/residential`,
   },
   {
     id: 2,
     img: three,
     label: t.hospitalityPage.otherspacestwo,
-    href: `/${locale}/portfolio/commercial`,
+    href: `/${locale}/projects/commercial`,
   },
 ]
 

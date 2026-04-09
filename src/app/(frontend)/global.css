@@ -16,6 +16,9 @@
   font-style: normal;
   font-display: swap;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 :root {
   --font-poppins: 'Poppins', sans-serif;

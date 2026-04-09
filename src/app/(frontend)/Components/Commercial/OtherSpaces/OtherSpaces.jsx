@@ -39,13 +39,13 @@ const OtherSpaces = () => {
       id: 1,
       img: two,
       label: t.CommercialPage.otherspacesone,
-      href: `/${locale}/portfolio/residential`,
+      href: `/${locale}/projects/residential`,
     },
     {
       id: 2,
       img: three,
       label: t.CommercialPage.otherspacestwo,
-      href: `/${locale}/portfolio/hospitality`,
+      href: `/${locale}/projects/hospitality`,
     },
   ]
 

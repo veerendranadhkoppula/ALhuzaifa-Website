@@ -23,7 +23,7 @@ const Transform = () => {
           </div>
           <div className={styles.Cards}>
 
-            <Link href={`/${locale}/portfolio/hospitality`} className={styles.Card}>
+            <Link href={`/${locale}/projects/hospitality`} className={styles.Card}>
               <div className={styles.CardTop}>
                 <Image src={one} alt="concept" className={styles.CardImg} />
               </div>
@@ -35,7 +35,7 @@ const Transform = () => {
               </div>
             </Link>
 
-            <Link href={`/${locale}/portfolio/residential`} className={styles.Card}>
+            <Link href={`/${locale}/projects/residential`} className={styles.Card}>
               <div className={styles.CardTop}>
                 <Image src={two} alt="concept" className={styles.CardImg} />
               </div>
@@ -47,7 +47,7 @@ const Transform = () => {
               </div>
             </Link>
 
-            <Link href={`/${locale}/portfolio/commercial`} className={styles.Card}>
+            <Link href={`/${locale}/projects/commercial`} className={styles.Card}>
               <div className={styles.CardTop}>
                 <Image src={three} alt="concept" className={styles.CardImg} />
               </div>
