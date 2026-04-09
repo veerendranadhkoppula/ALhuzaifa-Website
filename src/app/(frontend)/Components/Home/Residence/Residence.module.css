@@ -154,7 +154,9 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .Main {
     padding: 0 0px 80px 24px;
   }
-
+.viewAll{
+  display: none;
+}
   .MainContainer {
     gap: 20px;
   }
@@ -190,9 +192,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   .Main {
     padding: 0 40px 120px 40px;
   }
-.viewAll{
-  display: none;
-}
+
   .desktopGrid {
     gap: 16px;
   }
