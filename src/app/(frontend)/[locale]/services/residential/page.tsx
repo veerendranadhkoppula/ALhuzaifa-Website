@@ -15,7 +15,8 @@ export async function generateMetadata() {
   }
 }
 
-export default async function ResidentialPage({ params }: { params: { locale: string } }) {
-  const projects: ResidentialProject[] = await fetchResidentialProjects(params.locale)
-  return <Residential locale={params.locale} projects={projects} />
+export default async function ResidentialPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const projects: ResidentialProject[] = await fetchResidentialProjects(locale)
+  return <Residential locale={locale} projects={projects} />
 }

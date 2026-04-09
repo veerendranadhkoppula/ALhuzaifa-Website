@@ -15,7 +15,8 @@ export async function generateMetadata() {
   }
 }
 
-export default async function HospitalityPage({ params }: { params: { locale: string } }) {
-  const projects: HospitalityProject[] = await fetchHospitalityProjects(params.locale)
-  return <Hospitality locale={params.locale} projects={projects} />
+export default async function HospitalityPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const projects: HospitalityProject[] = await fetchHospitalityProjects(locale)
+  return <Hospitality locale={locale} projects={projects} />
 }

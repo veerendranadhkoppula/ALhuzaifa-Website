@@ -1,6 +1,6 @@
 'use client'
-import React, { useState } from 'react'
 import styles from './ProjectsList.module.css'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from '../../../hooks/useTranslation'
@@ -18,9 +18,15 @@ const ArrowRight = () => (
 
 const ProjectsList = ({ locale, projects }) => {
   const { t } = useTranslation()
-  const [visibleCount, setVisibleCount] = useState(9)
-  const visibleProjects = projects.slice(0, visibleCount)
-  const hasMore = projects.length > visibleCount
+const storageKey = `visibleCount_${locale}_hospitality`
+
+const [visibleCount, setVisibleCount] = useState(() => {
+  if (typeof window === 'undefined') return 9
+  return parseInt(sessionStorage.getItem(storageKey) || '9', 10)
+})
+
+const visibleProjects = projects.slice(0, visibleCount)
+const hasMore = projects.length > visibleCount
   if (!projects || projects.length === 0) return null
 
   return (
@@ -54,7 +60,11 @@ const ProjectsList = ({ locale, projects }) => {
           <div className={styles.viewMoreRow}>
             <button
               className={styles.viewMoreBtn}
-              onClick={() => setVisibleCount((prev) => prev + 9)}
+onClick={() => {
+  const next = visibleCount + 9
+  setVisibleCount(next)
+  sessionStorage.setItem(storageKey, String(next))
+}}
             >
               {t.portfolioPage.viewMore}
             </button>
