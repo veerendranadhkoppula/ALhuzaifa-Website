@@ -64,87 +64,109 @@ const Contact = ({ brochureUrl }) => {
       const vLines = sectionRef.current.querySelectorAll(`.${styles.sline}`)
 
       gsap.set(items, { opacity: 0, y: 30 })
-      gsap.set(hLines, { scaleX: 0, transformOrigin: 'left' })
+      gsap.set(hLines, {
+  scaleX: 0,
+  transformOrigin: 'left center',
+})
       gsap.set(vLines, { scaleY: 0, transformOrigin: 'top' })
-  const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: sectionRef.current,
-    start: 'top 75%',
-    toggleActions: 'play none none reverse',
-  },
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 75%',
+          toggleActions: 'play none none reverse',
+        },
+      })
+
+      tl.to(hLines[0], {
+        scaleX: 1,
+        duration: 0.9,
+        ease: 'expo.out',
+      })
+
+        .to(
+          items[0],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+            force3D: true,
+          },
+          '-=0.6',
+        )
+
+        .to(
+          vLines[0],
+          {
+            scaleY: 1,
+            duration: 0.7, 
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
+
+        .to(
+          items[1],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+            force3D: true,
+          },
+          '-=0.6',
+        )
+
+        .to(
+          vLines[1],
+          {
+            scaleY: 1,
+            duration: 0.7,
+            ease: 'expo.out',
+          },
+          '-=0.5',
+        )
+
+        .to(
+          items[2],
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'expo.out',
+            force3D: true,
+          },
+          '-=0.6',
+        )
+
+        .to(
+          hLines[1],
+          {
+            scaleX: 1,
+            duration: 0.9,
+            ease: 'expo.out',
+          },
+          '-=0.7',
+        )
+      
+
+items.forEach((item) => {
+  const inner = item.querySelectorAll('h3, p, h5')
+
+  gsap.set(inner, { opacity: 0, y: 20 })
+
+  gsap.to(inner, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: item,
+      start: 'top 75%',
+    },
+  })
 })
-
-tl.to(hLines[0], {
-  scaleX: 1,
-  duration: 0.9, 
-  ease: 'expo.out',
-})
-
-  .to(
-    items[0],
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8, 
-      ease: 'expo.out',
-      force3D: true,
-    },
-    '-=0.6',
-  )
-
-  .to(
-    vLines[0],
-    {
-      scaleY: 1,
-      duration: 0.7, // was 1.1
-      ease: 'expo.out',
-    },
-    '-=0.5', // was -=0.8
-  )
-
-  .to(
-    items[1],
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'expo.out',
-      force3D: true,
-    },
-    '-=0.6',
-  )
-
-  .to(
-    vLines[1],
-    {
-      scaleY: 1,
-      duration: 0.7,
-      ease: 'expo.out',
-    },
-    '-=0.5',
-  )
-
-  .to(
-    items[2],
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'expo.out',
-      force3D: true,
-    },
-    '-=0.6',
-  )
-
-  .to(
-    hLines[1],
-    {
-      scaleX: 1,
-      duration: 0.9,
-      ease: 'expo.out',
-    },
-    '-=0.7', 
-  )
     }, sectionRef)
 
     return () => ctx.revert()

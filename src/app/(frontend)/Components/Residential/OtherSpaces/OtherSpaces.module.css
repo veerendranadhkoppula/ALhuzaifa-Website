@@ -92,8 +92,14 @@
 .CardTop {
   display: flex;
   justify-content: left;
+  overflow: hidden;
 }
-
+.CardImg {
+  transition: transform 0.6s ease;
+}
+.Card:hover .CardImg {
+  transform: scale(1.03);
+}
 .CardTop img,
 .CardImg {
   width: 100%;

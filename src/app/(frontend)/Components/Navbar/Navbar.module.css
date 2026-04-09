@@ -419,7 +419,15 @@ padding: 0px clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 .Left h4,
 .Right h4,
 .dropdownWrapper h4 {
-  transition: font-weight 0.2s ease;
+  position: relative;
+  display: inline-block;
+}
+
+
+.Left h4:hover,
+.Right h4:hover,
+.dropdownWrapper h4:hover {
+  text-shadow: 0 0 0.01px #000, 0 0 0.01px #000;
 }
 .langWrapper {
   position: relative;

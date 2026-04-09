@@ -64,7 +64,10 @@ const Contact = ({ brochureUrl }) => {
       const vLines = sectionRef.current.querySelectorAll(`.${styles.sline}`)
 
       gsap.set(items, { opacity: 0, y: 30 })
-      gsap.set(hLines, { scaleX: 0, transformOrigin: 'left' })
+      gsap.set(hLines, {
+  scaleX: 0,
+  transformOrigin: 'left center',
+})
       gsap.set(vLines, { scaleY: 0, transformOrigin: 'top' })
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -96,10 +99,10 @@ const Contact = ({ brochureUrl }) => {
           vLines[0],
           {
             scaleY: 1,
-            duration: 0.7, // was 1.1
+            duration: 0.7, 
             ease: 'expo.out',
           },
-          '-=0.5', // was -=0.8
+          '-=0.5',
         )
 
         .to(
@@ -145,6 +148,25 @@ const Contact = ({ brochureUrl }) => {
           },
           '-=0.7',
         )
+      
+
+items.forEach((item) => {
+  const inner = item.querySelectorAll('h3, p, h5')
+
+  gsap.set(inner, { opacity: 0, y: 20 })
+
+  gsap.to(inner, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: item,
+      start: 'top 75%',
+    },
+  })
+})
     }, sectionRef)
 
     return () => ctx.revert()
