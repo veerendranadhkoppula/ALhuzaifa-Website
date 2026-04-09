@@ -4,6 +4,7 @@ import styles from './TextContainer.module.css'
 import { useTranslation } from '../../../hooks/useTranslation'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import SplitType from 'split-type'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,26 +12,34 @@ const TextContainer = () => {
   const { t } = useTranslation()
   const textRef = useRef(null)
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        textRef.current,
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: 'top 90%',
-          },
-        }
-      )
-    })
+ useEffect(() => {
+  const ctx = gsap.context(() => {
 
-    return () => ctx.revert()
-  }, [])
+   const split = new SplitType(textRef.current, {
+  types: 'lines',
+  tagName: 'span',
+})
+
+gsap.set(split.lines, { willChange: 'transform' })
+
+gsap.from(split.lines, {
+  yPercent: 120,
+  opacity: 0,
+  duration: 1.2,
+  ease: 'power4.out',
+  stagger: {
+    each: 0.12,
+    from: 'start',
+  },
+  scrollTrigger: {
+    trigger: textRef.current,
+    start: 'top 85%',
+  },
+})
+  })
+
+  return () => ctx.revert()
+}, [])
 
   return (
     <div className={styles.Main}>

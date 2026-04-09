@@ -15,7 +15,6 @@
   },
   "textContainer": {
     "body": "استوديو تصميم متكامل بالكامل يُشكّل المساحات السكنية والتجارية. من منازل مُصممة حسب الطلب إلى وجهات بارزة، حيث تلتقي الإبداع بالدقة. ما بعد التصميم، نصنع عوالم غامرة لأسلوب حياة راقٍ."
-
   },
   "twoBlock": {
     "block1Title": "الحرفية",
@@ -56,8 +55,8 @@
   },
   "portfolio": {
     "label": "الضيافة",
-"hospitality": "مشاريع الضيافة",
-"residence": "المشاريع السكنية",
+    "hospitality": "مشاريع الضيافة",
+    "residence": "المشاريع السكنية",
     "project1": "أفلي باي تاشاس",
     "project2": "لورين",
     "project3": "توتو",
@@ -71,7 +70,7 @@
     "contact": "تواصل معنا",
     "servicesTitle": "الخدمات",
     "residential": "السكني",
-  "hospitality": "الضيافة",
+    "hospitality": "الضيافة",
     "commercial": "التجاري",
     "legalTitle": "قانوني",
     "privacyPolicy": "سياسة الخصوصية",
@@ -82,7 +81,9 @@
     "instagram": "إنستغرام",
     "linkedin": "لينكد إن",
     "facebook": "فيسبوك",
-    "copyright": "حقوق النشر © 2026 الحظيفة"
+    "copyright": "حقوق النشر © 2026 الحظيفة",
+    "craftedBy": "تم التصميم بواسطة",
+    "integra": "Integra Magna"
   },
   "aboutUs": {
     "landingHeading": "نصنع المساحات منذ 1976",

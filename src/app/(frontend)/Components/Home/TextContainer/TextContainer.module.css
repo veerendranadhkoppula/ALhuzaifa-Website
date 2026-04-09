@@ -58,3 +58,11 @@ padding: clamp(
 [dir='rtl'] .MainContainer p {
     font-family: var(--font-alexandria);
 }
+.MainContainer p span {
+  display: block;
+  overflow: hidden;
+}
+.MainContainer p .line {
+  display: block;
+  overflow: hidden;
+}

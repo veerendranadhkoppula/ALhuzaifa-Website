@@ -25,38 +25,87 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.studioTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
-              <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
-              <li><Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link></li>
-              <li><Link href={`/${locale}/contact-us`}>{t.footer.contact}</Link></li>
+              <li>
+                <Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/contact-us`}>{t.footer.contact}</Link>
+              </li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link></li>
-              <li><Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link></li>
-              <li><Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link></li>
+              <li>
+                <Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link>
+              </li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.legalTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/privacy-policy`}>{t.footer.privacyPolicy}</Link></li>
-              <li><Link href={`/${locale}/terms-conditions`}>{t.footer.termsConditions}</Link></li>
+              <li>
+                <Link href={`/${locale}/privacy-policy`}>{t.footer.privacyPolicy}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/terms-conditions`}>{t.footer.termsConditions}</Link>
+              </li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.connectTitle}</h4>
             <ul className={styles.columnList}>
-              <li><a href="tel:+971800888247">{t.footer.phone}</a></li>
-              <li><a href="mailto:Info@alhuzaifaproperties.com">{t.footer.email}</a></li>
-              <li><a href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.instagram}</a></li>
-              <li><a href="https://www.linkedin.com/company/al-huzaifa-furniture/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.linkedin}</a></li>
-              <li><a href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.facebook}</a></li>
+              <li>
+                <a href="tel:+971800888247">{t.footer.phone}</a>
+              </li>
+              <li>
+                <a href="mailto:Info@alhuzaifaproperties.com">{t.footer.email}</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/alhuzaifadesignstudio/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.instagram}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/al-huzaifa-furniture/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.linkedin}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/p/Al-Huzaifa-Design-Studio-100076170074054/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.facebook}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -66,18 +115,32 @@ const Footer = () => {
             <div className={styles.column}>
               <h4 className={styles.columnTitle}>{t.footer.studioTitle}</h4>
               <ul className={styles.columnList}>
-                <li><Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link></li>
-                <li><Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link></li>
-                <li><Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link></li>
-                <li><Link href={`/${locale}/contact`}>{t.footer.contact}</Link></li>
+                <li>
+                  <Link href={`/${locale}/about-us`}>{t.footer.aboutUs}</Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/craftsmanship`}>{t.footer.craftmanship}</Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/projects`}>{t.footer.portfolio}</Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/contact`}>{t.footer.contact}</Link>
+                </li>
               </ul>
             </div>
             <div className={styles.column}>
               <h4 className={styles.columnTitle}>{t.footer.servicesTitle}</h4>
               <ul className={styles.columnList}>
-                <li><Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link></li>
-                <li><Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link></li>
-                <li><Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link></li>
+                <li>
+                  <Link href={`/${locale}/projects/residential`}>{t.footer.residential}</Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/projects/hospitality`}>{t.footer.hospitality}</Link>
+                </li>
+                <li>
+                  <Link href={`/${locale}/projects/commercial`}>{t.footer.commercial}</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -85,19 +148,54 @@ const Footer = () => {
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.connectTitle}</h4>
             <ul className={styles.columnList}>
-              <li><a href="tel:+971800888247">{t.footer.phone}</a></li>
-              <li><a href="mailto:Info@alhuzaifaproperties.com">{t.footer.email}</a></li>
-              <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.instagram}</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.linkedin}</a></li>
-              <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{t.footer.facebook}</a></li>
+              <li>
+                <a href="tel:+971800888247">{t.footer.phone}</a>
+              </li>
+              <li>
+                <a href="mailto:Info@alhuzaifaproperties.com">{t.footer.email}</a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.instagram}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.linkedin}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  {t.footer.facebook}
+                </a>
+              </li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>{t.footer.legalTitle}</h4>
             <ul className={styles.columnList}>
-              <li><Link href={`/${locale}/privacy-policy`}>{t.footer.privacyPolicy}</Link></li>
-              <li><Link href={`/${locale}/terms-conditions`}>{t.footer.termsConditions}</Link></li>
+              <li>
+                <Link href={`/${locale}/privacy-policy`}>{t.footer.privacyPolicy}</Link>
+              </li>
+              <li>
+                <Link href={`/${locale}/terms-conditions`}>{t.footer.termsConditions}</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -105,7 +203,21 @@ const Footer = () => {
 
       <div className={styles.bottomWrapper}>
         <div className={styles.bottomLine}></div>
-        <p className={styles.copyright}>{t.footer.copyright}</p>
+        <div className={styles.bottomContent}>
+          <p className={styles.copyright}>{t.footer.copyright}</p>
+
+          <p className={styles.credits}>
+            {t.footer.craftedBy}{' '}
+            <a
+              href="http://integramagna.com/?utm_source=alhuzaifa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.integraLink}
+            >
+              {t.footer.integra}
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   )
