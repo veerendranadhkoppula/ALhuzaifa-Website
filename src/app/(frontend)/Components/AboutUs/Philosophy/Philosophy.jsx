@@ -20,7 +20,6 @@ const Philosophy = () => {
 
       const elements = textRef.current.children
 
-      // initial state
       gsap.set(elements, {
         opacity: 0,
         y: 25,
@@ -34,7 +33,6 @@ const Philosophy = () => {
         },
       })
 
-      // 🔥 title
       tl.to(elements[0], {
         opacity: 1,
         y: 0,

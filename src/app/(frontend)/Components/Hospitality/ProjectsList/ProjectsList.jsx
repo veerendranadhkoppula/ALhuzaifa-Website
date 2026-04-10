@@ -19,31 +19,31 @@ const ArrowRight = () => (
 
 const ProjectsList = ({ locale, projects }) => {
   const { t } = useTranslation()
-const storageKey = `visibleCount_${locale}_hospitality`
-const newCardsStartIndex = useRef(null)
-const [visibleCount, setVisibleCount] = useState(() => {
-  if (typeof window === 'undefined') return 9
-  return parseInt(sessionStorage.getItem(storageKey) || '9', 10)
-})
-
-const visibleProjects = projects.slice(0, visibleCount)
-const hasMore = projects.length > visibleCount
-  if (!projects || projects.length === 0) return null
-useEffect(() => {
-  if (newCardsStartIndex.current === null) return
-
-  const cards = document.querySelectorAll(`.${styles.card}`)
-  const newCards = Array.from(cards).slice(newCardsStartIndex.current)
-  if (newCards.length === 0) return
-
-  gsap.from(newCards, {
-    y: 40,
-    opacity: 0,
-    duration: 0.6,
-    ease: 'power2.out',
-    stagger: 0.1,
+  const storageKey = `visibleCount_${locale}_hospitality`
+  const newCardsStartIndex = useRef(null)
+  const [visibleCount, setVisibleCount] = useState(() => {
+    if (typeof window === 'undefined') return 9
+    return parseInt(sessionStorage.getItem(storageKey) || '9', 10)
   })
-}, [visibleCount])
+
+  const visibleProjects = projects.slice(0, visibleCount)
+  const hasMore = projects.length > visibleCount
+  if (!projects || projects.length === 0) return null
+  useEffect(() => {
+    if (newCardsStartIndex.current === null) return
+
+    const cards = document.querySelectorAll(`.${styles.card}`)
+    const newCards = Array.from(cards).slice(newCardsStartIndex.current)
+    if (newCards.length === 0) return
+
+    gsap.from(newCards, {
+      y: 40,
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power2.out',
+      stagger: 0.1,
+    })
+  }, [visibleCount])
   return (
     <div className={styles.main}>
       <div className={styles.MainContainer}>
@@ -75,12 +75,12 @@ useEffect(() => {
           <div className={styles.viewMoreRow}>
             <button
               className={styles.viewMoreBtn}
-onClick={() => {
-   newCardsStartIndex.current = visibleCount
-  const next = visibleCount + 9
-  setVisibleCount(next)
-  sessionStorage.setItem(storageKey, String(next))
-}}
+              onClick={() => {
+                newCardsStartIndex.current = visibleCount
+                const next = visibleCount + 9
+                setVisibleCount(next)
+                sessionStorage.setItem(storageKey, String(next))
+              }}
             >
               {t.portfolioPage.viewMore}
             </button>

@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c9b9b0;
+  z-index: 2;
+  pointer-events: none;
+  transform: translateX(-101%);
+}
