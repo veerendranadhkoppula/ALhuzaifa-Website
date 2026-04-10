@@ -66,7 +66,7 @@
 .marqueeWrapper {
   width: 100%;
   overflow: hidden;
-  padding: clamp(16px, calc(16px + (8 * ((100vw - 320px) / 1120))), 24px) 0;
+  padding: 8px 0px;
   direction: ltr;
 }
 
@@ -94,12 +94,9 @@
 
 .logoImg {
   width: auto;
-  max-width: 86px;
-  max-height: 70px;
   object-fit: contain;
   height: auto;
   filter: grayscale(100%);
-  opacity: 0.6;
   transition: opacity 0.2s ease, filter 0.2s ease;
   border: none !important;
   outline: none !important;
@@ -124,7 +121,10 @@
   .MainContainer {
     gap: 32px;
   }
-
+.logoImg {
+  width: 50px;
+  height: 50px;
+}
   .left {
     gap: 8px;
   }
@@ -142,10 +142,7 @@
     padding: 0 24px;
   }
 
-  .logoImg {
-    max-width: 50px;
-    max-height: 26px;
-  }
+
 
   .divider {
     background-color: #A7A7A780;

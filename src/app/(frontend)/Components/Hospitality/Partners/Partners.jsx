@@ -30,7 +30,6 @@ const ALL_LOGOS = [
   '/striplogos/22.svg',
   '/striplogos/23.svg',
   '/striplogos/24.svg',
-  '/striplogos/25.svg',
 ]
 
 const Partners = () => {
@@ -66,8 +65,8 @@ const Partners = () => {
                 <div key={i} className={styles.logoItem}>
                   <Image
                     src={logo}
-                     width={86}   
-  height={70}
+                     width={100}   
+  height={100}
                     alt={`partner ${(i % ALL_LOGOS.length) + 1}`}
                     className={styles.logoImg}
                   />

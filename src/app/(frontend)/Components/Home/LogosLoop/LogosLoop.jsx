@@ -29,7 +29,7 @@ const logos = [
   '/striplogos/22.svg',
   '/striplogos/23.svg',
   '/striplogos/24.svg',
-  '/striplogos/25.svg',
+
 
 ]
 const LogosLoop = () => {
@@ -42,8 +42,8 @@ const LogosLoop = () => {
           <div className={styles.marqueeTrack}>
         {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
               <div className={styles.logoItem} key={index}>
-                <Image src={logo} alt={`logo-${index}`}  width={86}   
-  height={70}/>
+                <Image src={logo} alt={`logo-${index}`}  width={100}   
+  height={100}/>
               </div>
             ))}
           </div>
