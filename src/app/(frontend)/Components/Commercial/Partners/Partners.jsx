@@ -2,15 +2,36 @@
 import React, { useRef, useEffect } from 'react'
 import styles from './Partners.module.css'
 import Image from 'next/image'
-import one from './1.png'
-import two from './2.png'
-import three from './3.png'
-import four from './4.png'
-import five from './5.png'
-import six from './6.png'
+
 import { useTranslation } from '../../../hooks/useTranslation'
 
-const ALL_LOGOS = [one, two, three, four, five, six]
+const ALL_LOGOS = [
+  '/striplogos/1.svg',
+  '/striplogos/2.svg',
+  '/striplogos/3.svg',
+  '/striplogos/4.svg',
+  '/striplogos/5.svg',
+  '/striplogos/6.svg',
+  '/striplogos/7.svg',
+  '/striplogos/8.svg',
+  '/striplogos/9.svg',
+  '/striplogos/10.svg',
+  '/striplogos/11.svg',
+  '/striplogos/12.svg',
+  '/striplogos/13.svg',
+  '/striplogos/14.svg',
+  '/striplogos/15.svg',
+  '/striplogos/16.svg',
+  '/striplogos/17.svg',
+  '/striplogos/18.svg',
+  '/striplogos/19.svg',
+  '/striplogos/20.svg',
+  '/striplogos/21.svg',
+  '/striplogos/22.svg',
+  '/striplogos/23.svg',
+  '/striplogos/24.svg',
+  '/striplogos/25.svg',
+]
 
 const Partners = () => {
   const { t } = useTranslation()
@@ -45,6 +66,8 @@ const Partners = () => {
                 <div key={i} className={styles.logoItem}>
                   <Image
                     src={logo}
+                     width={86}   
+  height={70}
                     alt={`partner ${(i % ALL_LOGOS.length) + 1}`}
                     className={styles.logoImg}
                   />

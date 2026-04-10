@@ -76,7 +76,7 @@
   align-items: center;
   gap: 0;
   width: max-content;
-  animation: marqueeLeft 30s linear infinite;
+  animation: marqueeLeft 60s linear infinite;
   will-change: transform;
 }
 
@@ -94,8 +94,8 @@
 
 .logoImg {
   width: auto;
-  max-width: 80px;
-  max-height: 35px;
+  max-width: 86px;
+  max-height: 70px;
   object-fit: contain;
   height: auto;
   filter: grayscale(100%);
