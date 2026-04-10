@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from './OurServices.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import one from './1.png'
+import one from './1.webp'
 import { useTranslation } from '../../../hooks/useTranslation'
 import { useLanguage } from '../../../context/LanguageContext'
 
