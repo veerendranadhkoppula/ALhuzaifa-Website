@@ -14,6 +14,7 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   folders: true,
+  upload: true,
   fields: [
     {
       name: 'alt',
@@ -21,7 +22,6 @@ export const Media: CollectionConfig = {
       label: 'Alt Text',
     },
   ],
-  upload: true,
   hooks: {
     beforeChange: [
       async ({ data, req }) => {

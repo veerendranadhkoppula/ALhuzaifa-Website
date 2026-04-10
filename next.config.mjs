@@ -7,6 +7,11 @@ const serverProtocol = new URL(serverUrl).protocol.replace(':', '')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '30mb',
+    },
+  },
   images: {
     remotePatterns: [
       {
@@ -30,18 +35,6 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  serverRuntimeConfig: {
-    // Allow larger file uploads (30MB for PDFs)
-    bodyParser: {
-      sizeLimit: '50mb',
-    },
-  },
-  // Also configure API routes to accept larger payloads
-  api: {
-    bodyParser: {
-      sizeLimit: '50mb',
-    },
   },
 }
 
