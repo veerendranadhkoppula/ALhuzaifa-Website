@@ -37,7 +37,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   align-items: center;
   gap: clamp(80px, calc(80px + (80 * ((100vw - 320px) / 1120))), 160px);
   width: max-content;
-  animation: marquee 18s linear infinite;
+  animation: marquee 60s linear infinite;
   padding: 8px 0;
 }
 
@@ -76,7 +76,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 
   .marqueeTrack {
     gap: 80px;
-    animation-duration: 14s;
+    animation-duration: 30s;
   }
 
   .logoItem img {
@@ -84,7 +84,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
   }
 }
 [dir="rtl"] .marqueeTrack {
-  animation: marqueeRtl 18s linear infinite;
+  animation: marqueeRtl 60s linear infinite;
 }
 
 [dir="rtl"] .marqueeWrapper:hover .marqueeTrack {
@@ -102,6 +102,6 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 
 @media (max-width: 640px) {
   [dir="rtl"] .marqueeTrack {
-    animation: marqueeRtl 14s linear infinite;
+    animation: marqueeRtl 30s linear infinite;
   }
 }

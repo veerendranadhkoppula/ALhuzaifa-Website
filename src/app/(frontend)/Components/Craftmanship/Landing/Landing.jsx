@@ -6,20 +6,34 @@ import AnimatedText from '../../AnimatedText/AnimatedText'
 
 const Landing = () => {
         const { t } = useTranslation()
-  return (
-    <>
-      <div className={styles.Main}>
-        <div className={styles.MainContainer}>
-                <AnimatedText type="heading" tag="h3" delay={1} isHero>
-                  {t.CraftmanshipPage.landingHeading}     
-                  </AnimatedText>
+return (
+  <>
+    <div className={styles.Main}>
+      <video
+        className={styles.videoBg}
+        autoPlay
+        muted
+        loop
+        playsInline
+        // poster="/craft-thumb.jpg" 
+      >
+        {/* <source src="/craf.webm" type="video/webm" /> */}
+
+        <source src="/craf.mp4" type="video/mp4" />
+      </video>
+
+      <div className={styles.MainContainer}>
+        <AnimatedText type="heading" tag="h3" delay={1} isHero>
+          {t.CraftmanshipPage.landingHeading}
+        </AnimatedText>
+
         <AnimatedText type="description" tag="p" delay={2} isHero>
           {t.CraftmanshipPage.landingDesc}
-          </AnimatedText>
-        </div>
+        </AnimatedText>
       </div>
-    </>
-  )
+    </div>
+  </>
+)
 }
 
 export default Landing
