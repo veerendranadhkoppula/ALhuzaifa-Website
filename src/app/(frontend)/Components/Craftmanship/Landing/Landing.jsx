@@ -9,18 +9,7 @@ const Landing = () => {
 return (
   <>
     <div className={styles.Main}>
-      <video
-        className={styles.videoBg}
-        autoPlay
-        muted
-        loop
-        playsInline
-        // poster="/craft-thumb.jpg" 
-      >
-        {/* <source src="/craf.webm" type="video/webm" /> */}
-
-        <source src="/craf.mp4" type="video/mp4" />
-      </video>
+     
 
       <div className={styles.MainContainer}>
         <AnimatedText type="heading" tag="h3" delay={1} isHero>
