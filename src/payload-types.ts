@@ -652,7 +652,8 @@ export interface Certificate {
 export interface Brochure {
   id: number;
   title: string;
-  file: number | Media;
+  file?: (number | null) | Media;
+  driveLink?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1205,6 +1206,7 @@ export interface CertificatesSelect<T extends boolean = true> {
 export interface BrochureSelect<T extends boolean = true> {
   title?: T;
   file?: T;
+  driveLink?: T;
   updatedAt?: T;
   createdAt?: T;
 }
