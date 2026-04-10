@@ -1,0 +1,10 @@
+.base {
+  overflow: visible;
+}
+
+
+.lineWrapper {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.1em; 
+}

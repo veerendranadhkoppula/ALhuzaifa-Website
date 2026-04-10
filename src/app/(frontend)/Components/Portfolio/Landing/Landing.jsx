@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './Landing.module.css'
 import { useTranslation } from '../../../hooks/useTranslation'
+import AnimatedText from '../../AnimatedText/AnimatedText'
 
 const Landing = () => {
   const { t } = useTranslation()
@@ -10,8 +11,12 @@ const Landing = () => {
     <>
       <div className={styles.Main}>
         <div className={styles.MainContainer}>
-          <h4>{t.portfolioPage.landingHeading}</h4>
-          <p>{t.portfolioPage.landingDesc}</p>
+         <AnimatedText type="heading" tag="h4" delay={1} isHero>
+            {t.portfolioPage.landingHeading}
+            </AnimatedText>
+       <AnimatedText type="description" tag="p" delay={2} isHero>
+            {t.portfolioPage.landingDesc}
+            </AnimatedText>
         </div>
       </div>
     </>
