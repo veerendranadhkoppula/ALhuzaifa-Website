@@ -31,6 +31,18 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  serverRuntimeConfig: {
+    // Allow larger file uploads (30MB for PDFs)
+    bodyParser: {
+      sizeLimit: '50mb',
+    },
+  },
+  // Also configure API routes to accept larger payloads
+  api: {
+    bodyParser: {
+      sizeLimit: '50mb',
+    },
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
