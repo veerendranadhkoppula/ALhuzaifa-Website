@@ -1,20 +1,42 @@
 .Main{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100svh;
-    background: url('./1.png');
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
 }
+
+
+.videoBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.Main::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
 .MainContainer{
+    position: relative;
+    z-index: 2; 
     display: flex;
     justify-content: center;
     align-items: center;
-   width: 100%;
+    width: 100%;
 }
+
 .MainContainer h3{
     font-size: var(--fs-64);
     font-weight: 400;
@@ -22,8 +44,10 @@
     margin: 0;
     opacity: 0;
     transform: translateY(40px);
-   font-family: var(--font-pp-hatton);
+    font-family: var(--font-pp-hatton);
 }
+
+
 @media (max-width: 640px) {
     .MainContainer h3{
         font-size: 32px;
@@ -32,26 +56,23 @@
         padding-left: 4px;
         padding-right: 4px;
     }
-    .Main{
-        object-fit: cover;
-        object-position: left;
-
-        width: 100%;
-       
-    }
 }
+
+
 @media (min-width: 641px) and (max-width: 1024px) {
     .MainContainer h3{
         font-size: 48px;
         text-align: center;
         line-height: 120%;
     }
-    
 }
+
+
 [dir='rtl'] .MainContainer h3 {
     font-family: var(--font-alexandria);
     font-size: var(--fs-96);
 }
+
 @media (max-width: 640px) {
     [dir='rtl'] .MainContainer h3 {
         font-size: 32px;
