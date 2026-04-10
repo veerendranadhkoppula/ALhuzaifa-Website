@@ -18,12 +18,13 @@ const TextContainer = () => {
    const split = new SplitType(textRef.current, {
   types: 'lines',
   tagName: 'span',
+   lineClass: 'line',
 })
 
 gsap.set(split.lines, { willChange: 'transform' })
 
 gsap.from(split.lines, {
-  yPercent: 120,
+  yPercent: 100,
   opacity: 0,
   duration: 1.2,
   ease: 'power4.out',
