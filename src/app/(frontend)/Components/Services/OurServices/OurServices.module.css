@@ -30,7 +30,7 @@
 .heading {
   font-family: var(--font-poppins);
   font-size: var(--fs-25);
-  font-weight: 700;
+  font-weight: 600;
   color: #414141;
   margin: 0;
 }
@@ -68,7 +68,7 @@
 .serviceTitle {
   font-family: var(--font-poppins);
   font-size: var(--fs-18);
-  font-weight: 700;
+  font-weight: 600;
   color: #414141;
   margin: 0;
 }

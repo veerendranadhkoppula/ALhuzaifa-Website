@@ -26,7 +26,7 @@ clamp(24px, calc(24px + (26 * ((100vw - 320px) / 1120))), 50px);
 }
 .Top h3{
     font-size: var(--fs-25);
-    font-weight: 700;
+    font-weight: 600;
     color: #414141;
     text-transform: capitalize;
     font-family: var(--font-poppins);
