@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload'
 
-const MAX_PDF_SIZE = 30 * 1024 * 1024 
+const MAX_PDF_SIZE = 30 * 1024 * 1024
 const MAX_IMAGE_SIZE = 5 * 1024 * 1024
 const MAX_OTHER_SIZE = 10 * 1024 * 1024
 

@@ -228,7 +228,6 @@ items.forEach((item) => {
           </div>
         </div>
 
-        {/* ✅ MOBILE CAROUSEL FULLY UNTOUCHED */}
         <div className={styles.carouselWrapper}>
           <div className={styles.embla} ref={emblaRef}>
             <div className={styles.emblaContainer}>

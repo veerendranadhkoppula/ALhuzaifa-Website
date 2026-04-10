@@ -13,18 +13,28 @@ export const Brochure: CollectionConfig = {
     update: isLoggedIn,
     delete: canDelete,
   },
-  fields: [
-    {
-      name: 'title',
-      type: 'text',
-      required: true,
+fields: [
+  {
+    name: 'title',
+    type: 'text',
+    required: true,
+  },
+
+  {
+    name: 'file',
+    type: 'upload',
+    relationTo: 'media',
+    required: false, 
+  },
+
+  {
+    name: 'driveLink',
+    type: 'text',
+    required: false,
+    admin: {
+      placeholder: 'Paste Google Drive / external brochure link',
     },
-    {
-      name: 'file',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-    },
-  ],
+  },
+],
   timestamps: true,
 }
