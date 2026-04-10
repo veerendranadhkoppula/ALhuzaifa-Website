@@ -19,7 +19,7 @@ const Locations = () => {
 
             <div className={styles.address}>
               <div className={styles.adresstop}>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://share.google/qhPu2ac4WeInJFvu5" target="_blank" rel="noopener noreferrer">
                   <h4>{t.contactPage.abuDhabiTitle}</h4>
                 </a>
                 <svg
@@ -47,7 +47,7 @@ const Locations = () => {
 
             <div className={styles.address}>
               <div className={styles.adresstop}>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://share.google/f213FE9O7FDaPOzS5" target="_blank" rel="noopener noreferrer">
                   <h4>{t.contactPage.dubaiTitle}</h4>
                 </a>
                 <svg
@@ -75,7 +75,7 @@ const Locations = () => {
 
             <div className={styles.address}>
               <div className={styles.adresstop}>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://share.google/gVeiWjpTDVlz55WId" target="_blank" rel="noopener noreferrer">
                   <h4>{t.contactPage.sharjahTitle}</h4>
                 </a>
                 <svg
